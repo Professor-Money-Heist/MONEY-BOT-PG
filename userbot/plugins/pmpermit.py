@@ -64,7 +64,9 @@ if PM_ON_OFF != "DISABLE":
     async def approve_p_m(event):
         if event.fwd_from:
             return
-        replied_user = await event.client(GetFullUserRequest(await event.get_input_chat()))
+        replied_user = await event.client(
+            GetFullUserRequest(await event.get_input_chat())
+        )
         firstname = replied_user.user.first_name
         event.pattern_match.group(1)
         chat = await event.get_chat()
