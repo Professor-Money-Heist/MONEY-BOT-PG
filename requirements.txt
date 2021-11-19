@@ -108,7 +108,7 @@ sqlalchemy
 sqlalchemy==1.3.23
 telegraph
 twitter_scraper
-git+https://github.com/LEGEND-OS/Telethon
+telethon
 tgcrypto
 tswift
 html-telegraph-poster
