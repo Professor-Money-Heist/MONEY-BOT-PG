@@ -39,7 +39,7 @@ if PM_ON_OFF != "DISABLE":
         if not event.is_private:
             return
         chat_id = event.chat_id
-        sender = await event.client(GetFullUserRequest(event.chat_id))
+        sender = await event.client(GetFullUserRequest(await event.get_input_chat()))
         sender.user.first_name
         if chat_id == bot.uid:
             return
@@ -64,7 +64,7 @@ if PM_ON_OFF != "DISABLE":
     async def approve_p_m(event):
         if event.fwd_from:
             return
-        replied_user = await event.client(GetFullUserRequest(event.chat_id))
+        replied_user = await event.client(GetFullUserRequest(await event.get_input_chat()))
         firstname = replied_user.user.first_name
         event.pattern_match.group(1)
         chat = await event.get_chat()
