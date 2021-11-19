@@ -101,11 +101,11 @@ def button(page, modules):
     buttons.append(
         [
             custom.Button.inline(
-                f"⭅ɮǟƈӄ", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+                f"ẞαƈƙ", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
-            custom.Button.inline(f"🔥 Close 🔥", data="close"),
+            custom.Button.inline(f"🔥 ❌ 🔥", data="close"),
             custom.Button.inline(
-                f"ռɛӼȶ⭆", data=f"page({0 if page == (max_pages - 1) else page + 1})"
+                f"ɳ̃êӿ†", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
         ]
     )
@@ -128,7 +128,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             for x in CMD_LIST.values():
                 for y in x:
                     apn.append(y)
-            help_msg = f"🔥『{legend_mention}』🔥\n\n**📍𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ **`{len(CMD_HELP)}`\n**📍Tοταℓ Cοммαи∂ѕ⭆** `{len(apn)}`\n**🎒Pαցҽ⭆ **1/{veriler[0]}\n"
+            help_msg = f"⚜『{legend_mention}』⚜\n\n**⚡𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ **`{len(CMD_HELP)}`\n**⚡𝚃𝚘𝚝𝚊𝚕 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜⭆** `{len(apn)}`\n**📖Pαցҽ⭆ **1/{veriler[0]}\n"
             if help_pic and help_pic.endswith((".jpg", ".png")):
                 result = builder.photo(
                     help_pic,
