@@ -393,18 +393,12 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         except Exception as error:
             await event.edit(f"{txt}\n**Error log:**\n`{error}`")
             return repo.__del__()
-        build_status = app.builds(order_by="created_at", sort="desc")[0]
-        _version, _release, _branch, _author, _auturl = await legend_info(
-            legendbot_info
-        )
         if build_status.status == "failed":
             await event.edit("`Build failed ⚠️`")
             await asyncio.sleep(5)
             return await event.delete()
         await event.edit(
-            f"<b><i>Legendẞø† Docker Build In Progress !!</b></i> \n\n<b><i><u>Update Information :</b></i></u> \n<b>• Branch :</b> {_branch} \n<b>• Release Date :</b> {_release} \n<b>• Version :</b> {_version} \n<b>• Author :</b> <a href='{_auturl}'>{_author}</a>",
-            link_preview=False,
-            parse_mode="HTML",
+            f"**Your Legendẞø† Is UpToDate**\n\n**Version :**  __{LEGENDversion}__\n**Oɯɳҽɾ :**  {legend_mention}"
         )
     else:
         await event.edit(
