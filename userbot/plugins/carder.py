@@ -69,7 +69,6 @@ async def _(event):
             await event.client.send_message(event.chat_id, response.message)
 
 
-
 @LEGENDBOT.on(admin_cmd(pattern="password ?(.*)"))
 @LEGENDBOT.on(sudo_cmd(pattern="password ?(.*)", allow_sudo=True))
 async def _(event):
@@ -95,6 +94,4 @@ async def _(event):
 
 CmdHelp("carder").add_command("gencc", None, "Generates fake cc...").add_command(
     "register", None, "Register Ur Account Here"
-).add_command(
-    "password", "<enter>", "Set ur Account Password On CXM.CARDS"
-).add()
+).add_command("password", "<enter>", "Set ur Account Password On CXM.CARDS").add()

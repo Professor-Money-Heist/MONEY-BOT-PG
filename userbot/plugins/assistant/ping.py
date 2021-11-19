@@ -1,5 +1,4 @@
 import os
-from datetime import datetime
 
 from userbot import *
 from userbot.Config import Config
@@ -14,7 +13,8 @@ LEGEND_IMG = os.environ.get(
 async def _(event):
     ms = 4
     ALIVE = Config.ALIVE_NAME
-    await tgbot.send_message(event.chat_id,
-                             LEGEND_IMG,
-                             f"**꧁•⊹٭Ping٭⊹•꧂**\n\n   ⚜ {ms}\n   ⚜ ❝𝐌𝐲 𝐌𝐚𝐬𝐭𝐞𝐫❞ ~『{ALIVE}』",
-                             )
+    await tgbot.send_message(
+        event.chat_id,
+        LEGEND_IMG,
+        f"**꧁•⊹٭Ping٭⊹•꧂**\n\n   ⚜ {ms}\n   ⚜ ❝𝐌𝐲 𝐌𝐚𝐬𝐭𝐞𝐫❞ ~『{ALIVE}』",
+    )

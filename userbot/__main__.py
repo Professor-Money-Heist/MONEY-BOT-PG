@@ -164,7 +164,9 @@ print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
 
 async def legend_op():
     try:
-        os.environ["LEGEND_STRING"] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
+        os.environ[
+            "LEGEND_STRING"
+        ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
         if Config.LOGGER_ID != 0:
             await bot.send_file(
                 Config.LOGGER_ID,
