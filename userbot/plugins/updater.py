@@ -393,6 +393,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         except Exception as error:
             await event.edit(f"{txt}\n**Error log:**\n`{error}`")
             return repo.__del__()
+        build_status = app.builds(order_by="created_at", sort="desc")[0]
         if build_status.status == "failed":
             await event.edit("`Build failed ⚠️`")
             await asyncio.sleep(5)
