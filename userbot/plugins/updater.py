@@ -394,7 +394,9 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             await event.edit(f"{txt}\n**Error log:**\n`{error}`")
             return repo.__del__()
         build_status = app.builds(order_by="created_at", sort="desc")[0]
-        _version, _release, _branch, _author, _auturl = await legend_info(legendbot_info)
+        _version, _release, _branch, _author, _auturl = await legend_info(
+            legendbot_info
+        )
         if build_status.status == "failed":
             await event.edit("`Build failed ⚠️`")
             await asyncio.sleep(5)
