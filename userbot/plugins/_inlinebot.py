@@ -317,23 +317,22 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             result = builder.photo(
-                    ALV_PIC["Deploy"],
-                    text=f"Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot) \nYou can know more about me from the links given below 👇",
-                    buttons=[
-                        [
-                            custom.Button.url(
-                                "⭐ Repo ⭐", "https://Github.com/LEGEND-OS/LEGENDBOT"
-                            ),
-                            custom.Button.url(
-                                "⚡ Repl ⚡",
-                                "https://replit.com/@KrishnaJaiswal1/LEGENDBOT#main.py",
-                            ),
-                        ],
+                ALV_PIC["Deploy"],
+                text=f"Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot) \nYou can know more about me from the links given below 👇",
+                buttons=[
+                    [
+                        custom.Button.url(
+                            "⭐ Repo ⭐", "https://Github.com/LEGEND-OS/LEGENDBOT"
+                        ),
+                        custom.Button.url(
+                            "⚡ Repl ⚡",
+                            "https://replit.com/@KrishnaJaiswal1/LEGENDBOT#main.py",
+                        ),
                     ],
-                    link_preview=False,
-                )
+                ],
+                link_preview=False,
+            )
             await event.answer([result] if result else None)
-           
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"pmclick")))
     async def on_pm_click(event):
