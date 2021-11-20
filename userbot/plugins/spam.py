@@ -22,7 +22,7 @@ async def spammer(e):
         message = e.text
         counter = int(message[6:8])
         spam_message = str(e.text[8:])
-        await asyncio.await([e.respond(spam_message) for i in range(counter)])
+        await asyncio.wait([e.respond(spam_message) for i in range(counter)])
         await e.delete()
         await e.client.send_message(
             lg_id, f"#SPAM \n\nSpammed  `{counter}`  messages!!"
