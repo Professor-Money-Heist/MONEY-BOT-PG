@@ -324,13 +324,15 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 buttons=[
                     [
                         custom.Button.url(
+                            
                             "⭐ Repo ⭐", "Https://github.com/LEGEND-OS/LEGENDBOT"
                         ),
-                        custom.Button.url("⚡ Repl ⚡", "https://replit.com/@KrishnaJaiswal1/LEGENDBOT#main.py"),
+                        custom.Button.url(
+                            "⚡ Repl ⚡", "https://replit.com/@KrishnaJaiswal1/LEGENDBOT#main.py"
+                        ),
                     ],
                 ],
-                link_preview=False,
-            )
+                
         await event.answer([result] if result else None)
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"pmclick")))
