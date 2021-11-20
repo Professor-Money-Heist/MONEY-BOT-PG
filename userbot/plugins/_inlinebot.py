@@ -317,9 +317,24 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             """result = builder.photo(
-                ALV_PIC["Deploy"],
-                text=f"Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot) \nYou can know more about me from the links given below 👇",
-                buttons=[
+                    ALV_PIC["Deploy"],
+                    text=f"Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot) \nYou can know more about me from the links given below 👇",
+                    buttons=[
+                        [
+                            custom.Button.url(
+                                "⭐ Repo ⭐", "https://Github.com/LEGEND-OS/LEGENDBOT"
+                            ),
+                            custom.Button.url(
+                                "⚡ Repl ⚡",
+                                "https://replit.com/@KrishnaJaiswal1/LEGENDBOT#main.py",
+                            ),
+                        ],
+                    ],
+                    link_preview=False,
+                )
+            await event.answer([result] if result else None)"""
+            buttons = (
+                [
                     [
                         custom.Button.url(
                             "⭐ Repo ⭐", "https://Github.com/LEGEND-OS/LEGENDBOT"
@@ -330,20 +345,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         ),
                     ],
                 ],
-                link_preview=False,
             )
-        await event.answer([result] if result else None)"""
-            buttons=[
-                    [
-                        custom.Button.url(
-                            "⭐ Repo ⭐", "https://Github.com/LEGEND-OS/LEGENDBOT"
-                        ),
-                        custom.Button.url(
-                            "⚡ Repl ⚡",
-                            "https://replit.com/@KrishnaJaiswal1/LEGENDBOT#main.py",
-                        ),
-                    ],
-                ],
         markup = event.client.build_reply_markup(buttons)
         photo = types.InputWebDocument(
             url=ALV_PIC, size=0, mime_type="image/jpeg", attributes=[]
