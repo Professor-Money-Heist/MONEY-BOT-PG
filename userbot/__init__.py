@@ -9,7 +9,7 @@ from telethon.sessions import StringSession
 from userbot.Config import Config
 from var import Var
 from userbot.cmdhelp import CmdHelp
-frok userbot.helpers import *
+from userbot.helpers import *
 
 BOTLOG = True
 StartTime = time.time()
