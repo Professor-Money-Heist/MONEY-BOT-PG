@@ -315,30 +315,37 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 buttons=[[custom.Button.url("URL", part[0])]],
                 link_preview=True,
             )
-
         else:
-            result = builder.article(
-                "@Legend_Userbot",
-                text="""**Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot) \nYou can know more about me from the links given below 👇**""",
-                buttons=[
-                    [
-                        custom.Button.url(
-                            "🔥 CHANNEL 🔥", "https://t.me/Official_LegendBot"
-                        ),
-                        custom.Button.url("⚡ GROUP ⚡", "https://t.me/Legend_Userbot"),
-                    ],
-                    [
-                        custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/LEGEND-OS/LEGENDBOT"
-                        ),
-                        custom.Button.url(
-                            "🔰 TUTORIAL 🔰", "https://youtu.be/bPzvmaQejNM"
-                        ),
-                    ],
-                ],
-                link_preview=False,
+            buttons = [
+                (Button.url("Source code", "https://github.com/LEGEND-OS/LEGENDUSERBOT"),
+                 Button.url(
+                    "soon add",
+                    "https://github.com",
+                ),
             )
+        ]
+        markup = event.client.build_reply_markup(buttons)
+        photo = types.InputWebDocument(
+            url=https://te.legra.ph/file/957e2be12257deceafafc.jpg, size=0, mime_type="image/jpeg", attributes=[]
+        )
+        text, msg_entities = await event.client._parse_message_text(
+            "legend", "md"
+        )
+        result = types.InputBotInlineResult(
+            id=str(uuid4()),
+            type="photo",
+            title="Lêɠêɳ̃dẞø†",
+            description="Deploy yourself",
+            url="https://github.com/LEGEND-OS/LEGENDBOT",
+            thumb=photo,
+            content=photo,
+            send_message=types.InputBotInlineMessageMediaAuto(
+                reply_markup=markup, message=text, entities=msg_entities
+            ),
+        )
         await event.answer([result] if result else None)
+
+            
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"pmclick")))
     async def on_pm_click(event):
