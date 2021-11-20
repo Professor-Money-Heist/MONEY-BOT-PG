@@ -157,4 +157,14 @@ CmdHelp("spam").add_command(
     "<count> <text>",
     "Sends the text 'X' number of times. This what LEGENDBOT iz known for. The Best BigSpam Ever",
     ".bigspam 5000 hello",
+).add_command(
+    "cspam",
+    "<sentence>",
+    "Spam the chat with every letter in given sentence as new message",
+    ".cspam LEGENDBOT IS OP",
+).add_command(
+    "wspam",
+    "<sentence>",
+    "Spams the chat with every word in given sentence as new message",
+    ".wspam LEGENDBOT IS OP",
 ).add()
