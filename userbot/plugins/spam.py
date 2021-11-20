@@ -97,6 +97,7 @@ async def tmeme(event):
     "Spam the text word by word"
     wspam = str("".join(event.text.split(maxsplit=1)[1:]))
     message = wspam.split()
+    await event.delete()
     for word in message:
         await event.respond(word)
     if lg_id:
