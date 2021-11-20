@@ -344,7 +344,6 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         ),
                     ],
                 ],
-            )
         markup = event.client.build_reply_markup(buttons)
         photo = types.InputWebDocument(
             url=ALV_PIC, size=0, mime_type="image/jpeg", attributes=[]
