@@ -318,7 +318,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.photo(
                 ALV_PIC,
-                text=f"Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot) \nYou can know more about me from the links given below 👇",
+                text="""Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot) \nYou can know more about me from the links given below 👇""",
                 buttons=[
                     [
                         custom.Button.url(
@@ -332,7 +332,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 ],
                 link_preview=False,
             )
-            await event.answer([result] if result else None)
+        await event.answer([result] if result else None)
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"pmclick")))
     async def on_pm_click(event):
