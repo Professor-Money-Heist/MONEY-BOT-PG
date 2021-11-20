@@ -95,8 +95,7 @@ async def tiny_pic_spam(e):
 
 @bot.on(admin_cmd("wspam (.*)"))
 @bot.on(sudo_cmd(pattern="wspam (.*)", allow_sudo=True))
-async def tmeme(event):
-    "Spam the text word by word"
+async def spam(event):
     wspam = str("".join(event.text.split(maxsplit=1)[1:]))
     message = wspam.split()
     await event.delete()
@@ -119,7 +118,7 @@ async def tmeme(event):
             
 @bot.on(admin_cmd("cspam (.*)"))
 @bot.on(sudo_cmd(pattern="cspam (.*)", allow_sudo=True))
- async def tmeme(event):
+async def tmeme(event):
     "Spam the text letter by letter."
     cspam = str("".join(event.text.split(maxsplit=1)[1:]))
     message = cspam.replace(" ", "")
