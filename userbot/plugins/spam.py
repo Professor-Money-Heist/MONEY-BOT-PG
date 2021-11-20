@@ -116,6 +116,29 @@ async def tmeme(event):
                 + f"Word Spam was executed successfully in {legend_mention} chat with : `{message}`",
             )
 
+            
+@bot.on(admin_cmd("cspam (.*)"))
+@bot.on(sudo_cmd(pattern="cspam (.*)", allow_sudo=True))
+ async def tmeme(event):
+    "Spam the text letter by letter."
+    cspam = str("".join(event.text.split(maxsplit=1)[1:]))
+    message = cspam.replace(" ", "")
+    await event.delete()
+    for letter in message:
+        await event.respond(letter)
+    if Config.LOGGER:
+        if event.is_private:
+            await event.client.send_message(
+                lg_id,
+                "#CSPAM\n"
+                + f"Letter Spam was executed successfully in [User](tg://user?id={event.chat_id}) chat with : `{message}`",
+            )
+        else:
+            await event.client.send_message(
+                lg_id,
+                "#CSPAM\n"
+                + f"Letter Spam was executed successfully in {get_display_name(await event.get_chat())}(`{event.chat_id}`) chat with : `{message}`",
+            )
 
 CmdHelp("spam").add_command(
     "spam", "<number> <text>", "Sends the text 'X' number of times.", ".spam 99 hello"
