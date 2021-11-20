@@ -8,6 +8,8 @@ from telethon.sessions import StringSession
 
 from userbot.Config import Config
 from var import Var
+from userbot.cmdhelp import CmdHelp
+frok userbot.helpers import *
 
 BOTLOG = True
 StartTime = time.time()
@@ -123,5 +125,3 @@ CMD_HELP = {}
 ISAFK = False
 AFKREASON = None
 SUDO_LIST = {}
-
-from userbot.cmdhelp import CmdHelp
