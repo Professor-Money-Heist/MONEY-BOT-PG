@@ -324,11 +324,16 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 buttons=[
                     [
                         custom.Button.url(
-                            
-                            "⭐ Repo ⭐", "Https://github.com/LEGEND-OS/LEGENDBOT"
+                            "🔥 CHANNEL 🔥", "https://t.me/Official_LegendBot"
+                        ),
+                        custom.Button.url("⚡ GROUP ⚡", "https://t.me/Legend_Userbot"),
+                    ],
+                    [
+                        custom.Button.url(
+                            "✨ REPO ✨", "https://github.com/LEGEND-OS/LEGENDBOT"
                         ),
                         custom.Button.url(
-                            "⚡ Repl ⚡", "https://replit.com/@KrishnaJaiswal1/LEGENDBOT#main.py"
+                            "🔰 TUTORIAL 🔰", "https://youtu.be/bPzvmaQejNM"
                         ),
                     ],
                 ],
