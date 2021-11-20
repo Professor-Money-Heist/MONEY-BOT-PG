@@ -317,7 +317,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             result = builder.photo(
-                ALV_PIC("Deploy"),
+                ALV_PIC["Deploy"],
                 text=f"Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot) \nYou can know more about me from the links given below 👇",
                 buttons=[
                     [
