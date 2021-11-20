@@ -10,7 +10,7 @@ from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 from userbot.plugins.sql_helper.gvar_sql import *
 from userbot.utils import admin_cmd, sudo_cmd
-
+from.  import legend_mention
 SUDO_WALA = Config.SUDO_USERS
 lg_id = Config.LOGGER_ID
 
@@ -111,7 +111,7 @@ async def tmeme(event):
             await event.client.send_message(
                 lg_id,
                 "#WSPAM\n"
-                + f"Word Spam was executed successfully in {get_display_name(await event.get_chat())}(`{event.chat_id}`) chat with : `{message}`",
+                + f"Word Spam was executed successfully in {legend_mention} chat with : `{message}`",
             )
 
 
