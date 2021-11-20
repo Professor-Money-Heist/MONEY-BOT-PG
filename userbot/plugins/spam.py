@@ -22,7 +22,7 @@ async def spammer(e):
         message = e.text
         counter = int(message[6:8])
         spam_message = str(e.text[8:])
-        await asyncio.wait([e.respond(spam_message) for i in range(counter)])
+        await asyncio.await([e.respond(spam_message) for i in range(counter)])
         await e.delete()
         await e.client.send_message(
             lg_id, f"#SPAM \n\nSpammed  `{counter}`  messages!!"
@@ -97,8 +97,8 @@ async def tmeme(event):
     "Spam the text word by word"
     wspam = str("".join(event.text.split(maxsplit=1)[1:]))
     message = wspam.split()
-    await event.delete()
-    await event.respond(message)
+    for word in message:
+        await event.respond(word)
     if lg_id:
         if event.is_private:
             await event.client.send_message(
