@@ -5,7 +5,7 @@ import re
 from math import ceil
 from re import compile
 
-from telethon import Button, custom, events, functions
+from telethon import Button, custom, events, functions, types
 from telethon.errors.rpcerrorlist import UserNotParticipantError
 from telethon.events import InlineQuery, callbackquery
 from telethon.sync import custom
