@@ -9,7 +9,7 @@ import asyncio
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 from userbot.utils import admin_cmd, sudo_cmd
-
+from userbot.plugins.sql_helper.gvar_sql import *
 SUDO_WALA = Config.SUDO_USERS
 lg_id = Config.LOGGER_ID
 
@@ -89,7 +89,33 @@ async def tiny_pic_spam(e):
             f"**Error**\nUsage `!mspam <count> reply to a sticker/gif/photo/video`"
         )
 
-
+@bot.on(admin_cmd("wspam (.*)"))
+@bot.on(sudo_cmd(pattern="wspam (.*)", allow_sudo=True))
+async def tmeme(event):
+    "Spam the text word by word"
+    wspam = str("".join(event.text.split(maxsplit=1)[1:]))
+    message = wspam.split()
+    await event.delete()
+    addgvar("spamwork", True)
+    for word in message:
+        if gvarstatus("spamwork") is None:
+            return
+        await event.respond(word)
+    if lg_id:
+        if event.is_private:
+            await event.client.send_message(
+                lg_id,
+                "#WSPAM\n"
+                + f"Word Spam was executed successfully in [User](tg://user?id={event.chat_id}) chat with : `{message}`",
+            )
+        else:
+            await event.client.send_message(
+                lg_id,
+                "#WSPAM\n"
+                + f"Word Spam was executed successfully in {get_display_name(await event.get_chat())}(`{event.chat_id}`) chat with : `{message}`",
+            )
+    
+    
 CmdHelp("spam").add_command(
     "spam", "<number> <text>", "Sends the text 'X' number of times.", ".spam 99 hello"
 ).add_command(
