@@ -6,9 +6,7 @@ from telethon import TelegramClient
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 
-from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
-from userbot.helpers import *
 from var import Var
 
 BOTLOG = True
@@ -125,3 +123,5 @@ CMD_HELP = {}
 ISAFK = False
 AFKREASON = None
 SUDO_LIST = {}
+
+from userbot.helpers import *
