@@ -344,7 +344,6 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         ),
                     ],
                 ],
-                link_preview=False,
             )
         markup = event.client.build_reply_markup(buttons)
         photo = types.InputWebDocument(
