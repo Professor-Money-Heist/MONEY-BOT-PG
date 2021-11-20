@@ -28,7 +28,6 @@ help_pic = Config.HELP_PIC
 VAR_PIC = Config.ALIVE_PIC
 PREV_REPLY_MESSAGE = {}
 mybot = Config.BOT_USERNAME
-lol_pic = "https://telegra.ph/file/7227d44f3410822210b98.jpg"
 COMMAND_HAND_LER = os.environ.get("COMMAND_HAND_LER", r".")
 if mybot.startswith("@"):
     botname = mybot
@@ -318,7 +317,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             result = builder.photo(
-                lol_pic,
+                ALV_PIC(Deploy),
                 text=f"Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot) \nYou can know more about me from the links given below 👇",
                 buttons=[
                     [
