@@ -28,6 +28,7 @@ help_pic = Config.HELP_PIC
 VAR_PIC = Config.ALIVE_PIC
 PREV_REPLY_MESSAGE = {}
 mybot = Config.BOT_USERNAME
+lol_pic = "https://telegra.ph/file/7227d44f3410822210b98.jpg"
 COMMAND_HAND_LER = os.environ.get("COMMAND_HAND_LER", r".")
 if mybot.startswith("@"):
     botname = mybot
@@ -316,33 +317,20 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 link_preview=True,
             )
         else:
-            buttons = [
-                (Button.url("Source code", "https://github.com/LEGEND-OS/LEGENDUSERBOT"),
-                 Button.url(
-                     "soon add",
-                     "https://github.com",
-                     ),
-                 )
-            ]
-            markup = event.client.build_reply_markup(buttons)
-            photo = types.InputWebDocument(
-                url=https://te.legra.ph/file/957e2be12257deceafafc.jpg, size=0, mime_type="image/jpeg", attributes=[]
+            result = builder.photo(
+                @Legend_Userbot,
+                file=legend_pic,
+                text=lege_nd,
+                buttons=[
+                    [
+                        custom.Button.inline("📝 Request 📝", data="req"),
+                        custom.Button.inline("💬 Chat 💬", data="chat"),
+                    ],
+                    [custom.Button.inline("🚫 Spam 🚫", data="heheboi")],
+                    [custom.Button.inline("Curious ❓", data="pmclick")],
+                ],
             )
-            text, msg_entities = await event.client._parse_message_text(
-                "legend", "md"
-            )
-            result = types.InputBotInlineResult(
-                id=str(uuid4()),
-                type="photo",
-                title="Lêɠêɳ̃dẞø†",
-                description="Deploy yourself",
-                url="https://github.com/LEGEND-OS/LEGENDBOT",
-                thumb=photo,
-                content=photo,
-                send_message=types.InputBotInlineMessageMediaAuto(
-                    reply_markup=markup, message=text, entities=msg_entities
-                ),
-            )
+        
             await event.answer([result] if result else None)
 
             
