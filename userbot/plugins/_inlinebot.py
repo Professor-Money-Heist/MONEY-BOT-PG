@@ -319,7 +319,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.photo(
                 lol_pic,
-                text="""**Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot) \nYou can know more about me from the links given below 👇**"""
+                text="Hey",
                 buttons=[
                     [
                         custom.Button.url(
