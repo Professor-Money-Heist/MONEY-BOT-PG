@@ -98,11 +98,7 @@ async def tmeme(event):
     wspam = str("".join(event.text.split(maxsplit=1)[1:]))
     message = wspam.split()
     await event.delete()
-    addgvar("spamwork", True)
-    for word in message:
-        if gvarstatus("spamwork") is None:
-            return
-        await event.respond(word)
+    await event.respond(message)
     if lg_id:
         if event.is_private:
             await event.client.send_message(
