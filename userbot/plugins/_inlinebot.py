@@ -5,7 +5,7 @@ import re
 from math import ceil
 from re import compile
 
-from telethon import Button, custom, events, functions, types
+from telethon import Button, custom, events, functions
 from telethon.errors.rpcerrorlist import UserNotParticipantError
 from telethon.events import InlineQuery, callbackquery
 from telethon.sync import custom
@@ -340,9 +340,6 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 link_preview=False,
             )
         await event.answer([result] if result else None)
-
-
-            
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"pmclick")))
     async def on_pm_click(event):
