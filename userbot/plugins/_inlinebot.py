@@ -325,7 +325,10 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         custom.Button.url(
                             "⭐ Repo ⭐", "https://Github.com/LEGEND-OS/LEGENDBOT"
                         ),
-                        custom.Button.url("⚡ Repl ⚡", "https://replit.com/@KrishnaJaiswal1/LEGENDBOT#main.py"),
+                        custom.Button.url(
+                            "⚡ Repl ⚡",
+                            "https://replit.com/@KrishnaJaiswal1/LEGENDBOT#main.py",
+                        ),
                     ],
                 ],
                 link_preview=False,
