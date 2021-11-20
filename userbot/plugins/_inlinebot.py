@@ -316,7 +316,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 link_preview=True,
             )
         else:
-            result = builder.photo(
+            """result = builder.photo(
                 ALV_PIC["Deploy"],
                 text=f"Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot) \nYou can know more about me from the links given below 👇",
                 buttons=[
@@ -332,6 +332,39 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 ],
                 link_preview=False,
             )
+        await event.answer([result] if result else None)"""
+            buttons=[
+                    [
+                        custom.Button.url(
+                            "⭐ Repo ⭐", "https://Github.com/LEGEND-OS/LEGENDBOT"
+                        ),
+                        custom.Button.url(
+                            "⚡ Repl ⚡",
+                            "https://replit.com/@KrishnaJaiswal1/LEGENDBOT#main.py",
+                        ),
+                    ],
+                ],
+                link_preview=False,
+            )
+        markup = event.client.build_reply_markup(buttons)
+        photo = types.InputWebDocument(
+            url=ALV_PIC, size=0, mime_type="image/jpeg", attributes=[]
+        )
+        text, msg_entities = await event.client._parse_message_text(
+            "𝗗𝗲𝗽𝗹𝗼𝘆 𝘆𝗼𝘂𝗿 𝗼𝘄𝗻 𝗖𝗮𝘁𝗨𝘀𝗲𝗿𝗯𝗼𝘁.", "Deploy Ur Self"
+        )
+        result = types.InputBotInlineResult(
+            id=str(uuid4()),
+            type="photo",
+            title="𝘾𝙖𝙩𝙐𝙨𝙚𝙧𝙗𝙤𝙩",
+            description="Deploy yourself",
+            url="https://github.com/sandy1709/catuserbot",
+            thumb=photo,
+            content=photo,
+            send_message=types.InputBotInlineMessageMediaAuto(
+                reply_markup=markup, message=text, entities=msg_entities
+            ),
+        )
         await event.answer([result] if result else None)
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"pmclick")))
