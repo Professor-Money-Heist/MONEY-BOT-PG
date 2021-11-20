@@ -318,20 +318,29 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             result = builder.photo(
-                @Legend_Userbot,
-                file=legend_pic,
-                text=lege_nd,
+                "@Legend_Userbot",
+                file=lol_pic,
+                text="Hey",
                 buttons=[
                     [
-                        custom.Button.inline("📝 Request 📝", data="req"),
-                        custom.Button.inline("💬 Chat 💬", data="chat"),
+                        custom.Button.url(
+                            "🔥 CHANNEL 🔥", "https://t.me/Official_LegendBot"
+                        ),
+                        custom.Button.url("⚡ GROUP ⚡", "https://t.me/Legend_Userbot"),
                     ],
-                    [custom.Button.inline("🚫 Spam 🚫", data="heheboi")],
-                    [custom.Button.inline("Curious ❓", data="pmclick")],
+                    [
+                        custom.Button.url(
+                            "✨ REPO ✨", "https://github.com/LEGEND-OS/LEGENDBOT"
+                        ),
+                        custom.Button.url(
+                            "🔰 TUTORIAL 🔰", "https://youtu.be/bPzvmaQejNM"
+                        ),
+                    ],
                 ],
+                link_preview=False,
             )
-        
-            await event.answer([result] if result else None)
+        await event.answer([result] if result else None)
+
 
             
 
