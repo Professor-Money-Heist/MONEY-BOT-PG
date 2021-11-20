@@ -319,21 +319,13 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.photo(
                 lol_pic,
-                text="Hey",
+                text="""**Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot) \nYou can know more about me from the links given below 👇**"""
                 buttons=[
                     [
                         custom.Button.url(
-                            "🔥 CHANNEL 🔥", "https://t.me/Official_LegendBot"
+                            "⭐ Repo ⭐", "Https://github.com/LEGEND-OS/LEGENDBOT"
                         ),
-                        custom.Button.url("⚡ GROUP ⚡", "https://t.me/Legend_Userbot"),
-                    ],
-                    [
-                        custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/LEGEND-OS/LEGENDBOT"
-                        ),
-                        custom.Button.url(
-                            "🔰 TUTORIAL 🔰", "https://youtu.be/bPzvmaQejNM"
-                        ),
+                        custom.Button.url("⚡ Repl ⚡", "https://replit.com/@KrishnaJaiswal1/LEGENDBOT#main.py"),
                     ],
                 ],
                 link_preview=False,
