@@ -319,6 +319,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.photo(
                 lol_pic,
+                "Deploy",
                 text="Hey",
                 buttons=[
                     [
