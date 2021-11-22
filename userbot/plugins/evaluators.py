@@ -9,7 +9,7 @@ from userbot import *
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 from userbot.utils import admin_cmd, eor, sudo_cmd
-
+EVAL = os.environ.get("EVAL", None)
 from . import *
 
 
