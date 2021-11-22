@@ -97,9 +97,7 @@ async def variable(var):
                 return await var.edit("`.set var <ConfigVars-name> <value>`")
         await asyncio.sleep(1.5)
         if "LEGEND_STRING" in variable:
-            await eor(
-                var, "Successfully Changed To {value}"
-            )
+            await eor(var, "Successfully Changed To {value}")
             return
         elif variable in heroku_var:
             await var.edit(
