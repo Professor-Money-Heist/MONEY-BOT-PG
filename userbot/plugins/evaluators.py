@@ -96,7 +96,7 @@ async def _(event):
                 f"#EVAL \n\nEval command was executed sucessfully. \n\n{final_output}",
             )
     else:
-        await eor("Make Eval = ON FIRST `.set var EVAL ON`")
+        await edit_or_reply(event, "U Have To On Eval First Then\n `.set var EVAL ON`")
 
 
 async def aexec(code, smessatatus):
