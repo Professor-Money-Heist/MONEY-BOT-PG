@@ -50,47 +50,48 @@ async def _(event):
 @bot.on(admin_cmd(pattern="eval(?: |$|\n)(.*)", command="eval"))
 @bot.on(sudo_cmd(pattern="eval(?: |$|\n)(.*)", command="eval", allow_sudo=True))
 async def _(event):
-    if event.fwd_from:
-        return
-    cmd = "".join(event.text.split(maxsplit=1)[1:])
-    if not cmd:
-        return await eor(event, "`What should i run ?..`")
-    LEGENDevent = await eor(event, "`Running ...`")
-    old_stderr = sys.stderr
-    old_stdout = sys.stdout
-    redirected_output = sys.stdout = io.StringIO()
-    redirected_error = sys.stderr = io.StringIO()
-    stdout, stderr, exc = None, None, None
-    try:
-        await aexec(cmd, event)
-    except Exception:
-        exc = traceback.format_exc()
-    stdout = redirected_output.getvalue()
-    stderr = redirected_error.getvalue()
-    sys.stdout = old_stdout
-    sys.stderr = old_stderr
-    evaluation = ""
-    if exc:
-        evaluation = exc
-    elif stderr:
-        evaluation = stderr
-    elif stdout:
-        evaluation = stdout
-    else:
-        evaluation = "Success"
-    final_output = f"•  Eval : \n`{cmd}` \n\n•  Result : \n`{evaluation}` \n"
+    if EVAL == "ON":
+        if event.fwd_from:
+            return
+        cmd = "".join(event.text.split(maxsplit=1)[1:])
+        if not cmd:
+            return await eor(event, "`What should i run ?..`")
+        LEGENDevent = await eor(event, "`Running ...`")
+        old_stderr = sys.stderr
+        old_stdout = sys.stdout
+        redirected_output = sys.stdout = io.StringIO()
+        redirected_error = sys.stderr = io.StringIO()
+        stdout, stderr, exc = None, None, None
+        try:
+            await aexec(cmd, event)
+        except Exception:
+            exc = traceback.format_exc()
+        stdout = redirected_output.getvalue()
+        stderr = redirected_error.getvalue()
+        sys.stdout = old_stdout
+        sys.stderr = old_stderr
+        evaluation = ""
+        if exc:
+            evaluation = exc
+        elif stderr:
+            evaluation = stderr
+        elif stdout:
+            evaluation = stdout
+        else:
+            evaluation = "Success"
+        final_output = f"•  Eval : \n`{cmd}` \n\n•  Result : \n`{evaluation}` \n"
     # await eor(
     # LEGENDevent,
     # "**Eval Command Executed. Check out LOGGER_ID Group[Private Group Where All Message Forward]for result.**",
     # )
-    if "session" in cmd:
-        await eor(event, "String is a  Sensetive Data.\nSo, Its Protected By LegendBot")
-        return
-    else:
-        await eor(
-            LEGENDevent,
-            f"#EVAL \n\nEval command was executed sucessfully. \n\n{final_output}",
-        )
+        if "session" in cmd:
+            await eor(event, "String is a  Sensetive Data.\nSo, Its Protected By LegendBot")
+            return
+        else:
+            await eor(
+                LEGENDevent,
+                f"#EVAL \n\nEval command was executed sucessfully. \n\n{final_output}",
+            )
 
 
 async def aexec(code, smessatatus):
