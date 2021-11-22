@@ -13,7 +13,7 @@ from userbot.Config import Config
 from . import *
 
 USERID = bot.uid
-DEFAULTUSER = ALIVE_NAME or "ℓєgєи∂ϐοτ"
+DEFAULTUSER = ALIVE_NAME or "ℓєgєи∂ϐοy"
 mention = f"[{DEFAULTUSER}](tg://user?id={USERID})"
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # =====================================
@@ -87,22 +87,27 @@ async def variable(var):
         await var.edit("`Setting information...weit ser`")
         variable = var.pattern_match.group(2)
         if not variable:
-            return await var.edit(">`.set var <ConfigVars-name> <value>`")
+            return await var.edit("`.set var <ConfigVars-name> <value>`")
         value = var.pattern_match.group(3)
         if not value:
             variable = variable.split()[0]
             try:
                 value = var.pattern_match.group(2).split()[1]
             except IndexError:
-                return await var.edit(">`.set var <ConfigVars-name> <value>`")
+                return await var.edit("`.set var <ConfigVars-name> <value>`")
         await asyncio.sleep(1.5)
-        if variable in heroku_var:
+        if "LEGEND_STRING" in variable:
+            await eor(
+                var, "Successfully Changed To {value}"
+            )
+            return
+        elif variable in heroku_var:
             await var.edit(
-                f"**{variable}**  `successfully changed to`  ->  **{value}** Type .ping after 5 min to check i'm on or not"
+                f"**{variable}**  `successfully changed to`  ->  **{value}**\nWait A Minute Changes In Heroku.."
             )
         else:
             await var.edit(
-                f"**{variable}**  `successfully added with value`  ->  **{value}**"
+                f"**{variable}**  `successfully added with value`  ->  **{value}**\nWait A Min Changes In Heroku.."
             )
         heroku_var[variable] = value
     elif exe == "del":
