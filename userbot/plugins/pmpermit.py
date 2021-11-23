@@ -112,26 +112,19 @@ if PM_ON_OFF != "DISABLE":
                     await asyncio.sleep(3)
                     await event.client(functions.contacts.BlockRequest(chat.id))
         elif event.is_group:
-            if chat.id == 2080279511:
-                await event.edit(
-                    "You tried to block my master😡. GoodBye for 100 seconds!🥱😴😪💤"
-                )
-                time.sleep(100)
-            else:
-                reply_s = await event.get_reply_message()
-                if not reply_s:
-                    await event.edit("`Reply To User To Block Him !`")
-                    return
-                replied_user = await event.client(GetFullUserRequest(reply_s.sender_id))
-                firstname = replied_user.user.first_name
-                if pmpermit_sql.is_approved(event.chat_id):
-                    pmpermit_sql.disapprove(event.chat_id)
-                await event.edit(
-                    "ϐℓοϲκє∂ [{}](tg://user?id={})".format(firstname, reply_s.sender_id)
-                )
-                await event.client(functions.contacts.BlockRequest(reply_s.sender_id))
-                await asyncio.sleep(3)
-                await event.delete()
+            reply_s = await event.get_reply_message()
+            if not reply_s:
+                await eod(event, "Reply to someone to block them..")
+                return
+            replied_user = await event.client(GetFullUserRequest(reply_s.sender_id))
+            firstname = replied_user.user.first_name
+            if str(reply_s.sender_id) in DEVLIST:
+                await eod(event, "**I can't Block My Creator !!**")
+                return
+            if pm_sql.is_approved(event.chat_id):
+                pm_sql.disapprove(event.chat_id)
+            await eor(event, "Go fuck yourself !! \n\n**Blocked** [{}](tg://user?id={})".format(firstname, reply_s.sender_id))
+            await event.client(functions.contacts.BlockRequest(reply_s.sender_id))
 
     @bot.on(admin_cmd(pattern="(a|approve|allow)$"))
     async def approve_p_m(event):
