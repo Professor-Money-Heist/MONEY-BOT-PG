@@ -338,10 +338,10 @@ async def _(event):
     try:
         int(FBAN)
         if int(FBAN) == 2082798662:
-            await event.edit("Something went wrong.")
+            await event.edit("Sorry, I Can't Block My Creator")
             return
     except:
-        if FBAN == "@Krishna_045":
+        if FBAN == "@The_LegendBoy":
             await event.edit("Something went wrong.")
             return
     if FBAN_GROUP_ID:
