@@ -1,4 +1,3 @@
-
 from asyncio import sleep
 
 from telethon.errors import (
@@ -19,16 +18,16 @@ from telethon.tl.types import (
     MessageEntityMentionName,
     MessageMediaPhoto,
 )
-from userbot.Config import Config 
+
 from LEGENDBOT.utils import *
 from userbot import *
 from userbot.cmdhelp import CmdHelp
+from userbot.Config import Config
 from userbot.plugins.sql_helper.mute_sql import is_muted
 
 from . import *
 
-
-lg_id = Config.LOGGER_ID 
+lg_id = Config.LOGGER_ID
 # =================== CONSTANT ===================
 
 PP_TOO_SMOL = "`The image is too small`"
