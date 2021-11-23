@@ -1,10 +1,4 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-"""
-Userbot module to help you manage a group
-"""
+
 from asyncio import sleep
 
 from telethon.errors import (
@@ -25,7 +19,7 @@ from telethon.tl.types import (
     MessageEntityMentionName,
     MessageMediaPhoto,
 )
-
+from userbot.Config import Config 
 from LEGENDBOT.utils import *
 from userbot import *
 from userbot.cmdhelp import CmdHelp
@@ -33,6 +27,8 @@ from userbot.plugins.sql_helper.mute_sql import is_muted
 
 from . import *
 
+
+lg_id = Config.LOGGER_ID 
 # =================== CONSTANT ===================
 
 PP_TOO_SMOL = "`The image is too small`"
@@ -111,7 +107,7 @@ async def set_group_photo(gpic):
             await edit_or_reply(gpic, f"**Error : **`{str(e)}`")
         if BOTLOG and legend:
             await gpic.client.send_message(
-                BOTLOG_CHATID,
+                lg_id,
                 "#GROUPPIC\n"
                 f"Group profile pic changed "
                 f"CHAT: {gpic.chat.title}(`{gpic.chat_id}`)",
@@ -147,7 +143,7 @@ async def promote(promt):
     try:
         await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
         await LEGENDevent.edit(
-            "**🔥 Přômôťêđ  [{user.first_name}](tg://user?id={user.id})  Successfully In**  `{promt.chat.title}`!! \n**Admin Tag :**  `{rank}`"
+            f"**🔥 Přômôťêđ  [{user.first_name}](tg://user?id={user.id})  Successfully In**  `{promt.chat.title}`!! \n**Admin Tag :**  `{rank}`"
         )
     except BadRequestError:
         await LEGENDevent.edit(NO_PERM)
@@ -196,7 +192,7 @@ async def demote(dmod):
     )
     if BOTLOG:
         await dmod.client.send_message(
-            BOTLOG_CHATID,
+            lg_id,
             "#DEMOTE\n"
             f"USER: [{user.first_name}](tg://user?id={user.id})\n"
             f"CHAT: {dmod.chat.title}(`{dmod.chat_id}`)",
@@ -237,7 +233,7 @@ async def ban(bon):
         await LEGENDevent.edit(f"{str(user.id)} is banned!")
     if BOTLOG:
         await bon.client.send_message(
-            BOTLOG_CHATID,
+            lg_id,
             "#BAN\n"
             f"USER: [{user.first_name}](tg://user?id={user.id})\n"
             f"CHAT: {bon.chat.title}({bon.chat_id})",
@@ -266,7 +262,7 @@ async def nothanos(unbon):
         await LEGENDevent.edit("υиϐαииє∂ ѕυϲϲєѕѕƒυℓℓγ! Giving one more chance 😏")
         if BOTLOG:
             await unbon.client.send_message(
-                BOTLOG_CHATID,
+                lg_id,
                 "#UNBAN\n"
                 f"USER: [{user.first_name}](tg://user?id={user.id})\n"
                 f"CHAT: {unbon.chat.title}(`{unbon.chat_id}`)",
@@ -315,7 +311,7 @@ async def pin(msg):
     user = await get_user_from_id(msg.sender_id, msg)
     if BOTLOG:
         await msg.client.send_message(
-            BOTLOG_CHATID,
+            lg_id,
             "#PIN\n"
             f"ADMIN: [{user.first_name}](tg://user?id={user.id})\n"
             f"CHAT: {msg.chat.title}(`{msg.chat_id}`)\n"
@@ -359,7 +355,7 @@ async def kick(usr):
         await LEGENDevent.edit(f"Kicked [{user.first_name}](tg://user?id={user.id})!")
     if BOTLOG:
         await usr.client.send_message(
-            BOTLOG_CHATID,
+            lg_id,
             "#KICK\n"
             f"USER: [{user.first_name}](tg://user?id={user.id})\n"
             f"CHAT: {usr.chat.title}({usr.chat_id})\n",
