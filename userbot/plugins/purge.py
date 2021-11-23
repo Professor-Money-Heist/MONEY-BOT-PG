@@ -13,8 +13,10 @@ from telethon.errors import rpcbaseerrors
 from LEGENDBOT.utils import admin_cmd, errors_handler, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
+
 BOTLOG_CHATID = Config.LOGGER_ID
 from userbot import BOTLOG
+
 
 async def get_target_message(event):
     if event.is_reply and (await event.get_reply_message()).sender_id == borg.uid:
