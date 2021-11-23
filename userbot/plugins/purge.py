@@ -1,9 +1,3 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
-#
-# Licensed under the Raphielscape Public License, Version 1.c (the "License");
-# you may not use this file except in compliance with the License.
-#
-""" Userbot module for purging unneeded messages(usually spam or ot). """
 
 from asyncio import sleep
 
@@ -44,7 +38,6 @@ async def await_read(chat, message):
 @borg.on(admin_cmd(pattern=r"edit"))
 @errors_handler
 async def editer(edit):
-    """For .editme command, edit your last message."""
     message = edit.text
     chat = await edit.get_input_chat()
     self_id = await edit.client.get_peer_id("me")
@@ -110,8 +103,9 @@ async def fastpurger(purg):
         await purg.client.send_message(
             BOTLOG_CHATID, "Purge of " + str(count) + " messages done successfully."
         )
-    await sleep(4)
+    await sleep(2)
     await done.delete()
+    await purg.delete()
 
 
 # @register(outgoing=True, pattern="^.purgeme")
@@ -141,6 +135,7 @@ async def purgeme(delme):
     await sleep(2)
     i = 1
     await smsg.delete()
+    await delme.delete()
 
 
 @bot.on(admin_cmd(pattern=r"sd", outgoing=True))
