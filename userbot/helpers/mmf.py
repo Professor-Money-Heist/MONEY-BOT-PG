@@ -2,7 +2,7 @@ import os
 import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
-
+from userbot.Config import Config
 
 async def draw_to_Text(image_path, text):
     img = Image.open(image_path)
