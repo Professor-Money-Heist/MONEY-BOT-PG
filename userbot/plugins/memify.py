@@ -179,8 +179,53 @@ async def nope(kraken):
 client = borg
 
 
-@bot.on(admin_cmd(pattern="(memify|mmf) ?(.*)"))
-@bot.on(sudo_cmd(pattern="(memify|mmf) ?(.*)", allow_sudo=True))
+
+
+@bot.on(admin_cmd(pattern="memify ?(.*)"))
+@bot.on(sudo_cmd(pattern="memify ?(.*)", allow_sudo=True))
+async def _(event):
+    _reply = await event.get_reply_message()
+    msg = event.pattern_match.group(1)
+    if not (_reply and (_reply.media)):
+        legen_ = await eod(event, "`Can't memify this 🥴`")
+        return
+    legend = await _reply.download_media()
+    if legend.endswith((".tgs")):
+        legen_ = await eor(event, "**Memifying 🌚🌝**")
+        cmd = ["lottie_convert.py", legend, "pic.png"]
+        file = "pic.png"
+        process = await asyncio.create_subprocess_exec(
+            *cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+        )
+        stdout, stderr = await process.communicate()
+        stderr.decode().strip()
+        stdout.decode().strip()
+    elif legend.endswith((".webp", ".png")):
+        legen_ = await eor(event, "**Memifying 🌚🌝**")
+        pics = Image.open(legend)
+        pics.save("pic.png", format="PNG", optimize=True)
+        file = "pic.png"
+    else:
+        legen_ = await eor(event, "**Memifying 🌚🌝**")
+        img = cv2.VideoCapture(legend)
+        tal, semx = img.read()
+        cv2.imwrite("pic.png", semx)
+        file = "pic.png"
+    output = await drawText(file, msg)
+    await bot.send_file(
+        event.chat_id, output, force_document=False, reply_to=event.reply_to_msg_id
+    )
+    await legen_.delete()
+    try:
+        os.remove(legend)
+        os.remove(file)
+        os.remove(output)
+    except BaseException:
+        pass
+
+
+@bot.on(admin_cmd(pattern="mmf ?(.*)"))
+@bot.on(sudo_cmd(pattern="mmf ?(.*)", allow_sudo=True))
 async def handler(event):
     if event.fwd_from:
         return
@@ -199,7 +244,6 @@ async def handler(event):
     meme = await drawText(file, text)
     await client.send_file(event.chat_id, file=meme, force_document=False)
     os.remove(meme)
-
 
 """async def drawText(image_path, text):
     img = Image.open(image_path)
