@@ -1,8 +1,8 @@
 import os
 import textwrap
-import cv2
 
 from PIL import Image, ImageDraw, ImageFont
+
 
 async def draw_to_Text(image_path, text):
     img = Image.open(image_path)
@@ -109,7 +109,6 @@ async def draw_to_Text(image_path, text):
     webp_file = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, image_name)
     img.save(webp_file, "webp")
     return webp_file
-
 
 
 async def drawText(image_path, text):
