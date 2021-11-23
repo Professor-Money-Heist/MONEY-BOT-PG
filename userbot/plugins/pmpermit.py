@@ -30,12 +30,17 @@ LEGEND_FIRST = (
     )
 )
 
+
 @bot.on(admin_cmd(pattern="unblock ?(.*)"))
 async def unb(event):
     if event.is_private:
-        replied_user = await event.client(GetFullUserRequest (await event.get_input_chat()))
+        replied_user = await event.client(
+            GetFullUserRequest(await event.get_input_chat())
+        )
         firstname = replied_user.user.first_name
-        await eor(event, f"**Unblocked [{firstname}](tg://user?id={event.chat_id}) !!**")
+        await eor(
+            event, f"**Unblocked [{firstname}](tg://user?id={event.chat_id}) !!**"
+        )
         await event.client(functions.contacts.UnblockRequest(event.chat_id))
     elif event.is_group:
         reply_s = await event.get_reply_message()
@@ -44,8 +49,11 @@ async def unb(event):
             return
         replied_user = await event.client(GetFullUserRequest(reply_s.sender_id))
         firstname = replied_user.user.first_name
-        await eor(event, f"**Unblocked [{firstname}](tg://user?id={reply_s.sender_id}) !!**")
+        await eor(
+            event, f"**Unblocked [{firstname}](tg://user?id={reply_s.sender_id}) !!**"
+        )
         await event.client(functions.contacts.UnblockRequest(reply_s.sender_id))
+
 
 if PM_ON_OFF != "DISABLE":
 
@@ -124,7 +132,6 @@ if PM_ON_OFF != "DISABLE":
                 await event.client(functions.contacts.BlockRequest(reply_s.sender_id))
                 await asyncio.sleep(3)
                 await event.delete()
-
 
     @bot.on(admin_cmd(pattern="(a|approve|allow)$"))
     async def approve_p_m(event):
