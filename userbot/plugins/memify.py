@@ -239,12 +239,12 @@ async def handler(event):
     text = str(event.pattern_match.group(1)).strip()
     if len(text) < 1:
         return await edit_or_reply(event, "You might want to try `.help memify`")
-    meme = await drawText(file, text)
+    meme = await draw_to_Text(file, text)
     await client.send_file(event.chat_id, file=meme, force_document=False)
     os.remove(meme)
 
 
-"""async def drawText(image_path, text):
+async def draw_to_Text(image_path, text):
     img = Image.open(image_path)
     os.remove(image_path)
     i_width, i_height = img.size
@@ -349,7 +349,7 @@ async def handler(event):
     webp_file = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, image_name)
     img.save(webp_file, "webp")
     return webp_file
-"""
+
 
 CmdHelp("memify").add_command(
     "mmf",
