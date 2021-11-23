@@ -44,7 +44,7 @@ async def approve_p_m(event):
             pm_sql.disapprove(event.chat_id)
         await eor(
             event,
-            "Go Get Some Sleep Retard !! \n\n**Blocked** [{}](tg://user?id={})".format(
+            "Go And Fuck With Ur Self !! \n\n**Blocked** [{}](tg://user?id={})".format(
                 firstname, event.chat_id
             ),
         )
@@ -63,7 +63,7 @@ async def approve_p_m(event):
             pm_sql.disapprove(event.chat_id)
         await eor(
             event,
-            "Go fuck yourself !! \n\n**Blocked** [{}](tg://user?id={})".format(
+            "Go To Hell !! \n\n**Blocked** [{}](tg://user?id={})".format(
                 firstname, reply_s.sender_id
             ),
         )
