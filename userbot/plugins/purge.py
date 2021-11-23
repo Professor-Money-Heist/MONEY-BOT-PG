@@ -11,9 +11,10 @@ import telethon
 from telethon.errors import rpcbaseerrors
 
 from LEGENDBOT.utils import admin_cmd, errors_handler, sudo_cmd
-from userbot import BOTLOG, BOTLOG_CHATID
 from userbot.cmdhelp import CmdHelp
-
+from userbot.Config import Config
+BOTLOG_CHATID = Config.LOGGER_ID
+from userbot import BOTLOG
 
 async def get_target_message(event):
     if event.is_reply and (await event.get_reply_message()).sender_id == borg.uid:
@@ -107,7 +108,7 @@ async def fastpurger(purg):
         await purg.client.send_message(
             BOTLOG_CHATID, "Purge of " + str(count) + " messages done successfully."
         )
-    await sleep(2)
+    await sleep(4)
     await done.delete()
 
 
