@@ -179,8 +179,6 @@ async def nope(kraken):
 client = borg
 
 
-
-
 @bot.on(admin_cmd(pattern="memify ?(.*)"))
 @bot.on(sudo_cmd(pattern="memify ?(.*)", allow_sudo=True))
 async def _(event):
@@ -244,6 +242,7 @@ async def handler(event):
     meme = await drawText(file, text)
     await client.send_file(event.chat_id, file=meme, force_document=False)
     os.remove(meme)
+
 
 """async def drawText(image_path, text):
     img = Image.open(image_path)
