@@ -29,8 +29,34 @@ LEGEND_FIRST = (
         legend_mention, CSTM_PMP, max_flood
     )
 )
+@bot.on(admin_cmd(pattern="block ?(.*)"))
+async def approve_p_m(event):
+    if event.is_private:
+        replied_user = await event.client(GetFullUserRequest(await event.get_input_chat()))
+        firstname = replied_user.user.first_name
+        if str(event.chat_id) in DEVLIST:
+            await eod(event, "**I can't block my creator !!**")
+            return
+        if pm_sql.is_approved(event.chat_id):
+            pm_sql.disapprove(event.chat_id)
+        await eor(event, "Go Get Some Sleep Retard !! \n\n**Blocked** [{}](tg://user?id={})".format(firstname, event.chat_id))
+        await event.client(functions.contacts.BlockRequest(event.chat_id))
+    elif event.is_group:
+        reply_s = await event.get_reply_message()
+        if not reply_s:
+            await eod(event, "Reply to someone to block them..")
+            return
+        replied_user = await event.client(GetFullUserRequest(reply_s.sender_id))
+        firstname = replied_user.user.first_name
+        if str(reply_s.sender_id) in DEVLIST:
+            await eod(event, "**I can't Block My Creator !!**")
+            return
+        if pm_sql.is_approved(event.chat_id):
+            pm_sql.disapprove(event.chat_id)
+        await eor(event, "Go fuck yourself !! \n\n**Blocked** [{}](tg://user?id={})".format(firstname, reply_s.sender_id))
+        await event.client(functions.contacts.BlockRequest(reply_s.sender_id))
 
-
+        
 @bot.on(admin_cmd(pattern="unblock ?(.*)"))
 async def unb(event):
     if event.is_private:
@@ -85,7 +111,7 @@ if PM_ON_OFF != "DISABLE":
                 await asyncio.sleep(3)
                 await rko.delete()
 
-    @bot.on(admin_cmd(pattern="(block|blk) ?(.*)"))
+    """@bot.on(admin_cmd(pattern="(block|blk) ?(.*)"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -130,7 +156,8 @@ if PM_ON_OFF != "DISABLE":
                 ),
             )
             await event.client(functions.contacts.BlockRequest(reply_s.sender_id))
-
+"""
+    
     @bot.on(admin_cmd(pattern="(a|approve|allow)$"))
     async def approve_p_m(event):
         if event.fwd_from:
