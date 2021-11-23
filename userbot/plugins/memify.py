@@ -16,7 +16,7 @@ if not os.path.isdir(path):
     os.makedirs(path)
 
 from userbot.Config import Config
-
+from userbot.helpers.mmf import *
 lg_id = os.environ.get("LOGGER_ID", None)
 
 
@@ -200,7 +200,7 @@ async def handler(event):
     os.remove(meme)
 
 
-async def drawText(image_path, text):
+"""async def drawText(image_path, text):
     img = Image.open(image_path)
     os.remove(image_path)
     i_width, i_height = img.size
@@ -305,7 +305,7 @@ async def drawText(image_path, text):
     webp_file = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, image_name)
     img.save(webp_file, "webp")
     return webp_file
-
+"""
 
 CmdHelp("memify").add_command(
     "mmf",
