@@ -124,4 +124,15 @@ async def make_gif(event, file):
             return "Unblock @tgstogifbot"
 
 
+async def unsave_gif(event, hgif):
+    try:
+        await event.client(
+            functions.messages.SaveGifRequest(
+                id=get_input_document(hgif),
+                unsave=True,
+            )
+        )
+    except Exception as e:
+        LOGS.info(e)
+
 # legendbot
