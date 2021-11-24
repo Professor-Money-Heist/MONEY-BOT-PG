@@ -200,21 +200,20 @@ async def users(event):
         await event.delete()
         
 async def legend():
-  pro = await lnbot.get_me()
-  bot.set(bot_username=(await lnbot.get_me()).username)
-  legend = await bot.get_me()
-  YESS = f"""
-LegendBot Has Been deployed 
-"""
-  if Config.LOGGER_ID:
-    try:
-        TRY = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data="rul")]]
-      
-        await lnbot.send_message(bot.me.id, YESS, buttons=TRY)
-      except:
-        pass
-  else:
-      print("YOUR BOT DEPLOYED SUCCESSFULLY")
+    pro = await lnbot.get_me()
+    bot.set(bot_username=(await lnbot.get_me()).username)
+    legend = await bot.get_me()
+    YESS = f"""
+    LegendBot Has Been deployed 
+    """
+    if Config.LOGGER_ID:
+        try:
+            TRY = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data="rul")]]
+            await lnbot.send_message(bot.me.id, YESS, buttons=TRY)
+            except:
+                pass
+    else:
+        print("YOUR BOT DEPLOYED SUCCESSFULLY")
 
     # Join LegndBot Channel after deploying 🤐😅
     try:
