@@ -1,6 +1,11 @@
 import os
 import sys
 from pathlib import Path
+import telethon.utils
+
+from telethon import events, Button
+from telethon import functions, types
+from telethon.tl.types import InputMessagesFilterDocument
 
 import telethon.utils
 from telethon import TelegramClient
