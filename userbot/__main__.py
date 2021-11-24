@@ -179,28 +179,14 @@ async def legend_op():
 """
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rul")))
+@tbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rul")))
 async def help(event):
     await event.delete()
     if event.query.user_id is not bot.uid:
         await tgbot.send_message(
             event.chat_id,
-            message="🔰Rᴇᴀᴅ Tʜᴇ Rᴜʟᴇꜱ Tᴏᴏ🔰\n\n🔹 Dᴏɴ'ᴛ Sᴩᴀᴍ\n🔹 ᴛᴀʟᴋ Fʀɪᴇɴᴅʟy\n🔹 Dᴏɴ'ᴛ Bᴇ Rᴜᴅᴇ\n🔹 Sᴇɴᴅ Uʀ Mᴇꜱꜱᴀɢᴇꜱ Hᴇʀᴇ\n🔹 Nᴏ Pᴏʀɴᴏɢʀᴀᴘʜʏ\n🔹 Dᴏɴ'ᴛ Wʀɪᴛᴇ Bᴀᴅ Wᴏʀᴅs.\n\nWʜᴇɴ I Gᴇᴛ Fʀᴇᴇ Tɪᴍᴇ , I'ʟʟ Rᴇᴩʟy U 💯✅",
-            buttons=[
-                [
-                    custom.Button.inline(
-                        "🚫 Cʟᴏsᴇ 🚫",
-                        data="close_vcc",
-                    )
-                ],
-            ],
-        )
-
-
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close_vcc")))
-async def users(event):
-    if event.query.user_id == bot.uid:
-        await event.delete()
+            "🔰Rᴇᴀᴅ Tʜᴇ Rᴜʟᴇꜱ Tᴏᴏ🔰\n\n🔹 Dᴏɴ'ᴛ Sᴩᴀᴍ\n🔹 ᴛᴀʟᴋ Fʀɪᴇɴᴅʟy\n🔹 Dᴏɴ'ᴛ Bᴇ Rᴜᴅᴇ\n🔹 Sᴇɴᴅ Uʀ Mᴇꜱꜱᴀɢᴇꜱ Hᴇʀᴇ\n🔹 Nᴏ Pᴏʀɴᴏɢʀᴀᴘʜʏ\n🔹 Dᴏɴ'ᴛ Wʀɪᴛᴇ Bᴀᴅ Wᴏʀᴅs.\n\nWʜᴇɴ I Gᴇᴛ Fʀᴇᴇ Tɪᴍᴇ , I'ʟʟ Rᴇᴩʟy U 💯✅",
+            )
 
 
 async def legend():
