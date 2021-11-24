@@ -7,7 +7,7 @@ import telethon.utils
 from telethon import Button, TelegramClient, custom, events
 from telethon.tl.functions.channels import JoinChannelRequest
 
-from LEGENDBOY import lnbot
+from LEGENDBOY import lnbot, bbbot
 from userbot import LOGS, LEGENDversion, bot
 from userbot.Config import Config
 from userbot.utils import (
@@ -445,11 +445,18 @@ async def users(event):
 
 
 async def legend():
-    await lnbot.get_me()
-    await bot.get_me()
-    YESS = f"
-    LegendBot Has Been deployed 
-    "
+    fuck = await xbot.get_me()
+    bbbot.set(bot_username=(await lnbot.get_me()).username)
+    legend = await bbbot.get_me()
+    YESS = f"""
+    **Sᴏᴍᴇᴛʜɪɴɢ Hᴀᴘᴘᴇɴᴇᴅ ! Lᴇᴛs Cʜᴇᴄᴋ** 🤔 
+    `☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎`
+    **Dɪɴɢ Dᴏɴɢ...** `.\./.\` **Tɪɴɢ Tᴏɴɢ...** `./.\./` **LegendBot Hᴀs Bᴇᴇɴ Dᴇᴘʟᴏʏᴇᴅ !!**
+    **Pɪɴɢ Pᴏɴɢ...**
+    **➥ Mᴀsᴛᴇʀ** `➪` **@{legend.username}**
+    **➥ Assɪsᴛᴀɴᴛ** `➪` **@{pro.username}**
+    **Cʜᴇᴄᴋ ᴍᴏɪ Pɪɴɢ ᴛɪᴍᴇ ʙʏ** `.ping` **[Fᴏʀ UsᴇʀBᴏᴛ] or** `/ping` **[Fᴏʀ Assɪsᴛᴀɴᴛ]**
+    """
     if Config.LOGGER_ID:
         try:
             TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
