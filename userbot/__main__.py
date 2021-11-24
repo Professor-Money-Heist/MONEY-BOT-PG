@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 
 import telethon.utils
-from telethon import Button, TelegramClient, events, custom
+from telethon import Button, TelegramClient, custom, events
 from telethon.tl.functions.channels import JoinChannelRequest
 
 from LEGENDBOY import lnbot
