@@ -7,7 +7,7 @@ from telethon import TelegramClient
 from telethon.tl.functions.channels import JoinChannelRequest
 
 from LEGENDBOY import lnbot
-from userbot import LOGS, LEGENDversion, bot, tbot
+from userbot import LOGS, LEGENDversion, bot
 from userbot.Config import Config
 from userbot.utils import (
     load_abuse,
@@ -179,6 +179,7 @@ async def legend_op():
 """
 
 tgbot = bot.tgbot
+
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rul")))
 async def help(event):
