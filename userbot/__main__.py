@@ -452,9 +452,8 @@ async def legend():
     """
     if Config.LOGGER_ID:
         try:
-            TRY = [[Button.inline("start", data="start")]]
+            TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
             await lnbot.send_message(bot.me.id, YESS, buttons=TRY)
-
         except:
             pass
     else:
