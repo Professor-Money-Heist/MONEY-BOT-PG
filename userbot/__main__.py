@@ -9,8 +9,8 @@ from telethon.tl.functions.channels import JoinChannelRequest
 
 from LEGENDBOY import lnbot
 from userbot import LOGS, LEGENDversion, bot
+from userbot.a import *
 from userbot.Config import Config
-from userbot.plugins.assistant.start import *
 from userbot.utils import (
     load_abuse,
     load_addons,
@@ -180,7 +180,6 @@ async def legend_op():
         print(str(e))
 
 
-tgbot = bot.tgbot
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rul")))
