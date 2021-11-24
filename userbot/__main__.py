@@ -447,9 +447,9 @@ async def users(event):
 async def legend():
     await lnbot.get_me()
     await bot.get_me()
-    YESS = f"""
+    YESS = f"
     LegendBot Has Been deployed 
-    """
+    "
     if Config.LOGGER_ID:
         try:
             TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
