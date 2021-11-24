@@ -445,7 +445,7 @@ async def users(event):
 
 
 async def legend():
-    await xbot.get_me()
+    await lnbot.get_me()
     bbbot.set(bot_username=(await lnbot.get_me()).username)
     legend = await bbbot.get_me()
     YESS = f"""
