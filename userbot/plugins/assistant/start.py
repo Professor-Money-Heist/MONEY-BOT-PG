@@ -1,9 +1,14 @@
 import asyncio
 import io
 import re
+import os
+import re
+import sys
+from pathlib import Path
 
 from telethon import Button, custom, events
 from telethon.tl.functions.users import GetFullUserRequest
+
 from userbot.Config import Config 
 from userbot import bot 
 fdom userbot.plugins import *
@@ -25,7 +30,7 @@ async def legend():
     await lnbot.get_me()
     await bot.get_me()
     YESS = f"""
-    {legend_mention} LegendBot Has Been deployed 
+    LegendBot Has Been deployed 
     """
     if Config.LOGGER_ID:
         try:
