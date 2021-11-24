@@ -178,8 +178,9 @@ async def legend_op():
         print(str(e))
 """
 
+tgbot = bot.tgbot
 
-@tbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rul")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rul")))
 async def help(event):
     await event.delete()
     if event.query.user_id is not bot.uid:
