@@ -17,6 +17,7 @@ from userbot.utils import (
     start_assistant,
     start_spam,
 )
+from userbot.assistant.start import *
 from var import Var
 
 l2 = Config.SUDO_COMMAND_HAND_LER
@@ -200,7 +201,24 @@ async def legend():
     """
     if Config.LOGGER_ID:
         try:
-            TRY = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data="rul")]]
+            TRY = [
+                [
+                    Button.url(
+                        "🗣 Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ 🗣",
+                        f"t.me/{bot_username}?startgroup=true",
+                    )
+                ],
+                [
+                    custom.Button.inline("🙇 Usᴇʀs Lɪsᴛ 🙇", data="users"),
+                    custom.Button.inline("👾 Cᴏᴍᴍᴀɴᴅs ✘👾", data="gibcmd"),
+                ],
+                [
+                    Button.url(" Support ", "https://t.me/Legend_Userbot"),
+                    Button.url(" Updates ", "https://t.me/Official_LegendBot"),
+                ],
+                [custom.Button.inline("⚙ Sᴇᴛᴛɪɴɢs ⚙", data="settings")],
+                [custom.Button.inline("⚜ Hack ⚜", data="hack")],
+            ]
             await lnbot.send_message(bot.me.id, YESS, buttons=TRY)
 
         except:
