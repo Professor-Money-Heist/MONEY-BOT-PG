@@ -179,6 +179,7 @@ async def legend_op():
     except Exception as e:
         print(str(e))
 
+tgbot = bot.tgbot 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rul")))
 async def help(event):
@@ -199,12 +200,6 @@ async def legend():
     if Config.LOGGER_ID:
         try:
             TRY = [
-                [
-                    Button.url(
-                        "🗣 Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ 🗣",
-                        f"t.me/{bot_username}?startgroup=true",
-                    )
-                ],
                 [
                     custom.Button.inline("🙇 Usᴇʀs Lɪsᴛ 🙇", data="users"),
                     custom.Button.inline("👾 Cᴏᴍᴍᴀɴᴅs ✘👾", data="gibcmd"),
