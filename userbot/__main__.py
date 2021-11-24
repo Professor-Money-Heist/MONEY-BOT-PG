@@ -9,7 +9,7 @@ from telethon.tl.functions.channels import JoinChannelRequest
 
 from LEGENDBOY import lnbot
 from userbot import LOGS, LEGENDversion, bot
-from userbot.assistant.start import *
+from userbot.plugins.assistant.start import *
 from userbot.Config import Config
 from userbot.utils import (
     load_abuse,
