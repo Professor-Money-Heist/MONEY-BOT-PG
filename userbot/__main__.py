@@ -6,7 +6,7 @@ import telethon.utils
 from telethon import TelegramClient
 from telethon.tl.functions.channels import JoinChannelRequest
 
-from userbot import LOGS, LEGENDversion, bot
+from userbot import LOGS, LEGENDversion, bot, tbot
 from userbot.Config import Config
 from userbot.utils import (
     load_abuse,
@@ -168,10 +168,10 @@ async def legend_op():
             "LEGEND_STRING"
         ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
         if Config.LOGGER_ID != 0:
-            await bot.send_file(
-                Config.LOGGER_ID,
+            await tbot.send_messages(
+                bot.me.id,
                 LEGEND_PIC,
-                caption=f"Deployed Lêɠêɳ̃dẞø† Successfully\n\nLêɠêɳ̃dẞø† ~ {LEGENDversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [LegendBot Channel](t.me/Official_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
+                f"Deployed Lêɠêɳ̃dẞø† Successfully\n\nLêɠêɳ̃dẞø† ~ {LEGENDversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [LegendBot Channel](t.me/Official_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
             )
     except Exception as e:
         print(str(e))
