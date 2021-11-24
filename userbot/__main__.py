@@ -9,6 +9,7 @@ from telethon.tl.functions.channels import JoinChannelRequest
 
 from LEGENDBOY import lnbot
 from userbot import LOGS, LEGENDversion, bot
+from userbot.assistant.start import *
 from userbot.Config import Config
 from userbot.utils import (
     load_abuse,
@@ -17,7 +18,6 @@ from userbot.utils import (
     start_assistant,
     start_spam,
 )
-from userbot.assistant.start import *
 from var import Var
 
 l2 = Config.SUDO_COMMAND_HAND_LER
