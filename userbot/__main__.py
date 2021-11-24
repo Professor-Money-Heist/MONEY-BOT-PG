@@ -181,6 +181,7 @@ async def legend_op():
 
 tgbot = bot.tgbot
 
+
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"start")))
 async def help(event):
     await event.delete()
@@ -207,7 +208,6 @@ async def help(event):
                 [custom.Button.inline("⚜ Hack ⚜", data="hack")],
             ],
         )
-
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rules")))
