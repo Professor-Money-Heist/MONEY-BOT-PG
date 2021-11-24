@@ -180,8 +180,6 @@ async def legend_op():
         print(str(e))
 
 
-
-
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rul")))
 async def help(event):
     await event.delete()

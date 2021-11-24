@@ -1,9 +1,7 @@
-import asyncio
 import io
 import re
 
 from telethon import Button, custom, events
-from telethon.tl.functions.users import GetFullUserRequest
 
 from userbot import bot
 
@@ -59,6 +57,7 @@ async def users(event):
             )
     else:
         pass
+
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"alive")))
 async def help(event):
