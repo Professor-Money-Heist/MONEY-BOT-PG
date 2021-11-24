@@ -7,7 +7,7 @@ from telethon import TelegramClient
 from telethon.tl.functions.channels import JoinChannelRequest
 
 from LEGENDBOY import lnbot
-from userbot import LOGS, LEGENDversion, bot
+from userbot import LOGS, LEGENDversion, bot, tbot
 from userbot.Config import Config
 from userbot.utils import (
     load_abuse,
