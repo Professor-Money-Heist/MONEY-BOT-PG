@@ -163,7 +163,7 @@ print(
 )
 print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
 
-"""
+
 async def legend_op():
     try:
         os.environ[
@@ -171,13 +171,13 @@ async def legend_op():
         ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
         if Config.LOGGER_ID != 0:
             await tbot.send_messages(
-                bot.me.id,
+                Config.LOGGER_ID,
                 LEGEND_PIC,
                 f"Deployed Lêɠêɳ̃dẞø† Successfully\n\nLêɠêɳ̃dẞø† ~ {LEGENDversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [LegendBot Channel](t.me/Official_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
             )
     except Exception as e:
         print(str(e))
-"""
+
 
 tgbot = bot.tgbot
 
@@ -221,7 +221,7 @@ async def legend():
 
 
 bot.loop.run_until_complete(legend())
-"""bot.loop.create_task(legend_op())"""
+bot.loop.create_task(legend_op())
 
 
 if len(sys.argv) not in (1, 3, 4):
