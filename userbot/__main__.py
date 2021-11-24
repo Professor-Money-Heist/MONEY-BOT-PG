@@ -445,16 +445,15 @@ async def users(event):
 
 
 async def legend():
-    await lnbot.get_me()
-    bbbot.set(bot_username=(await lnbot.get_me()).username)
-    legend = await bbbot.get_me()
+    LEGEND_USER = bot.me.first_name
+    The_LegendBoy = bot.uid
+    legd_mention = f"[{LEGEND_USER}](tg://user?id={The_LegendBoy})"
     YESS = f"""
     **Sᴏᴍᴇᴛʜɪɴɢ Hᴀᴘᴘᴇɴᴇᴅ ! Lᴇᴛs Cʜᴇᴄᴋ** 🤔 
     `☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎ ☟︎︎︎`
     **Dɪɴɢ Dᴏɴɢ...** `.\./.\` **Tɪɴɢ Tᴏɴɢ...** `./.\./` **LegendBot Hᴀs Bᴇᴇɴ Dᴇᴘʟᴏʏᴇᴅ !!**
     **Pɪɴɢ Pᴏɴɢ...**
-    **➥ Mᴀsᴛᴇʀ** `➪` **@{legend.username}**
-    **➥ Assɪsᴛᴀɴᴛ** `➪` **@{pro.username}**
+    **➥ Mᴀsᴛᴇʀ** `➪` **{legd_mention}**
     **Cʜᴇᴄᴋ ᴍᴏɪ Pɪɴɢ ᴛɪᴍᴇ ʙʏ** `.ping` **[Fᴏʀ UsᴇʀBᴏᴛ] or** `/ping` **[Fᴏʀ Assɪsᴛᴀɴᴛ]**
     """
     if Config.LOGGER_ID:
