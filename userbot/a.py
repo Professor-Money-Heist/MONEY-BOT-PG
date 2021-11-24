@@ -5,8 +5,7 @@ from telethon import Button, custom, events
 
 from userbot import bot
 
-tgbot = bot.tgbot
-
+from userbot import tgbot
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rules")))
 async def help(event):
