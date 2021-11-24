@@ -179,7 +179,9 @@ async def legend_op():
     except Exception as e:
         print(str(e))
 
-tgbot = bot.tgbot 
+
+tgbot = bot.tgbot
+
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rul")))
 async def help(event):
