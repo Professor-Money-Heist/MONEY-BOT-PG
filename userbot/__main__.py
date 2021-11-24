@@ -210,8 +210,9 @@ async def legend():
         try:
             TRY = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data="rul")]]
             await lnbot.send_message(bot.me.id, YESS, buttons=TRY)
-            except:
-                pass
+            
+        except:
+            pass
     else:
         print("YOUR BOT DEPLOYED SUCCESSFULLY")
 
