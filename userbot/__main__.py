@@ -144,12 +144,12 @@ async def spams():
         print("⚠️Spam Not Loading⚠️")
 
 
-"""bot.loop.run_until_complete(module())
+bot.loop.run_until_complete(module())
 bot.loop.run_until_complete(addons())
 bot.loop.run_until_complete(abuses())
 bot.loop.run_until_complete(assistants())
 bot.loop.run_until_complete(spams())
-"""
+
 print(
     f"""
 ╔════❰LEGENDBOT❱═❍⊱❁۪۪
