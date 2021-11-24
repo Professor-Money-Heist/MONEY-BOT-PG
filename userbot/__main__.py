@@ -176,7 +176,29 @@ async def legend_op():
     except Exception as e:
         print(str(e))
 """
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rul")))
+async def help(event):
+    await event.delete()
+    if event.query.user_id is not bot.uid:
+        await tgbot.send_message(
+            event.chat_id,
+            message="🔰Rᴇᴀᴅ Tʜᴇ Rᴜʟᴇꜱ Tᴏᴏ🔰\n\n🔹 Dᴏɴ'ᴛ Sᴩᴀᴍ\n🔹 ᴛᴀʟᴋ Fʀɪᴇɴᴅʟy\n🔹 Dᴏɴ'ᴛ Bᴇ Rᴜᴅᴇ\n🔹 Sᴇɴᴅ Uʀ Mᴇꜱꜱᴀɢᴇꜱ Hᴇʀᴇ\n🔹 Nᴏ Pᴏʀɴᴏɢʀᴀᴘʜʏ\n🔹 Dᴏɴ'ᴛ Wʀɪᴛᴇ Bᴀᴅ Wᴏʀᴅs.\n\nWʜᴇɴ I Gᴇᴛ Fʀᴇᴇ Tɪᴍᴇ , I'ʟʟ Rᴇᴩʟy U 💯✅",
+            buttons=[
+                [
+                    custom.Button.inline(
+                        "🚫 Cʟᴏsᴇ 🚫",
+                        data="close_vcc",
+                    )
+                ],
+            ],
+        )
 
+
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close_vcc")))
+async def users(event):
+    if event.query.user_id == bot.uid:
+        await event.delete()
+        
 async def legend():
   pro = await lnbot.get_me()
   bot.set(bot_username=(await lnbot.get_me()).username)
@@ -186,11 +208,11 @@ LegendBot Has Been deployed
 """
   if Config.LOGGER_ID:
     try:
-      TRY = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data='ass_back')]]
+        TRY = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data="rul")]]
       
-      await lnbot.send_message(bot.me.id, YESS, buttons=TRY)
-    except:
-       pass
+        await lnbot.send_message(bot.me.id, YESS, buttons=TRY)
+      except:
+        pass
   else:
       print("YOUR BOT DEPLOYED SUCCESSFULLY")
 
