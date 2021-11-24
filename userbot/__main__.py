@@ -196,7 +196,7 @@ async def legend():
     await lnbot.get_me()
     await bot.get_me()
     YESS = f"""
-    LegendBot Has Been deployed 
+   # LegendBot Has Been deployed 
     """
     if Config.LOGGER_ID:
         try:
