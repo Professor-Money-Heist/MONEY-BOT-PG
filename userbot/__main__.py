@@ -6,7 +6,8 @@ from pathlib import Path
 import telethon.utils
 from telethon import Button, TelegramClient, events
 from telethon.tl.functions.channels import JoinChannelRequest
-from userbot.assistant.start import *
+
+from userbot.assistant.start import legend
 from LEGENDBOY import lnbot
 from userbot import LOGS, LEGENDversion, bot
 from userbot.Config import Config
