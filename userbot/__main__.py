@@ -195,9 +195,9 @@ async def help(event):
 async def legend():
     await lnbot.get_me()
     await bot.get_me()
-    YESS = f"""
-   # LegendBot Has Been deployed 
-    """
+    YESS = f"
+    LegendBot Has Been deployed 
+    "
     if Config.LOGGER_ID:
         try:
             TRY = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data="rul")]]
