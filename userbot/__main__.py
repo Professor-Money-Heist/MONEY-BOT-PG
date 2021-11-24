@@ -5,8 +5,9 @@ from pathlib import Path
 import telethon.utils
 from telethon import TelegramClient
 from telethon.tl.functions.channels import JoinChannelRequest
+
 from LEGENDBOY import lnbot
-from userbot import LOGS, LEGENDversion, bot, tbot
+from userbot import LOGS, LEGENDversion, bot
 from userbot.Config import Config
 from userbot.utils import (
     load_abuse,
@@ -176,6 +177,8 @@ async def legend_op():
     except Exception as e:
         print(str(e))
 """
+
+
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rul")))
 async def help(event):
     await event.delete()
@@ -198,11 +201,12 @@ async def help(event):
 async def users(event):
     if event.query.user_id == bot.uid:
         await event.delete()
-        
+
+
 async def legend():
-    pro = await lnbot.get_me()
+    await lnbot.get_me()
     bot.set(bot_username=(await lnbot.get_me()).username)
-    legend = await bot.get_me()
+    await bot.get_me()
     YESS = f"""
     LegendBot Has Been deployed 
     """
@@ -210,7 +214,7 @@ async def legend():
         try:
             TRY = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data="rul")]]
             await lnbot.send_message(bot.me.id, YESS, buttons=TRY)
-            
+
         except:
             pass
     else:
@@ -226,6 +230,7 @@ async def legend():
         await bot(JoinChannelRequest("@Legend_Userbot"))
     except BaseException:
         pass
+
 
 bot.loop.run_until_complete(legend())
 """bot.loop.create_task(legend_op())"""
