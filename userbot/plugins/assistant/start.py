@@ -1,18 +1,11 @@
 import asyncio
 import io
 import re
-import os
-import re
-import sys
-from pathlib import Path
 
 from telethon import Button, custom, events
 from telethon.tl.functions.users import GetFullUserRequest
 
-from userbot.Config import Config 
-from userbot import bot 
-fdom userbot.plugins import *
-from LEGENDBOY import lnbot
+from userbot import bot
 from userbot.plugins.sql_helper.blacklist_assistant import (
     add_nibba_in_db,
     is_he_added,
@@ -25,22 +18,6 @@ from userbot.plugins.sql_helper.idadder import (
     get_all_users,
 )
 
-
-async def legend():
-    await lnbot.get_me()
-    await bot.get_me()
-    YESS = f"""
-    LegendBot Has Been deployed 
-    """
-    if Config.LOGGER_ID:
-        try:
-            TRY = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data="")]]
-            await lnbot.send_message(bot.me.id, YESS, buttons=TRY)
-
-        except:
-            pass
-    else:
-        print("YOUR BOT DEPLOYED SUCCESSFULLY")
 
 @tgbot.on(events.NewMessage(pattern="^/start"))
 async def start(event):
