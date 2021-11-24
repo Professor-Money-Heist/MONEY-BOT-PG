@@ -194,7 +194,6 @@ async def help(event):
 
 async def legend():
     await lnbot.get_me()
-    bot.set(bot_username=(await lnbot.get_me()).username)
     await bot.get_me()
     YESS = f"""
     LegendBot Has Been deployed 
