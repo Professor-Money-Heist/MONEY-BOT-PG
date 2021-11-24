@@ -1,6 +1,13 @@
 import io
 import re
+import os
+import re
+import sys
+from pathlib import Path
 
+import telethon.utils
+from telethon import Button, TelegramClient, events
+from telethon.tl.functions.channels import JoinChannelRequest
 from telethon import Button, custom, events
 
 from userbot import bot
