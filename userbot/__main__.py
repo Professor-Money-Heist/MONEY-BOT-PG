@@ -5,7 +5,7 @@ from pathlib import Path
 import telethon.utils
 from telethon import TelegramClient
 from telethon.tl.functions.channels import JoinChannelRequest
-
+from LEGENDBOY import lnbot
 from userbot import LOGS, LEGENDversion, bot, tbot
 from userbot.Config import Config
 from userbot.utils import (
@@ -142,12 +142,12 @@ async def spams():
         print("⚠️Spam Not Loading⚠️")
 
 
-bot.loop.run_until_complete(module())
+"""bot.loop.run_until_complete(module())
 bot.loop.run_until_complete(addons())
 bot.loop.run_until_complete(abuses())
 bot.loop.run_until_complete(assistants())
 bot.loop.run_until_complete(spams())
-
+"""
 print(
     f"""
 ╔════❰LEGENDBOT❱═❍⊱❁۪۪
@@ -161,7 +161,7 @@ print(
 )
 print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
 
-
+"""
 async def legend_op():
     try:
         os.environ[
@@ -175,6 +175,24 @@ async def legend_op():
             )
     except Exception as e:
         print(str(e))
+"""
+
+async def legend():
+  pro = await lnbot.get_me()
+  bot.set(bot_username=(await lnbot.get_me()).username)
+  legend = await bot.get_me()
+  YESS = f"""
+LegendBot Has Been deployed 
+"""
+  if Config.LOGGER_ID:
+    try:
+      TRY = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data='ass_back')]]
+      
+      await lnbot.send_message(bot.me.id, YESS, buttons=TRY)
+    except:
+       pass
+  else:
+      print("YOUR BOT DEPLOYED SUCCESSFULLY")
 
     # Join LegndBot Channel after deploying 🤐😅
     try:
@@ -187,8 +205,10 @@ async def legend_op():
     except BaseException:
         pass
 
+bot.loop.run_until_complete(legend())
+"""bot.loop.create_task(legend_op())"""
 
-bot.loop.create_task(legend_op())
+
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
 else:
