@@ -208,7 +208,7 @@ async def legend():
     """
     if Config.LOGGER_ID:
         try:
-            TRY = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data="rul")]]
+            TRY = [[Button.inline("start", data="rul")]]
             await lnbot.send_message(bot.me.id, YESS, buttons=TRY)
 
         except:
