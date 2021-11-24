@@ -7,7 +7,6 @@ import telethon.utils
 from telethon import Button, TelegramClient, events
 from telethon.tl.functions.channels import JoinChannelRequest
 
-from userbot.assistant.start import legend
 from LEGENDBOY import lnbot
 from userbot import LOGS, LEGENDversion, bot
 from userbot.Config import Config
@@ -180,18 +179,6 @@ async def legend_op():
         print(str(e))
 
 
-    # Join LegndBot Channel after deploying 🤐😅
-    try:
-        await bot(JoinChannelRequest("@Official_LegendBot"))
-    except BaseException:
-        pass
-
-    try:
-        await bot(JoinChannelRequest("@Legend_Userbot"))
-    except BaseException:
-        pass
-
-"""
 tgbot = bot.tgbot
 
 
@@ -208,9 +195,9 @@ async def help(event):
 async def legend():
     await lnbot.get_me()
     await bot.get_me()
-    YESS = f"
+    YESS = f"""
     LegendBot Has Been deployed 
-    "
+    """
     if Config.LOGGER_ID:
         try:
             TRY = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data="rul")]]
@@ -220,8 +207,17 @@ async def legend():
             pass
     else:
         print("YOUR BOT DEPLOYED SUCCESSFULLY")
-"""
 
+    # Join LegndBot Channel after deploying 🤐😅
+    try:
+        await bot(JoinChannelRequest("@Official_LegendBot"))
+    except BaseException:
+        pass
+
+    try:
+        await bot(JoinChannelRequest("@Legend_Userbot"))
+    except BaseException:
+        pass
 
 
 bot.loop.run_until_complete(legend())
