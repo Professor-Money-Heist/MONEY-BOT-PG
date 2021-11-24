@@ -191,12 +191,6 @@ async def help(event):
             message="Hello sir/miss,\nHow can i help u",
             buttons=[
                 [
-                    Button.url(
-                        "🗣 Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ 🗣",
-                        f"t.me/{bot_username}?startgroup=true",
-                    )
-                ],
-                [
                     custom.Button.inline("🙇 Usᴇʀs Lɪsᴛ 🙇", data="users"),
                     custom.Button.inline("👾 Cᴏᴍᴍᴀɴᴅs ✘👾", data="gibcmd"),
                 ],
