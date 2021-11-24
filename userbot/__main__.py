@@ -9,7 +9,6 @@ from telethon.tl.functions.channels import JoinChannelRequest
 
 from LEGENDBOY import lnbot
 from userbot import LOGS, LEGENDversion, bot
-from userbot.a import *
 from userbot.Config import Config
 from userbot.utils import (
     load_abuse,
@@ -201,18 +200,7 @@ async def legend():
     """
     if Config.LOGGER_ID:
         try:
-            TRY = [
-                [
-                    custom.Button.inline("🙇 Usᴇʀs Lɪsᴛ 🙇", data="users"),
-                    custom.Button.inline("👾 Cᴏᴍᴍᴀɴᴅs ✘👾", data="gibcmd"),
-                ],
-                [
-                    Button.url(" Support ", "https://t.me/Legend_Userbot"),
-                    Button.url(" Updates ", "https://t.me/Official_LegendBot"),
-                ],
-                [custom.Button.inline("⚙ Sᴇᴛᴛɪɴɢs ⚙", data="settings")],
-                [custom.Button.inline("⚜ Hack ⚜", data="hack")],
-            ]
+            TRY = [[Button.inline("Hᴇʀᴏᴋᴜ Vᴀʀs", data="rul")]]
             await lnbot.send_message(bot.me.id, YESS, buttons=TRY)
 
         except:
