@@ -6,7 +6,7 @@ from pathlib import Path
 import telethon.utils
 from telethon import Button, TelegramClient, events
 from telethon.tl.functions.channels import JoinChannelRequest
-
+from userbot.assistant.start import *
 from LEGENDBOY import lnbot
 from userbot import LOGS, LEGENDversion, bot
 from userbot.Config import Config
@@ -178,7 +178,7 @@ async def legend_op():
     except Exception as e:
         print(str(e))
 
-
+"""
 tgbot = bot.tgbot
 
 
@@ -207,7 +207,7 @@ async def legend():
             pass
     else:
         print("YOUR BOT DEPLOYED SUCCESSFULLY")
-
+"""
     # Join LegndBot Channel after deploying 🤐😅
     try:
         await bot(JoinChannelRequest("@Official_LegendBot"))
