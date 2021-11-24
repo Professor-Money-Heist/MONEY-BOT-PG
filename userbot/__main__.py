@@ -170,7 +170,7 @@ async def legend_op():
             "LEGEND_STRING"
         ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
         if Config.LOGGER_ID != 0:
-            await tbot.send_messages(
+            await bot.send_file(
                 Config.LOGGER_ID,
                 LEGEND_PIC,
                 f"Deployed Lêɠêɳ̃dẞø† Successfully\n\nLêɠêɳ̃dẞø† ~ {LEGENDversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [LegendBot Channel](t.me/Official_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
