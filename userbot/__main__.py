@@ -1,12 +1,11 @@
 import os
+import re
 import sys
 from pathlib import Path
 
 import telethon.utils
 from telethon import Button, TelegramClient, events
 from telethon.tl.functions.channels import JoinChannelRequest
-import re
-from re import compile
 
 from LEGENDBOY import lnbot
 from userbot import LOGS, LEGENDversion, bot
