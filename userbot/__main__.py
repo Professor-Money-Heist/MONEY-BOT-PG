@@ -178,6 +178,18 @@ async def legend_op():
     except Exception as e:
         print(str(e))
 
+
+    # Join LegndBot Channel after deploying 🤐😅
+    try:
+        await bot(JoinChannelRequest("@Official_LegendBot"))
+    except BaseException:
+        pass
+
+    try:
+        await bot(JoinChannelRequest("@Legend_Userbot"))
+    except BaseException:
+        pass
+
 """
 tgbot = bot.tgbot
 
@@ -208,16 +220,7 @@ async def legend():
     else:
         print("YOUR BOT DEPLOYED SUCCESSFULLY")
 """
-    # Join LegndBot Channel after deploying 🤐😅
-    try:
-        await bot(JoinChannelRequest("@Official_LegendBot"))
-    except BaseException:
-        pass
 
-    try:
-        await bot(JoinChannelRequest("@Legend_Userbot"))
-    except BaseException:
-        pass
 
 
 bot.loop.run_until_complete(legend())
