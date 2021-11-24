@@ -51,7 +51,7 @@ if Config.LEGEND_STRING:
     bbbot = LegendBoy(session_name, Config.APP_ID, Config.API_HASH)
 else:
     session_name = "startup"
-    bbbot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
+    bbbot = TelegramClient(session_name, Config.APP_ID, Config.API_HASH)
 
 if __name__ == "__main__":
     bot.start()
