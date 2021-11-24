@@ -7,7 +7,7 @@ import telethon.utils
 from telethon import Button, TelegramClient, custom, events
 from telethon.tl.functions.channels import JoinChannelRequest
 
-from LEGENDBOY import lnbot, bbbot
+from LEGENDBOY import bbbot, lnbot
 from userbot import LOGS, LEGENDversion, bot
 from userbot.Config import Config
 from userbot.utils import (
@@ -445,7 +445,7 @@ async def users(event):
 
 
 async def legend():
-    fuck = await xbot.get_me()
+    await xbot.get_me()
     bbbot.set(bot_username=(await lnbot.get_me()).username)
     legend = await bbbot.get_me()
     YESS = f"""
