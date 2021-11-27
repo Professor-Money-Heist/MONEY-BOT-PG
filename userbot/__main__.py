@@ -143,6 +143,22 @@ async def spams():
     else:
         print("⚠️Spam Not Loading⚠️")
 
+async def install():
+    i =0
+    chat = Config.PLUGIN_CHANNEL
+    documentss = await bot.get_messages(chat, None , filter=InputMessagesFilterDocument)
+    total = int(documentss.total)
+    total_doxx = range(0, total)
+    for ixo in total_doxx:
+        mxo = documentss[ixo].id
+        downloaded_file_name = await bot.download_media(await bot.get_messages(chat, ids=mxo), "userbot/plugins/")
+        if "(" not in downloaded_file_name:
+            path1 = Path(downloaded_file_name)
+            shortname = path1.stem
+            load_module(shortname.replace(".py", ""))
+            print(f'{i} plugin install')
+        else:
+            print ("Failed")
 
 tgbot = bot.tgbot
 
@@ -451,6 +467,7 @@ bot.loop.run_until_complete(addons())
 bot.loop.run_until_complete(abuses())
 bot.loop.run_until_complete(assistants())
 bot.loop.run_until_complete(spams())
+bot.loop.run_until_complete(install())
 
 print(
     f"""
