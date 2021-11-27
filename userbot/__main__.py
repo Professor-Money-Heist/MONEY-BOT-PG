@@ -427,17 +427,10 @@ async def legends():
     LEGEND_USER = bot.me.first_name
     The_LegendBoy = bot.uid
     legd_mention = f"[{LEGEND_USER}](tg://user?id={The_LegendBoy})"
-    YESS = f"""
-    Hello Sir/Miss Something Happened 
-    Ding Dong Ting Tong Ping Pong
-    Successfully LegendBot Has Been Deployed 
-    My Master ~ 『{legd_mention}』 
-    Version ~ {LEGENDversion}
-    Click Below To Know More About Me👇🏾👇👇🏼
-    """
+    yescaption = f"Hello Sir/Miss Something Happened \nDing Dong Ting Tong Ping Pong\nSuccessfully LegendBot Has Been Deployed \nMy Master ~ 『{legd_mention}』 \nVersion ~ {LEGENDversion}\nClick Below To Know More About Me👇🏾👇👇🏼"
     try:
         TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
-        await lnbot.send_message(bot.me.id, LEGEND_PIC, YESS, buttons=TRY)
+        await lnbot.send_message(bot.me.id, LEGEND_PIC, caption=yescaption, buttons=TRY)
     except Exception as e:
         print(str(e))
 
