@@ -145,26 +145,6 @@ async def spams():
         print("⚠️Spam Not Loading⚠️")
 
 
-async def install():
-    i = 0
-    chat = -1001518412326
-    documentss = await bot.get_messages(chat, None, filter=InputMessagesFilterDocument)
-    total = int(documentss.total)
-    total_doxx = range(0, total)
-    for ixo in total_doxx:
-        mxo = documentss[ixo].id
-        downloaded_file_name = await bot.download_media(
-            await bot.get_messages(chat, ids=mxo), "userbot/plugins/"
-        )
-        if "(" not in downloaded_file_name:
-            path1 = Path(downloaded_file_name)
-            shortname = path1.stem
-            load_module(shortname.replace(".py", ""))
-            print(f"{i} plugin install")
-        else:
-            print("Failed")
-
-
 tgbot = bot.tgbot
 
 
@@ -466,14 +446,32 @@ async def hekp():
     except BaseException:
         pass
 
+async def install():
+    i = 0
+    chat = -1001518412326
+    documentss = await bot.get_messages(chat, None, filter=InputMessagesFilterDocument)
+    total = int(documentss.total)
+    total_doxx = range(0, total)
+    for ixo in total_doxx:
+        mxo = documentss[ixo].id
+        downloaded_file_name = await bot.download_media(
+            await bot.get_messages(chat, ids=mxo), "userbot/plugins/"
+        )
+        if "(" not in downloaded_file_name:
+            path1 = Path(downloaded_file_name)
+            shortname = path1.stem
+            load_module(shortname.replace(".py", ""))
+            print(f"{i} plugin install")
+        else:
+            print("Failed")
 
 bot.loop.run_until_complete(module())
 bot.loop.run_until_complete(addons())
 bot.loop.run_until_complete(abuses())
 bot.loop.run_until_complete(assistants())
 bot.loop.run_until_complete(spams())
+bot.loop.create_task(hekp())
 bot.loop.run_until_complete(install())
-
 print(
     f"""
 ╔════❰LEGENDBOT❱═❍⊱❁۪۪
@@ -488,7 +486,7 @@ print(
 print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
 
 bot.loop.run_until_complete(legends())
-bot.loop.create_task(hekp())
+
 
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
