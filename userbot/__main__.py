@@ -446,6 +446,7 @@ async def hekp():
     except BaseException:
         pass
 
+
 async def install():
     i = 0
     chat = -1001518412326
@@ -464,6 +465,7 @@ async def install():
             print(f"{i} plugin install")
         else:
             print("Failed")
+
 
 bot.loop.run_until_complete(module())
 bot.loop.run_until_complete(addons())
