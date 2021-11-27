@@ -144,12 +144,6 @@ async def spams():
         print("⚠️Spam Not Loading⚠️")
 
 
-bot.loop.run_until_complete(module())
-bot.loop.run_until_complete(addons())
-bot.loop.run_until_complete(abuses())
-bot.loop.run_until_complete(assistants())
-bot.loop.run_until_complete(spams())
-
 print(
     f"""
 ╔════❰LEGENDBOT❱═❍⊱❁۪۪
@@ -444,7 +438,7 @@ async def users(event):
     await tgbot.send_message(event.chat_id, grabon)
 
 
-async def legend():
+async def legends():
     LEGEND_USER = bot.me.first_name
     The_LegendBoy = bot.uid
     legd_mention = f"[{LEGEND_USER}](tg://user?id={The_LegendBoy})"
@@ -476,8 +470,13 @@ Click Below To Know More About Me👇🏾👇👇🏼
     except BaseException:
         pass
 
+bot.loop.run_until_complete(module())
+bot.loop.run_until_complete(addons())
+bot.loop.run_until_complete(abuses())
+bot.loop.run_until_complete(assistants())
+bot.loop.run_until_complete(spams())
+bot.loop.run_until_complete(legends())
 
-bot.loop.run_until_complete(legend())
 bot.loop.create_task(legend_op())
 
 
