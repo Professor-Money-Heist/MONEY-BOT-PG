@@ -143,20 +143,6 @@ async def spams():
         print("⚠️Spam Not Loading⚠️")
 
 
-print(
-    f"""
-╔════❰LEGENDBOT❱═❍⊱❁۪۪
-║┣⪼ OWNER - {Config.ALIVE_NAME}
-║┣⪼ Group - @Legend_Userbot
-║┣⪼ CREATOR - @The_LegendBoy
-║┣⪼ LEGENDBOT - {LEGENDversion}
-║┣⪼ ✨ 『🔱🇱 🇪 🇬 🇪 🇳 🇩 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
-║╰━━━━━━━━━━━━━━━➣
-╚══════════════════❍⊱"""
-)
-print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
-
-
 tgbot = bot.tgbot
 
 
@@ -422,6 +408,37 @@ async def users(event):
     await tgbot.send_message(event.chat_id, grabon)
 
 
+print(
+    f"""
+╔════❰LEGENDBOT❱═❍⊱❁۪۪
+║┣⪼ OWNER - {Config.ALIVE_NAME}
+║┣⪼ Group - @Legend_Userbot
+║┣⪼ CREATOR - @The_LegendBoy
+║┣⪼ LEGENDBOT - {LEGENDversion}
+║┣⪼ ✨ 『🔱🇱 🇪 🇬 🇪 🇳 🇩 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
+║╰━━━━━━━━━━━━━━━➣
+╚══════════════════❍⊱"""
+)
+print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
+
+async def legends():
+    LEGEND_USER = bot.me.first_name
+    The_LegendBoy = bot.uid
+    legd_mention = f"[{LEGEND_USER}](tg://user?id={The_LegendBoy})"
+    YESS = f"""
+    Hello Sir/Miss Something Happened 
+    Ding Dong Ting Tong Ping Pong
+    Successfully LegendBot Has Been Deployed 
+    My Master ~ 『{legd_mention}』 
+    Version ~ {LEGENDversion}
+    Click Below To Know More About Me👇🏾👇👇🏼
+    """
+    try:
+        TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
+        await lnbot.send_message(bot.me.id, LEGEND_PIC, YESS, buttons=TRY)
+    except Exception as e:
+        print(str(e))
+    
 async def hekp():
     try:
         os.environ[
@@ -435,6 +452,7 @@ async def hekp():
             )
     except Exception as e:
         print(str(e))
+
     try:
         await bot(JoinChannelRequest("@Official_LegendBot"))
     except BaseException:
@@ -444,36 +462,14 @@ async def hekp():
         await bot(JoinChannelRequest("@Legend_Userbot"))
     except BaseException:
         pass
-
-
-async def legends():
-    LEGEND_USER = bot.me.first_name
-    The_LegendBoy = bot.uid
-    legd_mention = f"[{LEGEND_USER}](tg://user?id={The_LegendBoy})"
-    YESS = f"""
-Hello Sir/Miss Something Happened 
-Ding Dong Ting Tong Ping Pong
-Successfully LegendBot Has Been Deployed 
-My Master ~ 『{legd_mention}』 
-Version ~ {LEGENDversion}
-Click Below To Know More About Me👇🏾👇👇🏼
-"""
-    try:
-        TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
-        await bot.send_message(bot.me.id, YESS, buttons=TRY)
-    except exception as e:
-        print(e)
-    # Join LegndBot Channel after deploying 🤐😅
-
-
 bot.loop.run_until_complete(module())
 bot.loop.run_until_complete(addons())
 bot.loop.run_until_complete(abuses())
+bot.loop.create_task(hekp())
 bot.loop.run_until_complete(assistants())
 bot.loop.run_until_complete(spams())
 bot.loop.run_until_complete(legends())
 
-bot.loop.create_task(hekp())
 
 
 if len(sys.argv) not in (1, 3, 4):
