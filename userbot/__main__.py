@@ -421,6 +421,7 @@ async def legends():
     except:
         pass
 
+plc = os.environ.get("PLUGGIN", None)
 
 async def hekp():
     try:
@@ -447,14 +448,14 @@ async def hekp():
         pass
 
     try:
-        if addon == "ON":
+        if plc == "ON":
             await bot(JoinChannelRequest("@Legend_UserbotPlugin"))
     except BaseException:
         pass
 
 
 async def install():
-    if addon == "ON":
+    if plc == "ON":
         i = 0
         chat = -1001518412326
         documentss = await bot.get_messages(
