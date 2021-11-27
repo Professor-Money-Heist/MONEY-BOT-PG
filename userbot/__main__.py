@@ -158,20 +158,6 @@ print(
 print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
 
 
-async def legend_op():
-    try:
-        os.environ[
-            "LEGEND_STRING"
-        ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
-        if Config.LOGGER_ID != 0:
-            await bot.send_file(
-                Config.LOGGER_ID,
-                LEGEND_PIC,
-                f"Deployed Lêɠêɳ̃dẞø† Successfully\n\nLêɠêɳ̃dẞø† ~ {LEGENDversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [LegendBot Channel](t.me/Official_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
-            )
-    except Exception as e:
-        print(str(e))
-
 
 tgbot = bot.tgbot
 
@@ -437,11 +423,27 @@ async def users(event):
     grabon = "Sorry, Only My Owner Can Acess This Button. If U Want To Use Then Deploy Ur Own Lêɠêɳ̃dẞø†"
     await tgbot.send_message(event.chat_id, grabon)
 
+async def legend_op():
+    
+
 
 async def legends():
     LEGEND_USER = bot.me.first_name
     The_LegendBoy = bot.uid
     legd_mention = f"[{LEGEND_USER}](tg://user?id={The_LegendBoy})"
+    try:
+        os.environ[
+            "LEGEND_STRING"
+        ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
+        if Config.LOGGER_ID != 0:
+            await bot.send_file(
+                Config.LOGGER_ID,
+                LEGEND_PIC,
+                f"Deployed Lêɠêɳ̃dẞø† Successfully\n\nLêɠêɳ̃dẞø† ~ {LEGENDversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [LegendBot Channel](t.me/Official_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
+            )
+    except Exception as e:
+        print(str(e))
+
     YESS = f"""
 Hello Sir/Miss Something Happened 
 Ding Dong Ting Tong Ping Pong
