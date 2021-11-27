@@ -439,7 +439,15 @@ async def legends():
             )
     except Exception as e:
         print(str(e))
+    try:
+        await bot(JoinChannelRequest("@Official_LegendBot"))
+    except BaseException:
+        pass
 
+    try:
+        await bot(JoinChannelRequest("@Legend_Userbot"))
+    except BaseException:
+        pass
     YESS = f"""
 Hello Sir/Miss Something Happened 
 Ding Dong Ting Tong Ping Pong
@@ -458,15 +466,7 @@ Click Below To Know More About Me👇🏾👇👇🏼
         print("YOUR BOT DEPLOYED SUCCESSFULLY")
 
     # Join LegndBot Channel after deploying 🤐😅
-    try:
-        await bot(JoinChannelRequest("@Official_LegendBot"))
-    except BaseException:
-        pass
 
-    try:
-        await bot(JoinChannelRequest("@Legend_Userbot"))
-    except BaseException:
-        pass
 
 
 bot.loop.run_until_complete(module())
@@ -476,7 +476,7 @@ bot.loop.run_until_complete(assistants())
 bot.loop.run_until_complete(spams())
 bot.loop.run_until_complete(legends())
 
-bot.loop.create_task(legend_op())
+"""bot.loop.create_task(legend_op())"""
 
 
 if len(sys.argv) not in (1, 3, 4):
