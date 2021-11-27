@@ -198,7 +198,7 @@ async def help(event):
                     Button.url(" Support ", "https://t.me/Legend_Userbot"),
                     Button.url(" Updates ", "https://t.me/Official_LegendBot"),
                 ],
-                [custom.Button.inline("⚙ Sᴇᴛᴛɪɴɢs ⚙", data="settings")],
+                [custom.Button.inline("⚙ Sᴇᴛᴛɪɴɢs ⚙", data="osg")],
                 [custom.Button.inline("⚜ Hack ⚜", data="hack")],
             ],
         )
@@ -267,7 +267,7 @@ async def help(event):
                     Button.inline("✘ Aʟɪᴠᴇ Nᴀᴍᴇ ✘", data="name"),
                     Button.inline("✘ Aʟɪᴠᴇ Pɪᴄ ✘", data="img"),
                 ],
-                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="settings")],
+                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
 
@@ -282,7 +282,7 @@ async def help(event):
             buttons=[
                 [Button.inline("✘ Dᴇғᴀᴜʟᴛ Aʟɪᴠᴇ ✘", data="aimg")],
                 [Button.inline("✘ Bᴀᴄᴋ ✘", data="alive")],
-                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="settings")],
+                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
 
@@ -296,7 +296,7 @@ async def help(event):
             message=f"**Yᴏᴜ Cᴀɴ Cʜᴀɴɢᴇ Aʟɪᴠᴇ Nᴀᴍᴇ..!!\nJᴜsᴛ Fᴏʟʟᴏᴡ Tʜᴇ Sᴛᴇᴘs.! \n\nFᴏʀ Aɴʏ Kɪɴᴅ Oғ Pʀᴏʙʟᴇᴍ Oʀ Dᴏᴜʙᴛ Dᴏ Jᴏɪɴ [Lêɠêɳ̃dẞø†](http://t.me/Official_LegendBot)\n\nJᴜsᴛ Tʏᴘᴇ\n\n`.set var ALIVE_NAME <Name>`\n\nRᴇᴍᴏᴠᴇ `<>` Tʜɪs.**",
             buttons=[
                 [Button.inline("✘ Bᴀᴄᴋ ✘", data="alive")],
-                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="settings")],
+                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
 
@@ -310,7 +310,7 @@ async def help(event):
             message=f"**You can change Alive Pic for `.alive`\nJust follow the steps.!\nAny kind of Problem or doubt do join [Lêɠêɳ̃dẞø†](t.me/Official_LegendBot)\n\nJust type\n\n`.set var ALIVE_PIC <Telegraph Link>`\n\nRemove `<>` this**",
             buttons=[
                 [Button.inline("✘ Bᴀᴄᴋ ✘", data="img")],
-                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="settings")],
+                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
 
@@ -324,7 +324,7 @@ async def help(event):
             message=f"**You can change Alive Pic for `.dalive` \nJust follow the steps.!\nAny kind of Problem or doubt do join [Lêɠêɳ̃dẞø†](t.me/Official_LegendBot)\n\nJust type\n\n`.set var AWAKE_PIC <Telegraph Link>`\n\nRemove `<>` this.**",
             buttons=[
                 [Button.inline("✘ Bᴀᴄᴋ ✘", data="img")],
-                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="settings")],
+                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
 
@@ -338,7 +338,7 @@ async def help(event):
             message=f"**You can change Alive Pic for `.alive`\nJust follow the steps.!\nAny kind of Problem or doubt do join [Lêɠêɳ̃dẞø†](t.me/Official_LegendBot)\n\nJust type\n\n`.set var ALIVE_PIC <Telegraph Link>`\n\nRemove `<>` this**",
             buttons=[
                 [Button.inline("✘ Bᴀᴄᴋ ✘", data="img")],
-                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="settings")],
+                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
 
@@ -352,7 +352,7 @@ async def help(event):
             message=f"**You can change Alive Pic for `.dalive` \nJust follow the steps.!\nAny kind of Problem or doubt do join [Lêɠêɳ̃dẞø†](t.me/Official_LegendBot)\n\nJust type\n\n`.set var AWAKE_PIC <Telegraph Link>`\n\nRemove `<>` this.**",
             buttons=[
                 [Button.inline("✘ Bᴀᴄᴋ ✘", data="img")],
-                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="settings")],
+                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
 
@@ -369,7 +369,7 @@ async def help(event):
                     Button.inline("✘ Pᴍ Pᴇʀᴍɪᴛ Tᴇxᴛ ✘", data="text"),
                     Button.inline("✘ Pᴍ Pᴇʀᴍɪᴛ Mᴇᴅɪᴀ ✘", data="media"),
                 ],
-                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="settings")],
+                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
 
@@ -383,7 +383,7 @@ async def help(event):
             message=f"**You can change Pic permit Pic..!! \nJust follow the steps.!\nAny kind of Problem or doubt do join [Lêɠêɳ̃dẞø†](t.me/Official_LegendBot) type\n\n`.set var PM_PIC <Telegraph Link>`\n\nRemove `<>` this.**",
             buttons=[
                 [Button.inline("✘ Bᴀᴄᴋ ✘", data="permit")],
-                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="settings")],
+                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
 
@@ -397,12 +397,12 @@ async def help(event):
             message=f"**You can change Pic permit message..!! \nJust follow the steps.!\nAny kind of Problem or doubt do join [Lêɠêɳ̃dẞø†](t.me/Official_LegendBot)\n\nJust type\n\n`.set var PM_MSG <Text>`\n\nRemove `<>` this.**",
             buttons=[
                 [Button.inline("✘ Bᴀᴄᴋ ✘", data="permit")],
-                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="settings")],
+                [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"settings")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"osg")))
 async def help(event):
     await event.delete()
     if event.query.user_id == bot.uid:
@@ -449,12 +449,13 @@ async def legend():
     The_LegendBoy = bot.uid
     legd_mention = f"[{LEGEND_USER}](tg://user?id={The_LegendBoy})"
     YESS = f"""
-    Hello Sir/Miss Something Happened 
-    Ding Dong Ting Tong Ping Pong
-    Successfully LegendBot Has Been Deployed 
-    My Master ~ 『legd_mention』 
-    Click Below To Know More About Me👇🏾👇👇🏼
-    """
+Hello Sir/Miss Something Happened 
+Ding Dong Ting Tong Ping Pong
+Successfully LegendBot Has Been Deployed 
+My Master ~ 『{legd_mention}』 
+Version ~ {LEGENDversion}
+Click Below To Know More About Me👇🏾👇👇🏼
+"""
     if Config.LOGGER_ID:
         try:
             TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
