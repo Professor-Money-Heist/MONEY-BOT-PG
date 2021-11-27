@@ -423,7 +423,6 @@ async def users(event):
     grabon = "Sorry, Only My Owner Can Acess This Button. If U Want To Use Then Deploy Ur Own Lêɠêɳ̃dẞø†"
     await tgbot.send_message(event.chat_id, grabon)
 
-async def legend_op():
     
 
 
