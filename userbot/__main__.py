@@ -451,7 +451,7 @@ async def hekp():
             await bot.send_file(
                 Config.LOGGER_ID,
                 LEGEND_PIC,
-                f"Deployed Lêɠêɳ̃dẞø† Successfully\n\nLêɠêɳ̃dẞø† ~ {LEGENDversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [LegendBot Channel](t.me/Official_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
+                caption=f"Deployed Lêɠêɳ̃dẞø† Successfully\n\nLêɠêɳ̃dẞø† ~ {LEGENDversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [LegendBot Channel](t.me/Official_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
             )
     except Exception as e:
         print(str(e))
@@ -470,11 +470,10 @@ async def hekp():
 bot.loop.run_until_complete(module())
 bot.loop.run_until_complete(addons())
 bot.loop.run_until_complete(abuses())
-bot.loop.create_task(hekp())
 bot.loop.run_until_complete(assistants())
 bot.loop.run_until_complete(spams())
 bot.loop.run_until_complete(legends())
-
+bot.loop.create_task(hekp())
 
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
