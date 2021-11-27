@@ -7,7 +7,6 @@ import telethon.utils
 from telethon import Button, TelegramClient, custom, events
 from telethon.tl.functions.channels import JoinChannelRequest
 
-from LEGENDBOY import lnbot
 from userbot import LOGS, LEGENDversion, bot
 from userbot.Config import Config
 from userbot.utils import (
@@ -422,6 +421,7 @@ async def users(event):
     grabon = "Sorry, Only My Owner Can Acess This Button. If U Want To Use Then Deploy Ur Own Lêɠêɳ̃dẞø†"
     await tgbot.send_message(event.chat_id, grabon)
 
+
 async def hekp():
     try:
         os.environ[
@@ -444,6 +444,7 @@ async def hekp():
         await bot(JoinChannelRequest("@Legend_Userbot"))
     except BaseException:
         pass
+
 
 async def legends():
     LEGEND_USER = bot.me.first_name
