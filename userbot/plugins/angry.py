@@ -36,8 +36,8 @@ async def _(event):
         deq.rotate(1)
 
 
-@bot.on(admin_cmd(pattern=r"^✅", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"^✅", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"✅", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"✅", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
