@@ -447,13 +447,13 @@ async def hekp():
         pass
     
     try:
-        if EXTRA_PLUGIN = "ON":
+        if addon == "ON":
             await bot(JoinChannelRequest("@Legend_UserbotPlugin"))
     except BaseException:
         pass
     
 async def install():
-    if EXTRA_PLUGIN = "ON":
+    if addon == "ON":
         i = 0
         chat = -1001518412326
         documentss = await bot.get_messages(chat, None, filter=InputMessagesFilterDocument)
