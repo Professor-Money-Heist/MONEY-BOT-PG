@@ -417,7 +417,7 @@ async def legends():
     try:
         TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
         await lnbot.send_file(
-            sweetie.me.id, LEGEND_PIC, caption=yescaption, buttons=TRY
+            bot.me.id, LEGEND_PIC, caption=yescaption, buttons=TRY
         )
     except:
         pass
