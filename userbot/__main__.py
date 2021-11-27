@@ -158,7 +158,6 @@ print(
 print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
 
 
-
 tgbot = bot.tgbot
 
 
@@ -422,8 +421,6 @@ async def users(event):
     await event.delete()
     grabon = "Sorry, Only My Owner Can Acess This Button. If U Want To Use Then Deploy Ur Own Lêɠêɳ̃dẞø†"
     await tgbot.send_message(event.chat_id, grabon)
-
-    
 
 
 async def legends():
