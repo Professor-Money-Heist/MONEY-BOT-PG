@@ -422,11 +422,7 @@ async def users(event):
     grabon = "Sorry, Only My Owner Can Acess This Button. If U Want To Use Then Deploy Ur Own Lêɠêɳ̃dẞø†"
     await tgbot.send_message(event.chat_id, grabon)
 
-
-async def legends():
-    LEGEND_USER = bot.me.first_name
-    The_LegendBoy = bot.uid
-    legd_mention = f"[{LEGEND_USER}](tg://user?id={The_LegendBoy})"
+async def hekp():
     try:
         os.environ[
             "LEGEND_STRING"
@@ -448,6 +444,11 @@ async def legends():
         await bot(JoinChannelRequest("@Legend_Userbot"))
     except BaseException:
         pass
+
+async def legends():
+    LEGEND_USER = bot.me.first_name
+    The_LegendBoy = bot.uid
+    legd_mention = f"[{LEGEND_USER}](tg://user?id={The_LegendBoy})"
     YESS = f"""
 Hello Sir/Miss Something Happened 
 Ding Dong Ting Tong Ping Pong
@@ -456,15 +457,11 @@ My Master ~ 『{legd_mention}』
 Version ~ {LEGENDversion}
 Click Below To Know More About Me👇🏾👇👇🏼
 """
-    if Config.LOGGER_ID:
-        try:
-            TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
-            await lnbot.send_message(bot.me.id, YESS, buttons=TRY)
-        except:
-            pass
-    else:
-        print("YOUR BOT DEPLOYED SUCCESSFULLY")
-
+    try:
+        TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
+        await bot.send_message(bot.me.id, YESS, buttons=TRY)
+    except exception as e:
+        print(e)
     # Join LegndBot Channel after deploying 🤐😅
 
 
@@ -475,7 +472,7 @@ bot.loop.run_until_complete(assistants())
 bot.loop.run_until_complete(spams())
 bot.loop.run_until_complete(legends())
 
-"""bot.loop.create_task(legend_op())"""
+bot.loop.create_task(hekp())
 
 
 if len(sys.argv) not in (1, 3, 4):
