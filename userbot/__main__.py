@@ -421,6 +421,7 @@ print(
 )
 print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
 
+
 async def legends():
     LEGEND_USER = bot.me.first_name
     The_LegendBoy = bot.uid
@@ -438,7 +439,8 @@ async def legends():
         await lnbot.send_message(bot.me.id, LEGEND_PIC, YESS, buttons=TRY)
     except Exception as e:
         print(str(e))
-    
+
+
 async def hekp():
     try:
         os.environ[
@@ -462,6 +464,8 @@ async def hekp():
         await bot(JoinChannelRequest("@Legend_Userbot"))
     except BaseException:
         pass
+
+
 bot.loop.run_until_complete(module())
 bot.loop.run_until_complete(addons())
 bot.loop.run_until_complete(abuses())
@@ -469,7 +473,6 @@ bot.loop.create_task(hekp())
 bot.loop.run_until_complete(assistants())
 bot.loop.run_until_complete(spams())
 bot.loop.run_until_complete(legends())
-
 
 
 if len(sys.argv) not in (1, 3, 4):
