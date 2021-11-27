@@ -7,7 +7,7 @@ import telethon.utils
 from telethon import Button, TelegramClient, custom, events
 from telethon.tl.functions.channels import JoinChannelRequest
 
-from LEGENDBOY import lnbot
+from LEGENDBOY import lnbot, bbbot
 from userbot import LOGS, LEGENDversion, bot
 from userbot.Config import Config
 from userbot.utils import (
@@ -142,20 +142,6 @@ async def spams():
                 start_spam(shortname.replace(".py", ""))
     else:
         print("⚠️Spam Not Loading⚠️")
-
-
-print(
-    f"""
-╔════❰LEGENDBOT❱═❍⊱❁۪۪
-║┣⪼ OWNER - {Config.ALIVE_NAME}
-║┣⪼ Group - @Legend_Userbot
-║┣⪼ CREATOR - @The_LegendBoy
-║┣⪼ LEGENDBOT - {LEGENDversion}
-║┣⪼ ✨ 『🔱🇱 🇪 🇬 🇪 🇳 🇩 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
-║╰━━━━━━━━━━━━━━━➣
-╚══════════════════❍⊱"""
-)
-print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
 
 tgbot = bot.tgbot
 
@@ -429,7 +415,7 @@ async def legends():
     yescaption = f"Hello Sir/Miss Something Happened \nDing Dong Ting Tong Ping Pong\nSuccessfully LegendBot Has Been Deployed \nMy Master ~ 『{legd_mention}』 \nVersion ~ {LEGENDversion}\nClick Below To Know More About Me👇🏾👇👇🏼"
     try:
         TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
-        await lnbot.send_file(bot.me.id, LEGEND_PIC, caption=yescaption, buttons=TRY)
+        await lnbot.send_file(bbbot.me.id, LEGEND_PIC, caption=yescaption, buttons=TRY)
     except:
         pass
 
@@ -464,6 +450,20 @@ bot.loop.run_until_complete(addons())
 bot.loop.run_until_complete(abuses())
 bot.loop.run_until_complete(assistants())
 bot.loop.run_until_complete(spams())
+
+print(
+    f"""
+╔════❰LEGENDBOT❱═❍⊱❁۪۪
+║┣⪼ OWNER - {Config.ALIVE_NAME}
+║┣⪼ Group - @Legend_Userbot
+║┣⪼ CREATOR - @The_LegendBoy
+║┣⪼ LEGENDBOT - {LEGENDversion}
+║┣⪼ ✨ 『🔱🇱 🇪 🇬 🇪 🇳 🇩 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
+║╰━━━━━━━━━━━━━━━➣
+╚══════════════════❍⊱"""
+)
+print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
+
 bot.loop.run_until_complete(legends())
 bot.loop.create_task(hekp())
 
