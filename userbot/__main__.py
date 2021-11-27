@@ -144,7 +144,8 @@ async def spams():
         print("⚠️Spam Not Loading⚠️")
 
 
-print(f"""
+print(
+    f"""
 ╔════❰LEGENDBOT❱═❍⊱❁۪۪
 ║┣⪼ OWNER - {Config.ALIVE_NAME}
 ║┣⪼ Group - @Legend_Userbot
