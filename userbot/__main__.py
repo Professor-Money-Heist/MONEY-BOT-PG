@@ -445,18 +445,21 @@ async def hekp():
         await bot(JoinChannelRequest("@Legend_Userbot"))
     except BaseException:
         pass
-    
+
     try:
         if addon == "ON":
             await bot(JoinChannelRequest("@Legend_UserbotPlugin"))
     except BaseException:
         pass
-    
+
+
 async def install():
     if addon == "ON":
         i = 0
         chat = -1001518412326
-        documentss = await bot.get_messages(chat, None, filter=InputMessagesFilterDocument)
+        documentss = await bot.get_messages(
+            chat, None, filter=InputMessagesFilterDocument
+        )
         total = int(documentss.total)
         total_doxx = range(0, total)
         for ixo in total_doxx:
