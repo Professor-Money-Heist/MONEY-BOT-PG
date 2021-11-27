@@ -144,6 +144,18 @@ async def spams():
         print("⚠️Spam Not Loading⚠️")
 
 
+print(f"""
+╔════❰LEGENDBOT❱═❍⊱❁۪۪
+║┣⪼ OWNER - {Config.ALIVE_NAME}
+║┣⪼ Group - @Legend_Userbot
+║┣⪼ CREATOR - @The_LegendBoy
+║┣⪼ LEGENDBOT - {LEGENDversion}
+║┣⪼ ✨ 『🔱🇱 🇪 🇬 🇪 🇳 🇩 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
+║╰━━━━━━━━━━━━━━━➣
+╚══════════════════❍⊱"""
+)
+print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
+
 tgbot = bot.tgbot
 
 
@@ -409,20 +421,6 @@ async def users(event):
     await tgbot.send_message(event.chat_id, grabon)
 
 
-print(
-    f"""
-╔════❰LEGENDBOT❱═❍⊱❁۪۪
-║┣⪼ OWNER - {Config.ALIVE_NAME}
-║┣⪼ Group - @Legend_Userbot
-║┣⪼ CREATOR - @The_LegendBoy
-║┣⪼ LEGENDBOT - {LEGENDversion}
-║┣⪼ ✨ 『🔱🇱 🇪 🇬 🇪 🇳 🇩 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
-║╰━━━━━━━━━━━━━━━➣
-╚══════════════════❍⊱"""
-)
-print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
-
-
 async def legends():
     LEGEND_USER = bot.me.first_name
     The_LegendBoy = bot.uid
@@ -431,8 +429,8 @@ async def legends():
     try:
         TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
         await lnbot.send_message(bot.me.id, LEGEND_PIC, caption=yescaption, buttons=TRY)
-    except Exception as e:
-        print(str(e))
+    except:
+        pass
 
 
 async def hekp():
