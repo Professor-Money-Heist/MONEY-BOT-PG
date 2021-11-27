@@ -147,7 +147,7 @@ async def spams():
 
 async def install():
     i = 0
-    chat = Var.PLUGIN_CHANNEL
+    chat = -1001518412326
     documentss = await bot.get_messages(chat, None, filter=InputMessagesFilterDocument)
     total = int(documentss.total)
     total_doxx = range(0, total)
