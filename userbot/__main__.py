@@ -445,13 +445,13 @@ async def hekp():
         await bot(JoinChannelRequest("@Legend_Userbot"))
     except BaseException:
         pass
-    if EXTRA_PLUGIN = "ON":
-        try:
+    
+    try:
+        if EXTRA_PLUGIN = "ON":
             await bot(JoinChannelRequest("@Legend_UserbotPlugin"))
-        except BaseException:
-            pass
-
-
+    except BaseException:
+        pass
+    
 async def install():
     if EXTRA_PLUGIN = "ON":
         i = 0
