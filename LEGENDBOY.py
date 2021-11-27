@@ -48,7 +48,7 @@ Your heroku bot username is {self.heroku_username}"""
 
 if Config.LEGEND_STRING:
     session_name = str(Config.LEGEND_STRING)
-    bbbot = LegendBoy(session_name, Config.APP_ID, Config.API_HASH)
+    sweetie = LegendBoy(session_name, Config.APP_ID, Config.API_HASH)
 else:
     session_name = "startup"
     bbbot = TelegramClient(session_name, Config.APP_ID, Config.API_HASH)
@@ -56,4 +56,5 @@ else:
 if __name__ == "__main__":
     bot.start()
     bot.run_until_disconnected()
+    sweetie.run_until_disconnected()
     lnbot.run_until_disconnected()
