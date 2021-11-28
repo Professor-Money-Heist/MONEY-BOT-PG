@@ -143,57 +143,6 @@ async def install(event):
             return os.remove(downloaded_file_name)
 
 
-@bot.on(admin_cmd(pattern="install -f$", outgoing=True))
-@bot.on(sudo_cmd(pattern="install -f$", allow_sudo=True))
-async def install(event):
-    if event.fwd_from:
-        return
-    a = "__𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚒𝚗𝚐.__"
-    b = 1
-    await event.edit(a)
-    if event.fwd_from:
-        return
-    if event.reply_to_msg_id:
-        try:
-            downloaded_file_name = (
-                await event.client.download_media(  # pylint:disable=E0602
-                    await event.get_reply_message(),
-                    "./userbot/plugins/",  # pylint:disable=E0602
-                )
-            )
-            if "(" not in downloaded_file_name:
-                path1 = Path(downloaded_file_name)
-                shortname = path1.stem
-                load_module(shortname.replace(".py", ""))
-                if shortname in CMD_LIST:
-                    string = "**Commands found in** `{}` (sudo included)\n".format(
-                        (os.path.basename(downloaded_file_name))
-                    )
-                    for i in CMD_LIST[shortname]:
-                        string += "  •  `" + i
-                        string += "`\n"
-                        if b == 1:
-                            a = "__𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚒𝚗𝚐..__"
-                            b = 2
-                        else:
-                            a = "__𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚒𝚗𝚐...__"
-                            b = 1
-                        await event.edit(a)
-                    return await event.edit(
-                        f"✅ **𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍 𝙼𝚘𝚍𝚞𝚕𝚎** :- `{shortname}` \n✨ BY :- {legend_mention}\n\n{string}\n\n        ⚡ **[『Lêɠêɳ̃dẞø†』](t.me/Legend_Userbot)**\n⚠️Dont Try To Install External Plugin⚠️\n Click Here & Do Uninstall 👉`.uninstall {shortname}`⚡",
-                        link_preview=False,
-                    )
-                return await event.edit(
-                    f"Installed module `{os.path.basename(downloaded_file_name)}`"
-                )
-            else:
-                os.remove(downloaded_file_name)
-                return await event.edit(
-                    f"**𝐅𝐚𝐢𝐥𝐞𝐝 𝐓𝐨 𝐈𝐧𝐬𝐭𝐚𝐥𝐥** \n`𝐄𝐫𝐫𝐨𝐫`\n𝐌𝐨𝐝𝐮𝐥𝐞 𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐈𝐧𝐬𝐭𝐚𝐥𝐥𝐞𝐝 𝐎𝐫 𝐔𝐧𝐤𝐧𝐨𝐰 𝐅𝐨𝐫𝐦𝐚𝐭"
-                )
-        except Exception as e:
-            await event.edit(f"**Failed to Install** \n`Error`\n{str(e)}")
-            return os.remove(downloaded_file_name)
 
 
 @bot.on(admin_cmd(pattern=r"uninstall (?P<shortname>\w+)", outgoing=True))
