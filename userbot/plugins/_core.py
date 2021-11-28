@@ -14,6 +14,7 @@ legend = bot.uid
 LEGEND = f"[{DEFAULTUSER}](tg://user?id={legend})"
 EVAL = os.environ.get("EVAL", None)
 
+
 @bot.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"send (?P<shortname>\w+)", allow_sudo=True))
 async def send(event):
