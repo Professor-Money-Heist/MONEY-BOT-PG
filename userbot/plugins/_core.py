@@ -140,9 +140,9 @@ async def install(event):
                     else:
                         await eod(legend, "First Turn On Eval = ON")
                         return
-                except Exception as e:
-                    await eod(legend, f"{e}")
-                    return
+            except Exception as e:
+                await eod(legend, f"{e}")
+                return
             else:
                 os.remove(downloaded_file_name)
                 return await eod(
