@@ -103,7 +103,7 @@ async def install(event):
                     if "session" in rd:
                         os.remove(downloaded_file_name)
                         await legend.edit(
-                             f"**⚠️ WARNING !!** \n\n__Replied plugin file contains some harmful codes. Please consider checking the file. If you still want to install then use__ `.install -f`. \n\n**Codes Detected :** \n•"
+                            f"**⚠️ WARNING !!** \n\n__Replied plugin file contains some harmful codes. Please consider checking the file. If you still want to install then use__ `.install -f`. \n\n**Codes Detected :** \n•"
                         )
                         return
                     elif "(" not in downloaded_file_name:
