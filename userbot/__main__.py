@@ -181,14 +181,14 @@ async def help(event):
                 [
                     custom.Button.inline(
                         "🚫 Cʟᴏsᴇ 🚫",
-                        data="lose_vcc",
+                        data="lse_vcc",
                     )
                 ],
             ],
         )
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"lose_vcc")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"lse_vcc")))
 async def users(event):
     if event.query.user_id == bot.uid:
         await event.delete()
@@ -261,7 +261,7 @@ async def help(event):
             event.chat_id,
             message=f"**Yᴏᴜ Cᴀɴ Cʜᴀɴɢᴇ Aʟɪᴠᴇ Nᴀᴍᴇ..!!\nJᴜsᴛ Fᴏʟʟᴏᴡ Tʜᴇ Sᴛᴇᴘs.! \n\nFᴏʀ Aɴʏ Kɪɴᴅ Oғ Pʀᴏʙʟᴇᴍ Oʀ Dᴏᴜʙᴛ Dᴏ Jᴏɪɴ [Lêɠêɳ̃dẞø†](http://t.me/Official_LegendBot)\n\nJᴜsᴛ Tʏᴘᴇ\n\n`.set var ALIVE_NAME <Name>`\n\nRᴇᴍᴏᴠᴇ `<>` Tʜɪs.**",
             buttons=[
-                [Button.inline("✘ Bᴀᴄᴋ ✘", data="alve")],
+                [Button.inline("✘ Bᴀᴄᴋ ✘", data="live")],
                 [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
@@ -348,7 +348,7 @@ async def help(event):
             event.chat_id,
             message=f"**You can change Pic permit Pic..!! \nJust follow the steps.!\nAny kind of Problem or doubt do join [Lêɠêɳ̃dẞø†](t.me/Official_LegendBot) type\n\n`.set var PM_PIC <Telegraph Link>`\n\nRemove `<>` this.**",
             buttons=[
-                [Button.inline("✘ Bᴀᴄᴋ ✘", data="permit")],
+                [Button.inline("✘ Bᴀᴄᴋ ✘", data="pmit")],
                 [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
@@ -362,7 +362,7 @@ async def help(event):
             event.chat_id,
             message=f"**You can change Pic permit message..!! \nJust follow the steps.!\nAny kind of Problem or doubt do join [Lêɠêɳ̃dẞø†](t.me/Official_LegendBot)\n\nJust type\n\n`.set var PM_MSG <Text>`\n\nRemove `<>` this.**",
             buttons=[
-                [Button.inline("✘ Bᴀᴄᴋ ✘", data="permit")],
+                [Button.inline("✘ Bᴀᴄᴋ ✘", data="pmit")],
                 [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
@@ -377,19 +377,19 @@ async def help(event):
             message=f"**Which type of setting do you want to edit?\nYou can change anything from these..!!\nAny kind for help do join [Lêɠêɳ̃dẞø†](t.me/Official_LegendBot)**",
             buttons=[
                 [
-                    Button.inline("✘ Aʟɪᴠᴇ ✘", data="alive"),
-                    Button.inline("✘ Pᴍ Pᴇʀᴍɪᴛ ✘", data="permit"),
+                    Button.inline("✘ Aʟɪᴠᴇ ✘", data="live"),
+                    Button.inline("✘ Pᴍ Pᴇʀᴍɪᴛ ✘", data="pmit"),
                 ],
                 [
                     Button.inline("✘ Chat Bot ✘", data="chat"),
-                    Button.inline("✘ Vc Bot ✘", data="Vc_Bot"),
+                    Button.inline("✘ Vc Bot ✘", data="V_Bot"),
                 ],
-                [Button.inline("✘ Cʟᴏsᴇ ✘", data="close")],
+                [Button.inline("✘ Cʟᴏsᴇ ✘", data="lose")],
             ],
         )
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"gibcmd")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"ibcmd")))
 async def users(event):
     await event.delete()
     grabon = "🇮🇳Hello Here Are Some Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr <lang-code> \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Media. \n➤ /addnote - Add Note \n➤ /notes - Shows Notes \n➤ /rmnote - Remove Note \n➤ /alive - Am I Alive? \n➤ /bun - Works In Group , Bans A User. \n➤ /unbun - Unbans A User in Group \n➤ /prumote - Promotes A User \n➤ /demute - Demotes A User \n➤ /pin - Pins A Message \n➤ /stats - Shows Total Users In Bot \n➤ /purge - Reply It From The Message u Want to Delete (Your Bot Should be Admin to Execute It) \n➤ /del - Reply a Message Tht Should Be Deleted (Your Bot Should be Admin to Execute It)"
@@ -400,13 +400,6 @@ async def users(event):
 async def users(event):
     await event.delete()
     grabon = "I am Giving U Full Power To Hack Anyone Through String session\nClick Here 👉/hack."
-    await tgbot.send_message(event.chat_id, grabon)
-
-
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"v_hack")))
-async def users(event):
-    await event.delete()
-    grabon = "Sorry, Only My Owner Can Acess This Button. If U Want To Use Then Deploy Ur Own Lêɠêɳ̃dẞø†"
     await tgbot.send_message(event.chat_id, grabon)
 
 
