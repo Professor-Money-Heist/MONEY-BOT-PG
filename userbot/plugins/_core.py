@@ -98,7 +98,7 @@ async def install(event):
                 op = open(downloaded_file_name, "r")
                 rd = op.read()
                 op.close()
-                
+
                 try:
                     if EVAL == "ON":
                         if session in rd:
