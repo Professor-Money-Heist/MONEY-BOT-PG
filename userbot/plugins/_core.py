@@ -134,9 +134,15 @@ async def install(event):
                             await legend.edit(
                                 f"Installed module `{os.path.basename(downloaded_file_name)}`"
                             )
+                            
                             return
                         except BaseException:
-                            return
+                            pass
+                        else:
+                            return await eod(
+                                legend,
+                                "faliled",
+                                )
             else:
                 os.remove(downloaded_file_name)
                 return await eod(
