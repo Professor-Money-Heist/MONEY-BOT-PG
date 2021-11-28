@@ -22,17 +22,17 @@ async def _(event):
     cmd = "".join(event.text.split(maxsplit=1)[1:])
     if not cmd:
         return await eor(event, "`What should i execute?..`")
-    await eor(event, "`Executing.....`")
+    legendevent = await eor(event, "`Executing.....`")
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     stdout, stderr = await process.communicate()
     result = str(stdout.decode().strip()) + str(stderr.decode().strip())
-    await event.client.get_me()
+    LEGENDuser = await event.client.get_me()
     if LEGENDuser.username:
         curruser = LEGENDuser.username
     else:
-        curruser = "LEGENDbot"
+        curruser = "@Official_LegendBot"
     uid = os.geteuid()
     if uid == 0:
         cresult = f"`{curruser}:~#` `{cmd}`\n`{result}`"
@@ -118,8 +118,6 @@ async def aexec(code, smessatatus):
 @bot.on(admin_cmd(pattern="bash ?(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="bash ?(.*)", allow_sudo=True))
 async def _(event):
-    if event.fwd_from:
-        return
     PROCESS_RUN_TIME = 100
     cmd = event.pattern_match.group(1)
     reply_to_id = event.message.id
