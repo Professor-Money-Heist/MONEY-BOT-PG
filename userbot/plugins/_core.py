@@ -108,7 +108,7 @@ async def install(event):
                         return
                 except BaseException:
                     return
-            elif "(" not in downloaded_file_name:
+            if "(" not in downloaded_file_name:
                 path1 = Path(downloaded_file_name)
                 shortname = path1.stem
                 load_module(shortname.replace(".py", ""))
