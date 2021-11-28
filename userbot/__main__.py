@@ -19,7 +19,11 @@ from userbot.utils import (
     start_spam,
 )
 from var import Var
-
+from userbot.plugins.sql_helper.idadder import (
+    add_usersid_in_db,
+    already_added,
+    get_all_users,
+)
 l2 = Config.SUDO_COMMAND_HAND_LER
 LEGEND_PIC = "https://telegra.ph/file/e753315316673cff51085.mp4"
 l1 = Config.COMMAND_HAND_LER
