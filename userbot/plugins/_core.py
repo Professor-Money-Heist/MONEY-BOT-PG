@@ -111,7 +111,7 @@ async def install(event):
                             shortname = path1.stem
                             load_module(shortname.replace(".py", ""))
                             if shortname in CMD_LIST:
-                                
+
                                 string = "**Commands found in** `{}`\n".format(
                                     (os.path.basename(downloaded_file_name))
                                 )
@@ -122,16 +122,16 @@ async def install(event):
                                         a = "__Installing..__"
                                         b = 2
                                     else:
-                                        
+
                                         a = "__Installing...__"
                                         b = 1
                                     await legend.edit(a)
-                                    return 
+                                    return
                                 await legend.edit(
                                     f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {legend_mention}\n\n{string}\n\n        ⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ Lêɠêɳ̃dẞø†]({chnl_link})** ⚡",
                                     link_preview=False,
                                 )
-                                return 
+                                return
                             await legend.edit(
                                 f"Installed module `{os.path.basename(downloaded_file_name)}`"
                             )
@@ -140,11 +140,11 @@ async def install(event):
                             await eod(
                                 legend,
                                 "faliled",
-                                )
+                            )
                             return
                 except Exception as e:
                     await eod(legend, f"{e}")
-                    return        
+                    return
             else:
                 os.remove(downloaded_file_name)
                 return await eod(
