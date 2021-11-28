@@ -102,9 +102,10 @@ async def install(event):
                     for harm in HARMFUL:
                         if harm in rd:
                             os.remove(downloaded_file_name)
-                            return await legend.edit(
+                            await legend.edit(
                                 f"**⚠️ WARNING !!** \n\n__Replied plugin file contains some harmful codes. Please consider checking the file. If you still want to install then use__ `.install -f`. \n\n**Codes Detected :** \n• {harm}"
                             )
+                            return
                         elif "(" not in downloaded_file_name:
                             path1 = Path(downloaded_file_name)
                             shortname = path1.stem
@@ -134,15 +135,16 @@ async def install(event):
                             await legend.edit(
                                 f"Installed module `{os.path.basename(downloaded_file_name)}`"
                             )
-                            
                             return
-                        except BaseException:
-                            pass
                         else:
-                            return await eod(
+                            await eod(
                                 legend,
                                 "faliled",
                                 )
+                            return
+                except Exception as e:
+                    await eod(legend, f"{e}")
+                    return        
             else:
                 os.remove(downloaded_file_name)
                 return await eod(
