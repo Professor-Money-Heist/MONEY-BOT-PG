@@ -11,7 +11,6 @@ from telethon.tl.types import InputMessagesFilterDocument
 from LEGENDBOY import lnbot
 from userbot import LOGS, LEGENDversion, bot
 from userbot.Config import Config
-from userbot.plugins.sql_helper.idadder import get_all_users
 from userbot.utils import (
     load_abuse,
     load_addons,
@@ -158,7 +157,7 @@ async def help(event):
             message="Hello sir/miss,\nHow can i help u",
             buttons=[
                 [
-                    custom.Button.inline("🙇 Usᴇʀs Lɪsᴛ 🙇", data="sers"),
+                    custom.Button.inline("🙇 Usᴇʀs Lɪsᴛ 🙇", data="users"),
                     custom.Button.inline("👾 Cᴏᴍᴍᴀɴᴅs ✘👾", data="ibcmd"),
                 ],
                 [
@@ -201,25 +200,7 @@ async def users(event):
         await event.delete()
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"sers")))
-async def users(event):
-    if event.query.user_id == bot.uid:
-        await event.delete()
-        total_users = get_all_users()
-        users_list = "⚜List Of Total Users In Bot.⚜ \n\n"
-        for starked in total_users:
-            users_list += ("==> {} \n").format(int(starked.chat_id))
-        with io.BytesIO(str.encode(users_list)) as tedt_file:
-            tedt_file.name = "userlist.txt"
-            await tgbot.send_file(
-                event.chat_id,
-                tedt_file,
-                force_document=True,
-                caption="Total Users In Your Bot.",
-                allow_cache=False,
-            )
-    else:
-        pass
+
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile("live")))
