@@ -143,8 +143,6 @@ async def install(event):
             return os.remove(downloaded_file_name)
 
 
-
-
 @bot.on(admin_cmd(pattern=r"uninstall (?P<shortname>\w+)", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"uninstall (?P<shortname>\w+)", allow_sudo=True))
 async def uninstall(event):
