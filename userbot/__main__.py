@@ -200,9 +200,6 @@ async def users(event):
         await event.delete()
 
 
-
-
-
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile("live")))
 async def help(event):
     await event.delete()
