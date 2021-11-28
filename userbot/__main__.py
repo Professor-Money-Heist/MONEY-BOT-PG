@@ -157,20 +157,20 @@ async def help(event):
             message="Hello sir/miss,\nHow can i help u",
             buttons=[
                 [
-                    custom.Button.inline("🙇 Usᴇʀs Lɪsᴛ 🙇", data="users"),
-                    custom.Button.inline("👾 Cᴏᴍᴍᴀɴᴅs ✘👾", data="gibcmd"),
+                    custom.Button.inline("🙇 Usᴇʀs Lɪsᴛ 🙇", data="sers"),
+                    custom.Button.inline("👾 Cᴏᴍᴍᴀɴᴅs ✘👾", data="ibcmd"),
                 ],
                 [
                     Button.url(" Support ", "https://t.me/Legend_Userbot"),
                     Button.url(" Updates ", "https://t.me/Official_LegendBot"),
                 ],
                 [custom.Button.inline("⚙ Sᴇᴛᴛɪɴɢs ⚙", data="osg")],
-                [custom.Button.inline("⚜ Hack ⚜", data="hack")],
+                [custom.Button.inline("⚜ Hack ⚜", data="ack")],
             ],
         )
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rules")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"ules")))
 async def help(event):
     await event.delete()
     if event.query.user_id is not bot.uid:
@@ -181,26 +181,26 @@ async def help(event):
                 [
                     custom.Button.inline(
                         "🚫 Cʟᴏsᴇ 🚫",
-                        data="close_vcc",
+                        data="lose_vcc",
                     )
                 ],
             ],
         )
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close_vcc")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"lose_vcc")))
 async def users(event):
     if event.query.user_id == bot.uid:
         await event.delete()
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"lose")))
 async def users(event):
     if event.query.user_id == bot.uid:
         await event.delete()
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"users")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"sers")))
 async def users(event):
     if event.query.user_id == bot.uid:
         await event.delete()
@@ -221,7 +221,7 @@ async def users(event):
         pass
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"alive")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile("live")))
 async def help(event):
     await event.delete()
     if event.query.user_id == bot.uid:
@@ -230,15 +230,15 @@ async def help(event):
             message=f"**Wʜᴀᴛ Dᴏ Yᴏᴜ Wᴀɴᴛ Yᴏ Eᴅɪᴛ Iɴ Aʟɪᴠᴇ?\nFᴏʀ Aɴʏ Kɪɴᴅ Oғ Hᴇʟᴘ Dᴏ Jᴏɪɴ [Đ₳Ɽ₭ Ƒմʂʂìօղ](https://t.me/Dark_Fussion_chat)**",
             buttons=[
                 [
-                    Button.inline("✘ Aʟɪᴠᴇ Nᴀᴍᴇ ✘", data="name"),
-                    Button.inline("✘ Aʟɪᴠᴇ Pɪᴄ ✘", data="img"),
+                    Button.inline("✘ Aʟɪᴠᴇ Nᴀᴍᴇ ✘", data="ame"),
+                    Button.inline("✘ Aʟɪᴠᴇ Pɪᴄ ✘", data="mg"),
                 ],
                 [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"img")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"mg")))
 async def help(event):
     await event.delete()
     if event.query.user_id == bot.uid:
@@ -246,14 +246,14 @@ async def help(event):
             event.chat_id,
             message=f"**Wʜɪᴄʜ Aʟɪᴠᴇ Pɪᴄ Dᴏ Yᴏᴜ Wᴀɴᴛ Tᴏ Cʜᴀɴɢᴇ?\nFᴏʀ Aɴʏ Kɪɴᴅ Oғ Hᴇʟᴘ Dᴏ Jᴏɪɴ [Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot)**",
             buttons=[
-                [Button.inline("✘ Dᴇғᴀᴜʟᴛ Aʟɪᴠᴇ ✘", data="aimg")],
-                [Button.inline("✘ Bᴀᴄᴋ ✘", data="alive")],
+                [Button.inline("✘ Dᴇғᴀᴜʟᴛ Aʟɪᴠᴇ ✘", data="aig")],
+                [Button.inline("✘ Bᴀᴄᴋ ✘", data="live")],
                 [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"name")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"ame")))
 async def help(event):
     await event.delete()
     if event.query.user_id == bot.uid:
@@ -261,13 +261,13 @@ async def help(event):
             event.chat_id,
             message=f"**Yᴏᴜ Cᴀɴ Cʜᴀɴɢᴇ Aʟɪᴠᴇ Nᴀᴍᴇ..!!\nJᴜsᴛ Fᴏʟʟᴏᴡ Tʜᴇ Sᴛᴇᴘs.! \n\nFᴏʀ Aɴʏ Kɪɴᴅ Oғ Pʀᴏʙʟᴇᴍ Oʀ Dᴏᴜʙᴛ Dᴏ Jᴏɪɴ [Lêɠêɳ̃dẞø†](http://t.me/Official_LegendBot)\n\nJᴜsᴛ Tʏᴘᴇ\n\n`.set var ALIVE_NAME <Name>`\n\nRᴇᴍᴏᴠᴇ `<>` Tʜɪs.**",
             buttons=[
-                [Button.inline("✘ Bᴀᴄᴋ ✘", data="alive")],
+                [Button.inline("✘ Bᴀᴄᴋ ✘", data="alve")],
                 [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"aimg")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"aig")))
 async def help(event):
     await event.delete()
     if event.query.user_id == bot.uid:
@@ -281,7 +281,7 @@ async def help(event):
         )
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"dalive")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"dive")))
 async def help(event):
     await event.delete()
     if event.query.user_id == bot.uid:
@@ -309,7 +309,7 @@ async def help(event):
         )
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"dalive")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"dive")))
 async def help(event):
     await event.delete()
     if event.query.user_id == bot.uid:
@@ -323,7 +323,7 @@ async def help(event):
         )
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"permit")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"pmit")))
 async def help(event):
     await event.delete()
     if event.query.user_id == bot.uid:
@@ -332,15 +332,15 @@ async def help(event):
             message=f"**What do you want to edit in Pm Permit?\nFor Any kind of Problem or doubt do join [Lêɠêɳ̃dẞø†](t.me/Official_LegendBot)**",
             buttons=[
                 [
-                    Button.inline("✘ Pᴍ Pᴇʀᴍɪᴛ Tᴇxᴛ ✘", data="text"),
-                    Button.inline("✘ Pᴍ Pᴇʀᴍɪᴛ Mᴇᴅɪᴀ ✘", data="media"),
+                    Button.inline("✘ Pᴍ Pᴇʀᴍɪᴛ Tᴇxᴛ ✘", data="txt"),
+                    Button.inline("✘ Pᴍ Pᴇʀᴍɪᴛ Mᴇᴅɪᴀ ✘", data="edia"),
                 ],
                 [Button.inline("🚫 Cᴀɴᴄᴇʟ 🚫", data="osg")],
             ],
         )
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"media")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"edia")))
 async def help(event):
     await event.delete()
     if event.query.user_id == bot.uid:
@@ -354,7 +354,7 @@ async def help(event):
         )
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"text")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"txt")))
 async def help(event):
     await event.delete()
     if event.query.user_id == bot.uid:
@@ -396,7 +396,7 @@ async def users(event):
     await tgbot.send_message(event.chat_id, grabon)
 
 
-@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"hack")))
+@tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"hck")))
 async def users(event):
     await event.delete()
     grabon = "I am Giving U Full Power To Hack Anyone Through String session\nClick Here 👉/hack."
