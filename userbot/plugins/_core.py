@@ -105,9 +105,10 @@ async def install(event):
                             return await legend.edit(
                                 f"**⚠️ WARNING !!** \n\n__Replied plugin file contains some harmful codes. Please consider checking the file. If you still want to install then use__ `.install -f`. \n\n**Codes Detected :** \n• {harm}"
                             )
+                        return
                 except BaseException:
-                    pass
-            if "(" not in downloaded_file_name:
+                    return  
+            elif "(" not in downloaded_file_name:
                 path1 = Path(downloaded_file_name)
                 shortname = path1.stem
                 load_module(shortname.replace(".py", ""))
