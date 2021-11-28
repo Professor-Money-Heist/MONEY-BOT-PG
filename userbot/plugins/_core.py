@@ -105,34 +105,38 @@ async def install(event):
                             return await legend.edit(
                                 f"**⚠️ WARNING !!** \n\n__Replied plugin file contains some harmful codes. Please consider checking the file. If you still want to install then use__ `.install -f`. \n\n**Codes Detected :** \n• {harm}"
                             )
-                        return
-                except BaseException:
-                    return
-            if "(" not in downloaded_file_name:
-                path1 = Path(downloaded_file_name)
-                shortname = path1.stem
-                load_module(shortname.replace(".py", ""))
-                if shortname in CMD_LIST:
-                    string = "**Commands found in** `{}`\n".format(
-                        (os.path.basename(downloaded_file_name))
-                    )
-                    for i in CMD_LIST[shortname]:
-                        string += "  •  `" + i
-                        string += "`\n"
-                        if b == 1:
-                            a = "__Installing..__"
-                            b = 2
-                        else:
-                            a = "__Installing...__"
-                            b = 1
-                        await legend.edit(a)
-                    return await legend.edit(
-                        f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {legend_mention}\n\n{string}\n\n        ⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ Lêɠêɳ̃dẞø†]({chnl_link})** ⚡",
-                        link_preview=False,
-                    )
-                return await legend.edit(
-                    f"Installed module `{os.path.basename(downloaded_file_name)}`"
-                )
+                        elif "(" not in downloaded_file_name:
+                            path1 = Path(downloaded_file_name)
+                            shortname = path1.stem
+                            load_module(shortname.replace(".py", ""))
+                            if shortname in CMD_LIST:
+                                
+                                string = "**Commands found in** `{}`\n".format(
+                                    (os.path.basename(downloaded_file_name))
+                                )
+                                for i in CMD_LIST[shortname]:
+                                    string += "  •  `" + i
+                                    string += "`\n"
+                                    if b == 1:
+                                        a = "__Installing..__"
+                                        b = 2
+                                    else:
+                                        
+                                        a = "__Installing...__"
+                                        b = 1
+                                    await legend.edit(a)
+                                    return 
+                                await legend.edit(
+                                    f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {legend_mention}\n\n{string}\n\n        ⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ Lêɠêɳ̃dẞø†]({chnl_link})** ⚡",
+                                    link_preview=False,
+                                )
+                                return 
+                            await legend.edit(
+                                f"Installed module `{os.path.basename(downloaded_file_name)}`"
+                            )
+                            return
+                        except BaseException:
+                            return
             else:
                 os.remove(downloaded_file_name)
                 return await eod(
