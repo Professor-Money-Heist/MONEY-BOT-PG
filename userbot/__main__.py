@@ -11,6 +11,7 @@ from telethon.tl.types import InputMessagesFilterDocument
 from LEGENDBOY import lnbot
 from userbot import LOGS, LEGENDversion, bot
 from userbot.Config import Config
+from userbot.plugins.sql_helper.idadder import get_all_users
 from userbot.utils import (
     load_abuse,
     load_addons,
@@ -19,11 +20,7 @@ from userbot.utils import (
     start_spam,
 )
 from var import Var
-from userbot.plugins.sql_helper.idadder import (
-    add_usersid_in_db,
-    already_added,
-    get_all_users,
-)
+
 l2 = Config.SUDO_COMMAND_HAND_LER
 LEGEND_PIC = "https://telegra.ph/file/e753315316673cff51085.mp4"
 l1 = Config.COMMAND_HAND_LER
