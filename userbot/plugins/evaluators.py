@@ -23,7 +23,7 @@ async def _(event):
     if not cmd:
         return await eor(event, "`What should i execute?..`")
     await eor(event, "`Executing.....`")
-    process = await asyncio.create_subprocess_sLEGENF(
+    process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     stdout, stderr = await process.communicate()
@@ -93,7 +93,7 @@ async def _(event):
         else:
             await eor(
                 LEGENDevent,
-                f"#EVAL \n\nEval command was executed sucessfully. \n\n{final_output}",
+                f"{final_output}",
             )
     else:
         await edit_or_reply(
