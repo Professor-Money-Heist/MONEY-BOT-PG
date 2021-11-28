@@ -40,7 +40,7 @@ async def _(event):
         cresult = f"`{curruser}:~$` `{cmd}`\n`{result}`"
     await eor(
         event,
-        "**Terminal Command Was Executed Successfully. Check LOGGER for Output.**",
+        f"•Command:\n`{cmd}`\n•Result:\n`{cresult}` ",
     )
     await borg.send_message(
         Config.LOGGER_ID,
@@ -140,7 +140,7 @@ async def _(event):
     OUTPUT = f"**QUERY:**\n__Command:__\n`{cmd}` \n__PID:__\n`{process.pid}`\n\n**stderr:** \n`{e}`\n**Output:**\n{o}"
     if len(OUTPUT) > 4095:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
-            out_file.name = "exec.text"
+            out_file.name = "bashed.text"
             await bot.send_file(
                 event.chat_id,
                 out_file,
@@ -150,8 +150,8 @@ async def _(event):
                 reply_to=reply_to_id,
             )
             await event.delete()
-    await eor(event, "**Check out logger for result..**")
-    await borg.send_message(Config.LOGGER_ID, f"#BASH \n\n{output}")
+    await eor(event, f"{OUTPUT}")
+    await borg.send_message(Config.LOGGER_ID, f"#BASH \n{OUTPUT}")
 
 
 CmdHelp("evaluators").add_command(
