@@ -133,12 +133,13 @@ async def install(event):
                             await legend.edit(
                                 f"Installed module `{os.path.basename(downloaded_file_name)}`"
                             )
-                       """ else:
-                            await eod(
-                                legend,
-                                "faliled",
-                            )
-                            return"""
+                            return
+                        else:
+                            await eod(legend, f"{e}")
+                            return
+                    else:
+                        await eod(legend, "First Turn On Eval = ON")
+                        return
                 except Exception as e:
                     await eod(legend, f"{e}")
                     return
