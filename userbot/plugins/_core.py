@@ -95,38 +95,34 @@ async def install(event):
                     "./userbot/plugins/",  # pylint:disable=E0602
                 )
             )
-            if owo != "-f":
-                op = open(downloaded_file_name, "r")
-                rd = op.read()
-                op.close()
-
-                try:
-                    if EVAL == "ON":
-                        if "session" in rd:
-                            os.remove(downloaded_file_name)
-                            await legend.edit(
-                                f"**⚠️ WARNING !!** \n\n__Replied plugin file contains some harmful codes. Please consider checking the file. If you still want to install then use__ `.install -f`. \n\n**Codes Detected :** \n•"
+            op = open(downloaded_file_name, "r")
+            rd = op.read()
+            op.close()
+            try:
+                if EVAL == "ON":
+                    if "session" in rd:
+                        os.remove(downloaded_file_name)
+                        await legend.edit(
+                             f"**⚠️ WARNING !!** \n\n__Replied plugin file contains some harmful codes. Please consider checking the file. If you still want to install then use__ `.install -f`. \n\n**Codes Detected :** \n•"
+                        )
+                        return
+                    elif "(" not in downloaded_file_name:
+                        path1 = Path(downloaded_file_name)
+                        shortname = path1.stem
+                        load_module(shortname.replace(".py", ""))
+                        if shortname in CMD_LIST:
+                            string = "**Commands found in** `{}`\n".format(
+                                (os.path.basename(downloaded_file_name))
                             )
-                            return
-                        else:
-                            #"(" not in downloaded_file_name:
-                            path1 = Path(downloaded_file_name)
-                            shortname = path1.stem
-                            load_module(shortname.replace(".py", ""))
-                            if shortname in CMD_LIST:
-                                string = "**Commands found in** `{}`\n".format(
-                                    (os.path.basename(downloaded_file_name))
-                                )
-                                for i in CMD_LIST[shortname]:
-                                    string += "  •  `" + i
-                                    string += "`\n"
-                                    if b == 1:
-                                        a = "__Installing..__"
-                                        b = 2
-                                    else:
-
-                                        a = "__Installing...__"
-                                        b = 1
+                            for i in CMD_LIST[shortname]:
+                                string += "  •  `" + i
+                                string += "`\n"
+                                if b == 1:
+                                    a = "__Installing..__"
+                                    b = 2
+                                else:
+                                    a = "__Installing...__"
+                                    b = 1
                                     await legend.edit(a)
                                     return
                                 await legend.edit(
@@ -137,7 +133,6 @@ async def install(event):
                             await legend.edit(
                                 f"Installed module `{os.path.basename(downloaded_file_name)}`"
                             )
-                            return
                        """ else:
                             await eod(
                                 legend,
