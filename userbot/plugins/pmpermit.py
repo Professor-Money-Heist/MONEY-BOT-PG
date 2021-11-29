@@ -179,7 +179,7 @@ if PM_ON_OFF != "DISABLE":
             if reason:
                 reason = event.pattern_match.group(2)
             else:
-                "Not Mentioned"
+                reason = "Not Mentioned"
             replied_user = await event.client(GetFullUserRequest(event.chat_id))
             firstname = replied_user.user.first_name
             chats = await event.get_chat()
