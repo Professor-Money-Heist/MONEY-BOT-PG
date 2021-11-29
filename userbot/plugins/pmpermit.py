@@ -195,8 +195,9 @@ if PM_ON_OFF != "DISABLE":
                     )
                     await asyncio.sleep(3)
                     await event.delete()
-                else:
-                    if not pm_sql.is_approved(chats.id):
+            else:
+                
+                if not pm_sql.is_approved(chats.id):
                     if chats.id in PM_WARNS:
                         del PM_WARNS[chats.id]
                     if chats.id in PREV_REPLY_MESSAGE:
