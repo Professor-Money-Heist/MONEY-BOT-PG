@@ -176,10 +176,12 @@ if PM_ON_OFF != "DISABLE":
         if event.fwd_from:
             return
         if event.is_private:
-            if reason:
-                reason = event.pattern_match.group(2)
-            else:
-                reason = "Not Mentioned"
+            reason = event.pattern_match.group(2)
+            replied_user = await event.client(GetFullUserRequest(event.chat_id))
+            firstname = replied_user.user.first_name
+            chats = await event.get_chat()
+        else:
+            reason = "Not Mentioned"
             replied_user = await event.client(GetFullUserRequest(event.chat_id))
             firstname = replied_user.user.first_name
             chats = await event.get_chat()
