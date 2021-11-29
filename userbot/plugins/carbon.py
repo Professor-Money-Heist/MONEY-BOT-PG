@@ -353,8 +353,8 @@ async def carbon_api(e):
     await LEGEND.delete()  # Deleting msg
 
 
-@bot.on(admin_cmd(pattern=f"kar4(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="kar4(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"kar(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="kar(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
         return
@@ -594,7 +594,7 @@ CmdHelp("carbon").add_command(
 ).add_command(
     "kar3", "<your text>", "Carbonize your text.(Fixed style)"
 ).add_command(
-    "kar4", "<your text>", "Carbonize your text.(Fixed style)"
+    "kar", "<your text>", "Carbonize your text.(Fixed style)"
 ).add_command(
     "rgbk2", "<your text>", "Carbonize your text.(Fixed style)"
 ).add_command(
