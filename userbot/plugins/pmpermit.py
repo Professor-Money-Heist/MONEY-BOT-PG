@@ -180,6 +180,7 @@ if PM_ON_OFF != "DISABLE":
             replied_user = await event.client(GetFullUserRequest(event.chat_id))
             firstname = replied_user.user.first_name
             chats = await event.get_chat()
+            return
         else:
             reason = "Not Mentioned"
             replied_user = await event.client(GetFullUserRequest(event.chat_id))
