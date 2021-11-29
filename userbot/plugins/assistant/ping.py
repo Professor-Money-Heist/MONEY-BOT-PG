@@ -13,7 +13,7 @@ LEGEND_IMG = os.environ.get(
 async def _(event):
     ms = 4
     ALIVE = Config.ALIVE_NAME
-    await tgbot.send_message(
+    await tgbot.send_file(
         event.chat_id,
         LEGEND_IMG,
         f"**꧁•⊹٭Ping٭⊹•꧂**\n\n   ⚜ {ms}\n   ⚜ ❝𝐌𝐲 𝐌𝐚𝐬𝐭𝐞𝐫❞ ~『{ALIVE}』",
