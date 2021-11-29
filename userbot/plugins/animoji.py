@@ -146,8 +146,6 @@ async def _(event):
         deq.rotate(1)
 
 
-
-
 @bot.on(admin_cmd(pattern=f"smoon$", outgoing=True))
 @bot.on(sudo_cmd(pattern="smoon$", allow_sudo=True))
 async def _(event):
