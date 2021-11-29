@@ -176,6 +176,7 @@ if PM_ON_OFF != "DISABLE":
         if event.fwd_from:
             return
         if event.is_private:
+            reason = event.pattern_match.group(2) else "Not Mentioned"
             replied_user = await event.client(GetFullUserRequest(event.chat_id))
             firstname = replied_user.user.first_name
             chats = await event.get_chat()
@@ -187,8 +188,8 @@ if PM_ON_OFF != "DISABLE":
                     del PREV_REPLY_MESSAGE[chats.id]
                 pm_sql.approve(chats.id, "Approved")
                 await event.edit(
-                    "Approved to pm [{}](tg://user?id={})".format(
-                        firstname, event.chat_id
+                    "Approved to pm [{}](tg://user?id={})\n{}".format(
+                        firstname, event.chat_id, reason
                     )
                 )
                 await asyncio.sleep(3)
