@@ -195,8 +195,14 @@ if PM_ON_OFF != "DISABLE":
                     )
                     await asyncio.sleep(3)
                     await event.delete()
+                    return
+                elif pm_sql.is_approved(chats.id):
+                    hel_ = await event.edit("Already In Approved List!!")
+                    await asyncio.sleep(3)
+                    await hel_.delete()
+                    return
+                return
             else:
-                
                 if not pm_sql.is_approved(chats.id):
                     if chats.id in PM_WARNS:
                         del PM_WARNS[chats.id]
@@ -211,10 +217,10 @@ if PM_ON_OFF != "DISABLE":
                     )
                     await asyncio.sleep(3)
                     await event.delete()
-            elif pm_sql.is_approved(chats.id):
-                hel_ = await event.edit("Already In Approved List!!")
-                await asyncio.sleep(3)
-                await hel_.delete()
+                elif pm_sql.is_approved(chats.id):
+                    hel_ = await event.edit("Already In Approved List!!")
+                    await asyncio.sleep(3)
+                    await hel_.delete()
         elif event.is_group:
             reply_s = await event.get_reply_message()
             if not reply_s:
