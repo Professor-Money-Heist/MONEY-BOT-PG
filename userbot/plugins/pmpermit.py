@@ -180,12 +180,8 @@ if PM_ON_OFF != "DISABLE":
             replied_user = await event.client(GetFullUserRequest(event.chat_id))
             firstname = replied_user.user.first_name
             chats = await event.get_chat()
-            return
-        elif:
+        if not reason:
             reason = "Not Mentioned"
-            replied_user = await event.client(GetFullUserRequest(event.chat_id))
-            firstname = replied_user.user.first_name
-            chats = await event.get_chat()
             if not pm_sql.is_approved(chats.id):
                 if chats.id in PM_WARNS:
                     del PM_WARNS[chats.id]
