@@ -389,7 +389,7 @@ async def legends():
     yescaption = f"Hello Sir/Miss Something Happened \nDing Dong Ting Tong Ping Pong\nSuccessfully LegendBot Has Been Deployed \nMy Master ~ 『{legd_mention}』 \nVersion ~ {LEGENDversion}\nClick Below To Know More About Me👇🏾👇👇🏼"
     try:
         TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
-        await lnbot.send_file(bot.me.id, LEGEND_PIC, caption=yescaption, buttons=TRY)
+        await lnbot.send_file(bot.me.id, LEGEND_PIC, caption=yescaption, buttons=TRY, )
     except:
         pass
 
