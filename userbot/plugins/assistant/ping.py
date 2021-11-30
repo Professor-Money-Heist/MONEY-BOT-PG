@@ -12,7 +12,7 @@ LEGEND_IMG = os.environ.get(
 ms = 4
 ALIVE = Config.ALIVE_NAME
 
-LegendBoy = (f"**꧁•⊹٭Ping٭⊹•꧂**\n\n   ⚜ {ms}\n   ⚜ ❝𝐌𝐲 𝐌𝐚𝐬𝐭𝐞𝐫❞ ~『{ALIVE}』",)
+LegendBoy = f"**꧁•⊹٭Ping٭⊹•꧂**\n\n   ⚜ {ms}\n   ⚜ ❝𝐌𝐲 𝐌𝐚𝐬𝐭𝐞𝐫❞ ~『{ALIVE}』"
 
 
 @tgbot.on(events.NewMessage(pattern="^/ping"))
