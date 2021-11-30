@@ -171,7 +171,7 @@ if PM_ON_OFF != "DISABLE":
             await event.client(functions.contacts.BlockRequest(reply_s.sender_id))
 """
 
-    @bot.on(admin_cmd(pattern="(a|approve|allow) (.*)", outgoing=True))
+    @bot.on(admin_cmd(pattern="(a|approve|allow)$"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
