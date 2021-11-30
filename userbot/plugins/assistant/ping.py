@@ -1,5 +1,6 @@
 import os
 
+from LEGENDBOY import lnbot
 from userbot import *
 from userbot.Config import Config
 from userbot.plugins import *
@@ -10,9 +11,14 @@ LEGEND_IMG = os.environ.get(
 ms = 4
 ALIVE = Config.ALIVE_NAME
 
-LegendBoy = (f"**꧁•⊹٭Ping٭⊹•꧂**\n\n   ⚜ {ms}\n   ⚜ ❝𝐌𝐲 𝐌𝐚𝐬𝐭𝐞𝐫❞ ~『{ALIVE}』",)
-
-
+LegendBoy=f"**꧁•⊹٭Ping٭⊹•꧂**\n\n   ⚜ {ms}\n   ⚜ ❝𝐌𝐲 𝐌𝐚𝐬𝐭𝐞𝐫❞ ~『{ALIVE}』",
+    
 @tgbot.on(events.NewMessage(pattern="^/ping"))
 async def _(event):
-    await tgbot.send_file(event.chat_id, LEGEND_IMG, caption=LegendBoy)
+    GOOD = [[Button.url(" Owner ", "https://t.me/The_LegendBoy")]]
+    await tgbot.send_file(
+        event.chat_id,
+        LEGEND_IMG,
+        caption=LegendBoy,
+        buttons=GOOD
+        )
