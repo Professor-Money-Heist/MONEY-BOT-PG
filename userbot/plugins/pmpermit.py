@@ -176,51 +176,27 @@ if PM_ON_OFF != "DISABLE":
         if event.fwd_from:
             return
         if event.is_private:
-            reason = event.pattern_match.group(1)
             replied_user = await event.client(GetFullUserRequest(event.chat_id))
             firstname = replied_user.user.first_name
             chats = await event.get_chat()
-            if reason:
-                if not pm_sql.is_approved(chats.id):
-                    if chats.id in PM_WARNS:
-                        del PM_WARNS[chats.id]
-                    if chats.id in PREV_REPLY_MESSAGE:
-                        await PREV_REPLY_MESSAGE[chats.id].delete()
-                        del PREV_REPLY_MESSAGE[chats.id]
-                    pm_sql.approve(chats.id, "Approved")
-                    await event.edit(
-                        "Approved to pm [{}](tg://user?id={})\n{}".format(
-                            firstname, event.chat_id, reason
-                        )
+            if not pm_sql.is_approved(chats.id):
+                if chats.id in PM_WARNS:
+                    del PM_WARNS[chats.id]
+                if chats.id in PREV_REPLY_MESSAGE:
+                    await PREV_REPLY_MESSAGE[chats.id].delete()
+                    del PREV_REPLY_MESSAGE[chats.id]
+                pm_sql.approve(chats.id, "Approved")
+                await event.edit(
+                    "Approved to pm [{}](tg://user?id={})".format(
+                        firstname, event.chat_id
                     )
-                    await asyncio.sleep(3)
-                    await event.delete()
-                    return
-                elif pm_sql.is_approved(chats.id):
-                    hel_ = await event.edit("Already In Approved List!!")
-                    await asyncio.sleep(3)
-                    await hel_.delete()
-                    return
-                return
-            else:
-                if not pm_sql.is_approved(chats.id):
-                    if chats.id in PM_WARNS:
-                        del PM_WARNS[chats.id]
-                    if chats.id in PREV_REPLY_MESSAGE:
-                        await PREV_REPLY_MESSAGE[chats.id].delete()
-                        del PREV_REPLY_MESSAGE[chats.id]
-                    pm_sql.approve(chats.id, "Approved")
-                    await event.edit(
-                        "Approved to pm [{}](tg://user?id={}) Reason Not Mention".format(
-                            firstname, event.chat_id
-                        )
-                    )
-                    await asyncio.sleep(3)
-                    await event.delete()
-                elif pm_sql.is_approved(chats.id):
-                    hel_ = await event.edit("Already In Approved List!!")
-                    await asyncio.sleep(3)
-                    await hel_.delete()
+                )
+                await asyncio.sleep(3)
+                await event.delete()
+            elif pm_sql.is_approved(chats.id):
+                hel_ = await event.edit("Already In Approved List!!")
+                await asyncio.sleep(3)
+                await hel_.delete()
         elif event.is_group:
             reply_s = await event.get_reply_message()
             if not reply_s:
