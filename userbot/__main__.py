@@ -8,7 +8,6 @@ from telethon import Button, TelegramClient, custom, events
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.types import InputMessagesFilterDocument
 
-from LEGENDBOY import lnbot
 from userbot import LOGS, LEGENDversion, bot
 from userbot.Config import Config
 from userbot.utils import (
