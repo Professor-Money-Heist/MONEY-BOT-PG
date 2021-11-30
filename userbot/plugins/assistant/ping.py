@@ -1,9 +1,10 @@
 import os
 
+from LEGENDBOY import lnbot
 from userbot import *
 from userbot.Config import Config
 from userbot.plugins import *
-from LEGENDBOY import lnbot
+
 LEGEND_IMG = os.environ.get(
     "BOT_PING_PIC", "https://telegra.ph/file/a9f6a3c160977352dd595.jpg"
 )
