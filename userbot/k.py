@@ -4,7 +4,7 @@ from distutils.util import strtobool as sb
 LOGGER_ID = os.environ.get("LOGGER_ID", None)
 if LOGGER_ID:
     LOGGER_ID = int(LOGGER_ID)
-   
+
 BOTLOG_CHATID = LOGGER_ID
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
