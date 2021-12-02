@@ -164,7 +164,7 @@ async def help(event):
                     Button.url(" Updates ", "https://t.me/Official_LegendBot"),
                 ],
                 [custom.Button.inline("⚙ Sᴇᴛᴛɪɴɢs ⚙", data="osg")],
-                [custom.Button.inline("⚜ Hack ⚜", data="ack")],
+                [custom.Button.inline("⚜ Hack ⚜", data="hck")],
             ],
         )
 
