@@ -10,8 +10,8 @@ from LEGENDBOT.utils import *
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern="tr ?(.*)"))
-@bot.on(sudo_cmd(pattern="tr ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="trt ?(.*)"))
+@bot.on(sudo_cmd(pattern="trt ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
