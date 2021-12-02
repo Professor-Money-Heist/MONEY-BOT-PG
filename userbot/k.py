@@ -1,7 +1,9 @@
 import os
 from distutils.util import strtobool as sb
 
-BOTLOG_CHATID = "-100"
+BOTLOG_CHATID = os.environ.get("LOGGER_ID", None)
+if LOGGER_ID:
+    LOGGER_ID = int(LOGGER_ID)
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
