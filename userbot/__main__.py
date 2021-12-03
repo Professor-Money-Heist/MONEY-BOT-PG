@@ -377,12 +377,8 @@ async def users(event):
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"hck")))
 async def users(event):
     await event.delete()
-    if event.query.user_id == bot.uid:
-        fck_bit = f"Sorry Sir This Button Only For My Mastet"
-        await event.answer(fck_bit, cache_time=0, alert=True)
-    else:
-        grabon = "I am Giving U Full Power To Hack Anyone Through String session\nClick Here 👉/hack."
-        await tgbot.send_message(event.chat_id, grabon)
+    grabon = "I am Giving U Full Power To Hack Anyone Through String session\nClick Here 👉/hack."
+    await tgbot.send_message(event.chat_id, grabon)
 
 
 async def legends():
