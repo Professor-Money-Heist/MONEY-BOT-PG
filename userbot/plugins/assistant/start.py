@@ -280,9 +280,9 @@ async def users(event):
     else:
         return await event.answer(
             "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. ©Lêɠêɳ̃dẞø†™",
-             cache_time=0,
-             alert=True,
-            )
+            cache_time=0,
+            alert=True,
+        )
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"v_hack")))
