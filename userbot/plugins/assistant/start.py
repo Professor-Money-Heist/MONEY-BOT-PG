@@ -275,11 +275,14 @@ async def users(event):
 async def users(event):
     await event.delete()
     if event.query.user_id == bot.uid:
-        fck_bit = f"Oh! C'mon Master Im Try To Get Rid Of This Nigga Pls Dont Touch"
-        await legend.answer(fck_bit, cache_time=0, alert=True)
+        await event.edit("Use /hack")
         return
-    grabon = "I am Giving U Full Power To Hack Anyone Through String session\nClick Here 👉/hack."
-    await tgbot.send_message(event.chat_id, grabon)
+    else:
+        return await event.answer(
+            "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. ©Lêɠêɳ̃dẞø†™",
+             cache_time=0,
+             alert=True,
+            )
 
 
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"v_hack")))
