@@ -274,7 +274,7 @@ async def users(event):
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"hack")))
 async def users(event):
     await event.delete()
-    if legend.query.user_id == bot.uid:
+    if event.query.user_id == bot.uid:
         fck_bit = f"Oh! C'mon Master Im Try To Get Rid Of This Nigga Pls Dont Touch"
         await legend.answer(fck_bit, cache_time=0, alert=True)
         return
