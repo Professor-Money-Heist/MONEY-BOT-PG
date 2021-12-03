@@ -1,8 +1,8 @@
+from telethon import functions
 from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotInlineDisabledError as noinline
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from telethon import Button, custom, events, functions, version
 
 from LEGENDBOT.utils import admin_cmd, sudo_cmd
 from userbot import CMD_LIST, bot
@@ -214,9 +214,9 @@ async def _(event):
         return await event.edit(
             "**Plz First Turn On Assistant.** Click Here👉 `.set var ASSISTANT ON` Anf send"
         )
-    
-@borg.on(admin_cmd(pattern="config"))  # pylint:disable=E0602
 
+
+@borg.on(admin_cmd(pattern="config"))  # pylint:disable=E0602
 async def _(event):
 
     if event.fwd_from:
@@ -230,5 +230,3 @@ async def _(event):
     logger.info(result)  # pylint:disable=E0602
 
     await event.edit("тєℓєтнση  вαѕє∂ υѕєявσт ρσωєяє∂ ву **Lêɠêɳ̃dẞø†** вσт")
-    
-    
