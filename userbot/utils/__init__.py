@@ -1,4 +1,4 @@
-from userbot.Config import Config 
+from userbot.Config import Config
 from userbot.plugins.sql_helper.gvar_sql import addgvar, delgvar, gvarstatus
 
 if Config.PRIVATE_GROUP_BOT_API_ID == 0:
