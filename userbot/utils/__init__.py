@@ -1,5 +1,5 @@
 from userbot.Config import Config 
-from userbot.pligins.sql_helper.gvar_sql import addgvar, delgvar, gvarstatus
+from userbot.plugins.sql_helper.gvar_sql import addgvar, delgvar, gvarstatus
 
 if Config.PRIVATE_GROUP_BOT_API_ID == 0:
     if gvarstatus("PRIVATE_GROUP_BOT_API_ID") is None:
