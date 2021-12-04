@@ -181,7 +181,7 @@ async def _(legendevent):
 async def _(event):
     legend = await eor(event, "`Gbanning...`")
     reason = ""
-    reply = await event.get_reply_message()
+    await event.get_reply_message()
     if event.reply_to_msg_id:
         userid = (await event.get_reply_message()).sender_id
         try:
