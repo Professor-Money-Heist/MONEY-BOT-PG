@@ -58,8 +58,8 @@ async def get_user_from_id(user, event):
     return user_obj
 
 
-@bot.on(admin_cmd(pattern="gpro ?(.*)"))
-@bot.on(sudo_cmd(pattern="gpro ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="gpromote ?(.*)"))
+@bot.on(sudo_cmd(pattern="gpromote ?(.*)", allow_sudo=True))
 async def _(legendevent):
     i = 0
     await legendevent.get_sender()
@@ -82,7 +82,7 @@ async def _(legendevent):
         return
     try:
         if not rank:
-            rank = "legend"
+            rank = "ℓεɠεɳ∂"
     except:
         return await legend.edit("**ERROR !!**")
     if user:
@@ -117,8 +117,8 @@ async def _(legendevent):
     )
 
 
-@bot.on(admin_cmd(pattern="gdem ?(.*)"))
-@bot.on(sudo_cmd(pattern="gdem ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="gdemote ?(.*)"))
+@bot.on(sudo_cmd(pattern="gdemote ?(.*)", allow_sudo=True))
 async def _(legendevent):
     i = 0
     await legendevent.get_sender()
@@ -176,8 +176,8 @@ async def _(legendevent):
     )
 
 
-@bot.on(admin_cmd(pattern=r"gbn ?(.*)"))
-@bot.on(sudo_cmd(pattern=r"gbn ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"gban ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"gban ?(.*)", allow_sudo=True))
 async def _(event):
     legend = await eor(event, "`Gbanning...`")
     reason = ""
@@ -238,8 +238,8 @@ async def _(event):
         await legend.edit(ogmsg)
 
 
-@bot.on(admin_cmd(pattern=r"ungbn ?(.*)"))
-@bot.on(sudo_cmd(pattern=r"ungbn ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"ungban ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"ungban ?(.*)", allow_sudo=True))
 async def _(event):
     legend = await eor(event, "`Ungban in progress...`")
     if event.reply_to_msg_id:
@@ -269,8 +269,8 @@ async def _(event):
     )
 
 
-@bot.on(admin_cmd(pattern="lstgban$"))
-@bot.on(sudo_cmd(pattern="lstgban$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="listgban$"))
+@bot.on(sudo_cmd(pattern="listgban$", allow_sudo=True))
 async def already(event):
     hmm = await eor(event, "`Fetching Gbanned users...`")
     gbanned_users = all_gbanned()
@@ -345,8 +345,8 @@ async def gkick(event):
         await legend.edit(gkmsg)
 
 
-@bot.on(admin_cmd(pattern=r"gmut ?(\d+)?"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern=r"gmut ?(\d+)?"))
+@bot.on(admin_cmd(pattern=r"gmute ?(\d+)?"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern=r"gmute ?(\d+)?"))
 async def gm(event):
     private = False
     if event.fwd_from:
@@ -389,8 +389,8 @@ async def gm(event):
             await eor(event, "🤫 Shhh... **Don't speak Now !!**")
 
 
-@bot.on(admin_cmd(outgoing=True, pattern=r"ungmut ?(\d+)?"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern=r"ungmut ?(\d+)?"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"ungmute ?(\d+)?"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern=r"ungmute ?(\d+)?"))
 async def endgmute(event):
     private = False
     if event.fwd_from:
@@ -429,25 +429,25 @@ async def watcher(event):
 
 
 CmdHelp("global").add_command(
-    "gbn",
+    "gban",
     "<reply>/<userid>",
     "Globally Bans the mentioned user in 'X' chats you are admin with ban permission.",
 ).add_command(
-    "ungbn", "<reply>/<userid>", "Globally Unbans the user in 'X' chats you are admin!"
+    "ungban", "<reply>/<userid>", "Globally Unbans the user in 'X' chats you are admin!"
 ).add_command(
-    "lstgbn", None, "Gives the list of all GBanned Users."
+    "listgban", None, "Gives the list of all GBanned Users."
 ).add_command(
     "gkick", "<reply>/<userid>", "Globally Kicks the user in 'X' chats you are admin!"
 ).add_command(
-    "gmut", "<reply> or <userid>", "Globally Mutes the User."
+    "gmute", "<reply> or <userid>", "Globally Mutes the User."
 ).add_command(
-    "ungmut", "<reply> or <userid>", "Globally Unmutes the gmutes user."
+    "ungmute", "<reply> or <userid>", "Globally Unmutes the gmutes user."
 ).add_command(
-    "gpro",
+    "gpromote",
     "<reply> or <username>",
     "Globally Promotes the mentioned user in all the chats you are admin with Add Admins permission.",
 ).add_command(
-    "gdem",
+    "gdemote",
     "<reply> or <username>",
     "Globally Demotes the mentioned user in all the chats you have rights to demoted that user.",
 ).add_info(
