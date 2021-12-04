@@ -1,13 +1,5 @@
 import asyncio
-import asyncio
 import random
-
-from telethon import events
-from telethon.tl.functions.channels import EditAdminRequest
-from telethon.tl.types import ChatAdminRights, ChannelParticipantsAdmins, ChatBannedRights, MessageEntityMentionName, MessageMediaPhoto
-from telethon.errors.rpcerrorlist import UserIdInvalidError, MessageTooLongError
-from telethon.tl.functions.channels import EditAdminRequest, EditBannedRequest, EditPhotoRequest
-from telethon.tl.functions.messages import UpdatePinnedMessageRequest
 
 from telethon import events
 from telethon.tl.functions.channels import EditAdminRequest
@@ -282,7 +274,9 @@ async def _(event):
                     gfuck.id, userid, view_messages=True
                 )
                 chats += 1
-                await legend.edit(f"**Ungban in progress...** \n**Chats :** __{chats}__")
+                await legend.edit(
+                    f"**Ungban in progress...** \n**Chats :** __{chats}__"
+                )
             except BaseException:
                 pass
     ungbaner(userid)
@@ -399,7 +393,7 @@ async def gm(event):
         return await eod(
             event, "Need a user to gmute. Reply or give userid to gmute them.."
         )
-    name = (await event.client.get_entity(userid)).first_name
+    (await event.client.get_entity(userid)).first_name
     event.chat_id
     await event.get_chat()
     if gsql.is_gmuted(userid, "gmute"):
@@ -416,11 +410,16 @@ async def gm(event):
     else:
         if Config.ABUSE == "ON":
             await bot.send_file(
-                event.chat_id, shhh, caption="**Chup Madarcod... Bilkul Chup 🤫**", reply_to=reply
+                event.chat_id,
+                shhh,
+                caption="**Chup Madarcod... Bilkul Chup 🤫**",
+                reply_to=reply,
             )
             await event.delete()
         else:
-            await eor(event, "🤫 Shhh... [{name}](tg://user?id={userid})**Don't speak Now !!**")
+            await eor(
+                event, "🤫 Shhh... [{name}](tg://user?id={userid})**Don't speak Now !!**"
+            )
 
 
 @bot.on(admin_cmd(outgoing=True, pattern=r"ungmute ?(\d+)?"))
@@ -445,7 +444,7 @@ async def endgmute(event):
             event,
             "Please reply to a user or add their into the command to ungmute them.",
         )
-    name = (await event.client.get_entity(userid)).first_name
+    (await event.client.get_entity(userid)).first_name
     event.chat_id
     if not gsql.is_gmuted(userid, "gmute"):
         return await eod(event, "I don't remember I gmuted him...")
@@ -454,7 +453,9 @@ async def endgmute(event):
     except Exception as e:
         await eod(event, "Error occured!\nError is " + str(e))
     else:
-        await eor(event, "[{name}](tg://user?id={userid}) Ok!!Globally Unmuted Now Speak")
+        await eor(
+            event, "[{name}](tg://user?id={userid}) Ok!!Globally Unmuted Now Speak"
+        )
 
 
 @command(incoming=True)
