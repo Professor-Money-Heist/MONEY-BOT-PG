@@ -12,10 +12,10 @@ from userbot.plugins.sql_helper.gban_sql import (
     is_gbanned,
     ungbaner,
 )
-
+from userbot.plugins.sql_helper.gvar_sql import gvarstat
 from . import *
 
-gbpic = Config.ALIVE_PIC or cjb
+gbpic = Config.ALIVE_PIC
 
 
 async def get_full_user(event):
@@ -424,8 +424,11 @@ async def endgmute(event):
 
 @command(incoming=True)
 async def watcher(event):
-    if gsql.is_gmuted(event.sender_id, "gmute"):
-        await event.delete()
+    try:
+        if gsql.is_gmuted(event.sender_id, "gmute"):
+            await event.delete()
+    except Exception as e:
+        LOGS.info(str(e))
 
 
 CmdHelp("global").add_command(
