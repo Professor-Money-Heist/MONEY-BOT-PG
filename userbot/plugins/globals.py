@@ -393,7 +393,7 @@ async def gm(event):
         return await eod(
             event, "Need a user to gmute. Reply or give userid to gmute them.."
         )
-    (await event.client.get_entity(userid)).first_name
+    name = (await event.client.get_entity(userid)).first_name
     event.chat_id
     await event.get_chat()
     if gsql.is_gmuted(userid, "gmute"):
@@ -444,7 +444,7 @@ async def endgmute(event):
             event,
             "Please reply to a user or add their into the command to ungmute them.",
         )
-    (await event.client.get_entity(userid)).first_name
+    name = (await event.client.get_entity(userid)).first_name
     event.chat_id
     if not gsql.is_gmuted(userid, "gmute"):
         return await eod(event, "I don't remember I gmuted him...")
