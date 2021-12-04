@@ -390,9 +390,7 @@ async def gm(event):
     elif private is True:
         userid = event.chat_id
     else:
-        return await eod(
-            event, "Need a user to gmute. Reply or give userid to gmute them.."
-        )
+        return await eod(event, "Need a user to gmute. Reply or give userid to gmute them..")
     name = (await event.client.get_entity(userid)).first_name
     event.chat_id
     await event.get_chat()
@@ -409,28 +407,20 @@ async def gm(event):
         await eod(event, "Error occured!\nError is " + str(e))
     else:
         if Config.ABUSE == "ON":
-            await bot.send_file(
-                event.chat_id,
-                LEGEND_logo2,
-                caption="**Chup Madarcod... Bilkul Chup 🤫**",
-                reply_to=reply,
-            )
+            await bot.send_file(event.chat_id, LEGEND_logo1, caption=f"**(~‾▿‾)~ Chup [Madarchod](tg://user?id={userid}) ....**", reply_to=reply)
             await event.delete()
         else:
-            await eor(
-                event,
-                f"🤫 Shhh... [{name}](tg://user?id={userid})**Don't speak Now !!**",
-            )
+            await eor(event, "**Globally Muted [{name}](tg://user?id={userid}) !!**\n\n__Kid struggling to speak__ ♪～(´ε｀ )")
 
 
 @bot.on(admin_cmd(outgoing=True, pattern=r"ungmute ?(\d+)?"))
 @bot.on(sudo_cmd(allow_sudo=True, pattern=r"ungmute ?(\d+)?"))
-async def endgmute(event):
+async def gm(event):
     private = False
     if event.fwd_from:
         return
     elif event.is_private:
-        await eor(event, "`Trying to ungmute !!`")
+        await eor(event, "`Trying to gmute user...`")
         await asyncio.sleep(2)
         private = True
     reply = await event.get_reply_message()
@@ -441,22 +431,27 @@ async def endgmute(event):
     elif private is True:
         userid = event.chat_id
     else:
-        return await eod(
-            event,
-            "Please reply to a user or add their into the command to ungmute them.",
-        )
+        return await eod(event, "Need a user to gmute. Reply or give userid to gmute them..")
     name = (await event.client.get_entity(userid)).first_name
     event.chat_id
-    if not gsql.is_gmuted(userid, "gmute"):
-        return await eod(event, "I don't remember I gmuted him...")
+    await event.get_chat()
+    if gsql.is_gmuted(userid, "gmute"):
+        return await eod(event, "This kid is already Gmuted.")
     try:
-        gsql.ungmute(userid, "gmute")
+        if str(userid) in DEVLIST:
+            return await eod(event, "**Sorry I'm not going to gmute them..**")
+    except:
+        pass
+    try:
+        gsql.gmute(userid, "gmute")
     except Exception as e:
         await eod(event, "Error occured!\nError is " + str(e))
     else:
-        await eor(
-            event, f"[{name}](tg://user?id={userid}) Ok!!Globally Unmuted Now Speak"
-        )
+        if Config.ABUSE == "ON":
+            await bot.send_file(event.chat_id, shhh, caption=f"**(~‾▿‾)~ Chup [Madarchod](tg://user?id={userid}) ....**", reply_to=reply)
+            await event.delete()
+        else:
+            await eor(event, "**Globally Muted [{name}](tg://user?id={userid}) !!**\n\n__Kid struggling to speak__ ♪～(´ε｀ )")
 
 
 @command(incoming=True)
