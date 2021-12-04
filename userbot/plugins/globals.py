@@ -312,8 +312,8 @@ async def _(event):
                     pass
 
 
-@bot.on(admin_cmd(pattern=r"gkck ?(.*)"))
-@bot.on(sudo_cmd(pattern=r"gkck ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"gkick ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"gkick ?(.*)", allow_sudo=True))
 async def gkick(event):
     legend = await eor(event, "`Kicking globally...`")
     if event.reply_to_msg_id:
