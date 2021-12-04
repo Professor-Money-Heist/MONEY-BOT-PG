@@ -1,19 +1,25 @@
 import asyncio
+
 from telethon import events
 from telethon.tl.functions.channels import EditAdminRequest
-from telethon.tl.types import ChatAdminRights, ChannelParticipantsAdmins, ChatBannedRights, MessageEntityMentionName, MessageMediaPhoto
-from telethon.errors.rpcerrorlist import UserIdInvalidError, MessageTooLongError
-from telethon.tl.functions.channels import EditAdminRequest, EditBannedRequest, EditPhotoRequest
-from telethon.tl.functions.messages import UpdatePinnedMessageRequest
+from telethon.tl.types import ChatAdminRights, MessageEntityMentionName
 
-from userbot.plugins.sql_helper.gban_sql import is_gbanned, gbaner, ungbaner, all_gbanned
-from userbot.plugins.sql_helper import gmute_sql as gsql
-from . import *
 from userbot.cmdhelp import CmdHelp
+from userbot.plugins.sql_helper import gmute_sql as gsql
+from userbot.plugins.sql_helper.gban_sql import (
+    all_gbanned,
+    gbaner,
+    is_gbanned,
+    ungbaner,
+)
+
+from . import *
+
 gbpic = Config.ALIVE_PIC or cjb
 
-async def get_full_user(event):  
-    args = event.pattern_match.group(1).split(':', 1)
+
+async def get_full_user(event):
+    args = event.pattern_match.group(1).split(":", 1)
     extra = None
     if event.reply_to_msg_id and not len(args) == 2:
         previous_message = await event.get_reply_message()
@@ -30,15 +36,14 @@ async def get_full_user(event):
             return
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
-            if isinstance(probable_user_mention_entity,
-                          MessageEntityMentionName):
+            if isinstance(probable_user_mention_entity, MessageEntityMentionName):
                 user_id = probable_user_mention_entity.user_id
                 user_obj = await event.client.get_entity(user_id)
                 return user_obj
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await eor(event, f"**ERROR !!**\n\n`{str(err)}`")           
+            return await eor(event, f"**ERROR !!**\n\n`{str(err)}`")
     return user_obj, extra
 
 
@@ -53,12 +58,11 @@ async def get_user_from_id(user, event):
     return user_obj
 
 
-
 @bot.on(admin_cmd(pattern="gpro ?(.*)"))
 @bot.on(sudo_cmd(pattern="gpro ?(.*)", allow_sudo=True))
 async def _(legendevent):
     i = 0
-    sender = await legendevent.get_sender()
+    await legendevent.get_sender()
     me = await legendevent.client.get_me()
     legend = await eor(legendevent, "`Promoting globally...`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
@@ -74,44 +78,50 @@ async def _(legendevent):
     except:
         pass
     if me == user:
-       k = await legend.edit("You can't promote yourself...")
-       return
+        await legend.edit("You can't promote yourself...")
+        return
     try:
         if not rank:
             rank = "legend"
     except:
         return await legend.edit("**ERROR !!**")
     if user:
-        telchanel = [d.entity.id
-                     for d in await legendevent.client.get_dialogs()
-                     if (d.is_group or d.is_channel)
-                     ]
-        rgt = ChatAdminRights(add_admins=False,
-                               invite_users=True,
-                                change_info=False,
-                                 ban_users=True,
-                                  delete_messages=True,
-                                   pin_messages=True)
+        telchanel = [
+            d.entity.id
+            for d in await legendevent.client.get_dialogs()
+            if (d.is_group or d.is_channel)
+        ]
+        rgt = ChatAdminRights(
+            add_admins=False,
+            invite_users=True,
+            change_info=False,
+            ban_users=True,
+            delete_messages=True,
+            pin_messages=True,
+        )
         for x in telchanel:
-          try:
-             await legendevent.client(EditAdminRequest(x, user, rgt, rank))
-             i += 1
-             await legend.edit(f"**Promoting User in :**  `{i}` Chats...")
-          except:
-             pass
+            try:
+                await legendevent.client(EditAdminRequest(x, user, rgt, rank))
+                i += 1
+                await legend.edit(f"**Promoting User in :**  `{i}` Chats...")
+            except:
+                pass
     else:
         await legend.edit(f"**Reply to a user !!**")
     await legend.edit(
         f"[{user.first_name}](tg://user?id={user.id}) **Was Promoted Globally In** `{i}` **Chats !!**"
     )
-    await bot.send_message(Config.LOGGER_ID, f"#GPROMOTE \n\n**Globally Promoted User :** [{user.first_name}](tg://user?id={user.id}) \n\n**Total Chats :** `{i}`")
+    await bot.send_message(
+        Config.LOGGER_ID,
+        f"#GPROMOTE \n\n**Globally Promoted User :** [{user.first_name}](tg://user?id={user.id}) \n\n**Total Chats :** `{i}`",
+    )
 
 
 @bot.on(admin_cmd(pattern="gdem ?(.*)"))
 @bot.on(sudo_cmd(pattern="gdem ?(.*)", allow_sudo=True))
 async def _(legendevent):
     i = 0
-    sender = await legendevent.get_sender()
+    await legendevent.get_sender()
     me = await legendevent.client.get_me()
     legend = await eor(legendevent, "`Demoting Globally...`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
@@ -127,37 +137,43 @@ async def _(legendevent):
     except:
         pass
     if me == user:
-       k = await legend.edit("You can't Demote yourself !!")
-       return
+        await legend.edit("You can't Demote yourself !!")
+        return
     try:
         if not rank:
             rank = "legend"
     except:
         return await legend.edit("**ERROR !!**")
     if user:
-        telchanel = [d.entity.id
-                     for d in await legendevent.client.get_dialogs()
-                     if (d.is_group or d.is_channel)
-                     ]
-        rgt = ChatAdminRights(add_admins=None,
-                               invite_users=None,
-                                change_info=None,
-                                 ban_users=None,
-                                  delete_messages=None,
-                                   pin_messages=None)
+        telchanel = [
+            d.entity.id
+            for d in await legendevent.client.get_dialogs()
+            if (d.is_group or d.is_channel)
+        ]
+        rgt = ChatAdminRights(
+            add_admins=None,
+            invite_users=None,
+            change_info=None,
+            ban_users=None,
+            delete_messages=None,
+            pin_messages=None,
+        )
         for x in telchanel:
-          try:
-             await legendevent.client(EditAdminRequest(x, user, rgt, rank))
-             i += 1
-             await legend.edit(f"**Demoting Globally In Chats :** `{i}`")
-          except:
-             pass
+            try:
+                await legendevent.client(EditAdminRequest(x, user, rgt, rank))
+                i += 1
+                await legend.edit(f"**Demoting Globally In Chats :** `{i}`")
+            except:
+                pass
     else:
         await legend.edit(f"**Reply to a user !!**")
     await legend.edit(
         f"[{user.first_name}](tg://user?id={user.id}) **Was Demoted Globally In** `{i}` **Chats !!**"
     )
-    await bot.send_message(Config.LOGGER_ID, f"#GDEMOTE \n\n**Globally Demoted :** [{user.first_name}](tg://user?id={user.id}) \n\n**Total Chats :** `{i}`")
+    await bot.send_message(
+        Config.LOGGER_ID,
+        f"#GDEMOTE \n\n**Globally Demoted :** [{user.first_name}](tg://user?id={user.id}) \n\n**Total Chats :** `{i}`",
+    )
 
 
 @bot.on(admin_cmd(pattern=r"gbn ?(.*)"))
@@ -185,7 +201,9 @@ async def _(event):
         except IndexError:
             reason = ""
     else:
-        return await eor(legend, "**To gban a user i need a userid or reply to his/her message!!**")
+        return await eor(
+            legend, "**To gban a user i need a userid or reply to his/her message!!**"
+        )
     name = (await event.client.get_entity(userid)).first_name
     chats = 0
     if userid == The_LegendBoy:
@@ -200,7 +218,9 @@ async def _(event):
     async for gfuck in event.client.iter_dialogs():
         if gfuck.is_group or gfuck.is_channel:
             try:
-                await event.client.edit_permissions(gfuck.id, userid, view_messages=False)
+                await event.client.edit_permissions(
+                    gfuck.id, userid, view_messages=False
+                )
                 chats += 1
             except BaseException:
                 pass
@@ -237,7 +257,9 @@ async def _(event):
     async for gfuck in event.client.iter_dialogs():
         if gfuck.is_group or gfuck.is_channel:
             try:
-                await event.client.edit_permissions(gfuck.id, userid, view_messages=True)
+                await event.client.edit_permissions(
+                    gfuck.id, userid, view_messages=True
+                )
                 chats += 1
             except BaseException:
                 pass
@@ -282,7 +304,9 @@ async def _(event):
                         view_messages=False,
                     )
                     gban_watcher = f"⚠️⚠️**Warning**⚠️⚠️\n\n`Gbanned User Joined the chat!!`\n**⚜️ Victim Id :**  [{user.first_name}](tg://user?id={user.id})\n"
-                    gban_watcher += f"**🔥 Action 🔥**  \n`Banned this piece of shit....` **AGAIN!**"
+                    gban_watcher += (
+                        f"**🔥 Action 🔥**  \n`Banned this piece of shit....` **AGAIN!**"
+                    )
                     await event.reply(gban_watcher)
                 except BaseException:
                     pass
@@ -339,7 +363,9 @@ async def gm(event):
     elif private is True:
         userid = event.chat_id
     else:
-        return await eor(event, "Need a user to gmute. Reply or give userid to gmute them..")
+        return await eor(
+            event, "Need a user to gmute. Reply or give userid to gmute them.."
+        )
     event.chat_id
     await event.get_chat()
     if gsql.is_gmuted(userid, "gmute"):
@@ -355,11 +381,12 @@ async def gm(event):
         await eor(event, "Error occured!\nError is " + str(e))
     else:
         if Config.ABUSE == "ON":
-            await bot.send_file(event.chat_id, shhh, caption="**Chup Madarcod... Bilkul Chup 🤫**")
+            await bot.send_file(
+                event.chat_id, shhh, caption="**Chup Madarcod... Bilkul Chup 🤫**"
+            )
             await event.delete()
         else:
             await eor(event, "🤫 Shhh... **Don't speak Now !!**")
-        
 
 
 @bot.on(admin_cmd(outgoing=True, pattern=r"ungmut ?(\d+)?"))
@@ -380,7 +407,10 @@ async def endgmute(event):
     elif private is True:
         userid = event.chat_id
     else:
-        return await eor(event,"Please reply to a user or add their into the command to ungmute them.")
+        return await eor(
+            event,
+            "Please reply to a user or add their into the command to ungmute them.",
+        )
     event.chat_id
     if not gsql.is_gmuted(userid, "gmute"):
         return await eor(event, "I don't remember I gmuted him...")
@@ -399,23 +429,29 @@ async def watcher(event):
 
 
 CmdHelp("global").add_command(
-  "gbn", "<reply>/<userid>", "Globally Bans the mentioned user in 'X' chats you are admin with ban permission."
+    "gbn",
+    "<reply>/<userid>",
+    "Globally Bans the mentioned user in 'X' chats you are admin with ban permission.",
 ).add_command(
-  "ungbn", "<reply>/<userid>", "Globally Unbans the user in 'X' chats you are admin!"
+    "ungbn", "<reply>/<userid>", "Globally Unbans the user in 'X' chats you are admin!"
 ).add_command(
-  "lstgbn", None, "Gives the list of all GBanned Users."
+    "lstgbn", None, "Gives the list of all GBanned Users."
 ).add_command(
-  "gkick", "<reply>/<userid>", "Globally Kicks the user in 'X' chats you are admin!"
+    "gkick", "<reply>/<userid>", "Globally Kicks the user in 'X' chats you are admin!"
 ).add_command(
-  "gmut", "<reply> or <userid>", "Globally Mutes the User."
+    "gmut", "<reply> or <userid>", "Globally Mutes the User."
 ).add_command(
-  "ungmut", "<reply> or <userid>", "Globally Unmutes the gmutes user."
+    "ungmut", "<reply> or <userid>", "Globally Unmutes the gmutes user."
 ).add_command(
-  "gpro", "<reply> or <username>", "Globally Promotes the mentioned user in all the chats you are admin with Add Admins permission."
+    "gpro",
+    "<reply> or <username>",
+    "Globally Promotes the mentioned user in all the chats you are admin with Add Admins permission.",
 ).add_command(
-  "gdem", "<reply> or <username>", "Globally Demotes the mentioned user in all the chats you have rights to demoted that user."
+    "gdem",
+    "<reply> or <username>",
+    "Globally Demotes the mentioned user in all the chats you have rights to demoted that user.",
 ).add_info(
-  "Global Admin Tool."
+    "Global Admin Tool."
 ).add_warning(
-  "✅ Harmlesss Module."
+    "✅ Harmlesss Module."
 ).add()
