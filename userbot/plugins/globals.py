@@ -15,7 +15,7 @@ from userbot.plugins.sql_helper.gban_sql import (
 
 from . import *
 
-gbpic = Config.ALIVE_PIC
+gbpic = Config.ALIVE_PIC or LEGEND_logo3
 
 
 async def get_full_user(event):
@@ -236,7 +236,7 @@ async def _(event):
         gbpic = random.choice(c)
     else:
         gbpic = LEGEND_logo2
-    gmsg = f"🥴 [{name}](tg://user?id={userid}) **beta majdur ko khodna 😪 aur** {legend_mention} **ko chodna... Kabhi sikhana nhi!! 😏**\n\n📍 Added to Gban Watch!!\n**🔰 Total Chats :**  `{chats}`"
+    gmsg = f"🥴 [{name}](tg://user?id={userid}) **Gbanned** By {legend_mention} **Reason = Not Mentioned 😏**\n\n📍 Added to Gban Watch!!\n**🔰 Total Chats :**  `{chats}`"
     if reason != "":
         gmsg += f"\n**🔰 Reason :**  `{reason}`"
     ogmsg = f"[{name}](tg://user?id={userid}) **Is now GBanned by** {legend_mention} **in**  `{chats}`  **Chats!! 😏**\n\n**📍 Also Added to Gban Watch!!**"
