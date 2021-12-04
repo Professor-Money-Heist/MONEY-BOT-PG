@@ -3,11 +3,7 @@ import random
 
 from telethon import events
 from telethon.tl.functions.channels import EditAdminRequest
-from telethon.tl.types import ChatAdminRights, ChannelParticipantsAdmins, ChatBannedRights, MessageEntityMentionName, MessageMediaPhoto
-from telethon.errors.rpcerrorlist import UserIdInvalidError, MessageTooLongError
-from telethon.tl.functions.channels import EditAdminRequest, EditBannedRequest, EditPhotoRequest
-from telethon.tl.functions.messages import UpdatePinnedMessageRequest
-
+from telethon.tl.types import ChatAdminRights, MessageEntityMentionName
 
 from userbot.cmdhelp import CmdHelp
 from userbot.plugins.sql_helper import gmute_sql as gsql
@@ -422,7 +418,8 @@ async def gm(event):
             await event.delete()
         else:
             await eor(
-                event, f"🤫 Shhh... [{name}](tg://user?id={userid})**Don't speak Now !!**"
+                event,
+                f"🤫 Shhh... [{name}](tg://user?id={userid})**Don't speak Now !!**",
             )
 
 
@@ -444,7 +441,10 @@ async def endgmute(event):
     elif private is True:
         userid = event.chat_id
     else:
-        return await eod(event,"Please reply to a user or add their into the command to ungmute them.")
+        return await eod(
+            event,
+            "Please reply to a user or add their into the command to ungmute them.",
+        )
     name = (await event.client.get_entity(userid)).first_name
     event.chat_id
     if not gsql.is_gmuted(userid, "gmute"):
