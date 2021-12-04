@@ -181,6 +181,7 @@ async def _(legendevent):
 async def _(event):
     legend = await eor(event, "`Gbanning...`")
     reason = ""
+    reply = await event.get_reply_message()
     if event.reply_to_msg_id:
         userid = (await event.get_reply_message()).sender_id
         try:
@@ -201,15 +202,15 @@ async def _(event):
         except IndexError:
             reason = ""
     else:
-        return await eor(
+        return await eod(
             legend, "**To gban a user i need a userid or reply to his/her message!!**"
         )
     name = (await event.client.get_entity(userid)).first_name
     chats = 0
     if userid == The_LegendBoy:
-        return await eor(legend, "🥴 **Nashe me hai kya lawde ‽**")
+        return await eod(legend, "🥴 **Nashe me hai kya lawde ‽**")
     if str(userid) in DEVLIST:
-        return await eor(legend, "😑 **GBan my creator ?¿ Really‽**")
+        return await eod(legend, "😑 **GBan my creator ?¿ Really‽**")
     if is_gbanned(userid):
         return await eor(
             legend,
@@ -222,9 +223,19 @@ async def _(event):
                     gfuck.id, userid, view_messages=False
                 )
                 chats += 1
+                await legend.edit(f"**Gbanning...** \n**Chats :** __{chats}__")
             except BaseException:
                 pass
     gbaner(userid)
+    a = gvarstat("ALIVE_PIC")
+    if a is not None:
+        b = a.split(" ")
+        c = [LEGEND_logo2]
+        for d in b:
+            c.append(d)
+        gbpic = random.choice(c)
+    else:
+        gbpic = LEGEND_logo2
     gmsg = f"🥴 [{name}](tg://user?id={userid}) **beta majdur ko khodna 😪 aur** {legend_mention} **ko chodna... Kabhi sikhana nhi!! 😏**\n\n📍 Added to Gban Watch!!\n**🔰 Total Chats :**  `{chats}`"
     if reason != "":
         gmsg += f"\n**🔰 Reason :**  `{reason}`"
