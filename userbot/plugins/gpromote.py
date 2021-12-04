@@ -1,4 +1,4 @@
-marculs = 9
+"""marculs = 9
 from telethon.tl.functions.channels import EditAdminRequest
 from telethon.tl.types import ChatAdminRights, MessageEntityMentionName
 
@@ -78,7 +78,7 @@ async def gben(userbot):
         return
     try:
         if not rank:
-            rank = "ℓεɠεɳ∂"
+            rank = "legend"
     except:
         return await dark.edit(f"**Something W3NT Wrong**")
     if user:
@@ -169,3 +169,4 @@ CmdHelp("gpromote").add_command(
 ).add_command(
     "gdemote", "<User-id> or reply to a user", "demote the user in all of your groups"
 ).add()
+"""
