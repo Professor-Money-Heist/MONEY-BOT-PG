@@ -1,4 +1,13 @@
 import asyncio
+import asyncio
+import random
+
+from telethon import events
+from telethon.tl.functions.channels import EditAdminRequest
+from telethon.tl.types import ChatAdminRights, ChannelParticipantsAdmins, ChatBannedRights, MessageEntityMentionName, MessageMediaPhoto
+from telethon.errors.rpcerrorlist import UserIdInvalidError, MessageTooLongError
+from telethon.tl.functions.channels import EditAdminRequest, EditBannedRequest, EditPhotoRequest
+from telethon.tl.functions.messages import UpdatePinnedMessageRequest
 
 from telethon import events
 from telethon.tl.functions.channels import EditAdminRequest
@@ -273,6 +282,7 @@ async def _(event):
                     gfuck.id, userid, view_messages=True
                 )
                 chats += 1
+                await legend.edit(f"**Ungban in progress...** \n**Chats :** __{chats}__")
             except BaseException:
                 pass
     ungbaner(userid)
@@ -328,6 +338,7 @@ async def _(event):
 @bot.on(sudo_cmd(pattern=r"gkick ?(.*)", allow_sudo=True))
 async def gkick(event):
     legend = await eor(event, "`Kicking globally...`")
+    reply = await event.get_reply_message()
     if event.reply_to_msg_id:
         userid = (await event.get_reply_message()).sender_id
     elif event.pattern_match.group(1):
@@ -339,7 +350,7 @@ async def gkick(event):
     name = (await event.client.get_entity(userid)).first_name
     chats = 0
     if userid == The_LegendBoy:
-        return await eor(legend, "**🥴 Nashe me hai kya lawde!!**")
+        return await eod(legend, "**🥴 Nashe me hai kya lawde!!**")
     if str(userid) in DEVLIST:
         return await eor(legend, "**😪 I'm not going to gkick my developer!!**")
     async for gkick in event.client.iter_dialogs():
@@ -347,11 +358,21 @@ async def gkick(event):
             try:
                 await bot.kick_participant(gkick.id, userid)
                 chats += 1
+                await hell.edit(f"**Kicking globally...** \n**Chats :** __{chats}__")
             except BaseException:
                 pass
+    a = gvarstat("ALIVE_PIC")
+    if a is not None:
+        b = a.split(" ")
+        c = [LEGEND_logo2]
+        for d in b:
+            c.append(d)
+        gbpic = random.choice(c)
+    else:
+        gbpic = LEGEND_logo2
     gkmsg = f"🏃 **Globally Kicked** [{name}](tg://user?id={userid})'s butts !! \n\n📝 **Chats :**  `{chats}`"
     if Config.ABUSE == "ON":
-        await bot.send_file(event.chat_id, gbpic, caption=gkmsg)
+        await bot.send_file(event.chat_id, gbpic, caption=gkmsg, reply_to=reply)
         await legend.delete()
     else:
         await legend.edit(gkmsg)
@@ -375,30 +396,31 @@ async def gm(event):
     elif private is True:
         userid = event.chat_id
     else:
-        return await eor(
+        return await eod(
             event, "Need a user to gmute. Reply or give userid to gmute them.."
         )
+    name = (await event.client.get_entity(userid)).first_name
     event.chat_id
     await event.get_chat()
     if gsql.is_gmuted(userid, "gmute"):
-        return await eor(event, "This kid is already Gmuted.")
+        return await eod(event, "This kid is already Gmuted.")
     try:
         if str(userid) in DEVLIST:
-            return await eor(event, "**Sorry I'm not going to gmute them..**")
+            return await eod(event, "**Sorry I'm not going to gmute them..**")
     except:
         pass
     try:
         gsql.gmute(userid, "gmute")
     except Exception as e:
-        await eor(event, "Error occured!\nError is " + str(e))
+        await eod(event, "Error occured!\nError is " + str(e))
     else:
         if Config.ABUSE == "ON":
             await bot.send_file(
-                event.chat_id, shhh, caption="**Chup Madarcod... Bilkul Chup 🤫**"
+                event.chat_id, shhh, caption="**Chup Madarcod... Bilkul Chup 🤫**", reply_to=reply
             )
             await event.delete()
         else:
-            await eor(event, "🤫 Shhh... **Don't speak Now !!**")
+            await eor(event, "🤫 Shhh... [{name}](tg://user?id={userid})**Don't speak Now !!**")
 
 
 @bot.on(admin_cmd(outgoing=True, pattern=r"ungmute ?(\d+)?"))
@@ -419,19 +441,20 @@ async def endgmute(event):
     elif private is True:
         userid = event.chat_id
     else:
-        return await eor(
+        return await eod(
             event,
             "Please reply to a user or add their into the command to ungmute them.",
         )
+    name = (await event.client.get_entity(userid)).first_name
     event.chat_id
     if not gsql.is_gmuted(userid, "gmute"):
-        return await eor(event, "I don't remember I gmuted him...")
+        return await eod(event, "I don't remember I gmuted him...")
     try:
         gsql.ungmute(userid, "gmute")
     except Exception as e:
-        await eor(event, "Error occured!\nError is " + str(e))
+        await eod(event, "Error occured!\nError is " + str(e))
     else:
-        await eor(event, "Ok!! Speak")
+        await eor(event, "[{name}](tg://user?id={userid}) Ok!!Globally Unmuted Now Speak")
 
 
 @command(incoming=True)
