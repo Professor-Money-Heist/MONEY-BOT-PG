@@ -12,9 +12,10 @@ from userbot.plugins.sql_helper.gban_sql import (
     is_gbanned,
     ungbaner,
 )
+from userbot.plugins.sql_helper.gvar_sql import *
 
 from . import *
-from userbot.plugins.sql_helper.gvar_sql import *
+
 gbpic = Config.ALIVE_PIC or LEGEND_logo3
 
 
