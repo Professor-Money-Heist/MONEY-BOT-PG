@@ -3,7 +3,10 @@ import random
 
 from telethon import events
 from telethon.tl.functions.channels import EditAdminRequest
-from telethon.tl.types import ChatAdminRights, MessageEntityMentionName
+from telethon.tl.types import ChatAdminRights, ChannelParticipantsAdmins, ChatBannedRights, MessageEntityMentionName, MessageMediaPhoto
+from telethon.errors.rpcerrorlist import UserIdInvalidError, MessageTooLongError
+from telethon.tl.functions.channels import EditAdminRequest, EditBannedRequest, EditPhotoRequest
+from telethon.tl.functions.messages import UpdatePinnedMessageRequest
 
 from userbot.cmdhelp import CmdHelp
 from userbot.plugins.sql_helper import gmute_sql as gsql
@@ -390,10 +393,8 @@ async def gm(event):
     elif private is True:
         userid = event.chat_id
     else:
-        return await eod(
-            event, "Need a user to gmute. Reply or give userid to gmute them.."
-        )
-    (await event.client.get_entity(userid)).first_name
+        return await eod(event, "Need a user to gmute. Reply or give userid to gmute them..")
+    name = (await event.client.get_entity(userid)).first_name
     event.chat_id
     await event.get_chat()
     if gsql.is_gmuted(userid, "gmute"):
@@ -409,18 +410,10 @@ async def gm(event):
         await eod(event, "Error occured!\nError is " + str(e))
     else:
         if Config.ABUSE == "ON":
-            await bot.send_file(
-                event.chat_id,
-                LEGEND_logo1,
-                caption=f"**(~‾▿‾)~ Chup [Madarchod](tg://user?id={userid}) ....**",
-                reply_to=reply,
-            )
+            await bot.send_file(event.chat_id, LEGEND_logo1, caption=f"**(~‾▿‾)~ Chup [Madarchod](tg://user?id={userid}) ....**", reply_to=reply)
             await event.delete()
         else:
-            await eor(
-                event,
-                "**Globally Muted [{name}](tg://user?id={userid}) !!**\n\n__Kid struggling to speak__ ♪～(´ε｀ )",
-            )
+            await eor(event, "**Globally Muted [{name}](tg://user?id={userid}) !!**\n\n__Kid struggling to speak__ ♪～(´ε｀ )")
 
 
 @bot.on(admin_cmd(outgoing=True, pattern=r"ungmute ?(\d+)?"))
@@ -441,10 +434,8 @@ async def gm(event):
     elif private is True:
         userid = event.chat_id
     else:
-        return await eod(
-            event, "Need a user to gmute. Reply or give userid to gmute them.."
-        )
-    (await event.client.get_entity(userid)).first_name
+        return await eod(event, "Need a user to gmute. Reply or give userid to gmute them..")
+    name = (await event.client.get_entity(userid)).first_name
     event.chat_id
     await event.get_chat()
     if gsql.is_gmuted(userid, "gmute"):
@@ -460,18 +451,10 @@ async def gm(event):
         await eod(event, "Error occured!\nError is " + str(e))
     else:
         if Config.ABUSE == "ON":
-            await bot.send_file(
-                event.chat_id,
-                shhh,
-                caption=f"**(~‾▿‾)~ Chup [Madarchod](tg://user?id={userid}) ....**",
-                reply_to=reply,
-            )
+            await bot.send_file(event.chat_id, shhh, caption=f"**(~‾▿‾)~ Chup [Madarchod](tg://user?id={userid}) ....**", reply_to=reply)
             await event.delete()
         else:
-            await eor(
-                event,
-                "**Globally Muted [{name}](tg://user?id={userid}) !!**\n\n__Kid struggling to speak__ ♪～(´ε｀ )",
-            )
+            await eor(event, "**Globally Muted [{name}](tg://user?id={userid}) !!**\n\n__Kid struggling to speak__ ♪～(´ε｀ )")
 
 
 @command(incoming=True)
