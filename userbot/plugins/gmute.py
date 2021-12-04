@@ -1,4 +1,4 @@
-import asyncio
+"""import asyncio
 
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
@@ -90,3 +90,4 @@ async def watcher(event):
 CmdHelp("gmute").add_command(
     "gmute", "<Reply To User>", "To Mute User In Which U are Admin"
 ).add_command("gunmute", "<Reply Ro User", "To Unmute User In Which U are Admin").add()
+"""
