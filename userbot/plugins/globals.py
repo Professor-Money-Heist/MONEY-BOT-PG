@@ -393,7 +393,7 @@ async def gm(event):
         return await eod(
             event, "Need a user to gmute. Reply or give userid to gmute them.."
         )
-    (await event.client.get_entity(userid)).first_name
+    name = (await event.client.get_entity(userid)).first_name
     event.chat_id
     await event.get_chat()
     if gsql.is_gmuted(userid, "gmute"):
@@ -419,7 +419,7 @@ async def gm(event):
         else:
             await eor(
                 event,
-                "**Globally Muted [{name}](tg://user?id={userid}) !!**\n\n__Kid struggling to speak__ ♪～(´ε｀ )",
+                f"**Globally Muted [{name}](tg://user?id={userid}) !!**\n\n__Kid struggling to speak__ ♪～(´ε｀ )",
             )
 
 
@@ -444,7 +444,7 @@ async def gm(event):
         return await eod(
             event, "Need a user to gmute. Reply or give userid to gmute them.."
         )
-    (await event.client.get_entity(userid)).first_name
+    name = (await event.client.get_entity(userid)).first_name
     event.chat_id
     await event.get_chat()
     if gsql.is_gmuted(userid, "gmute"):
@@ -463,14 +463,14 @@ async def gm(event):
             await bot.send_file(
                 event.chat_id,
                 shhh,
-                caption=f"**(~‾▿‾)~ Chup [Madarchod](tg://user?id={userid}) ....**",
+                caption=f"**(~‾▿‾)~ Chup [{name}](tg://user?id={userid}) ....**",
                 reply_to=reply,
             )
             await event.delete()
         else:
             await eor(
                 event,
-                "**Globally Muted [{name}](tg://user?id={userid}) !!**\n\n__Kid struggling to speak__ ♪～(´ε｀ )",
+                f"**Globally Muted [{name}](tg://user?id={userid}) !!**\n\n__Kid struggling to speak__ ♪～(´ε｀ )",
             )
 
 
