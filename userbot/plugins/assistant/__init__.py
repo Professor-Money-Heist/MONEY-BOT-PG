@@ -9,18 +9,18 @@ OWNER_NAME = ALIVE_NAME
 OWNER_ID = bot.uid
 
 
-LEGEND_USER = bot.me.first_name
-Its_LegendBoy = bot.uid
+PROFAGORA_USER = bot.me.first_name
+PROF_AGORA = bot.uid
 
-legend_mention = f"[{LEGEND_USER}](tg://user?id={Its_LegendBoy})"
-LEGEND_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
-LEGEND_logo1 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-LEGEND_logo2 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-LEGEND_logo4 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-LEGEND_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-LEGENDversion = "𝚅2.1"
+AGORA_mention = f"[{PROFAGORA_USER}](tg://user?id={PROF_AGORA})"
+AGORA_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
+AGORA_logo1 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+AGORA_logo2 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+AGORA_logo4 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+AGORA_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+AGORAversion = "𝚅10.1"
 
-perf = "[ †hê Lêɠêɳ̃dẞø† ]"
+perf = "[ MONEY HEIST BOT FULL ADVANCED]"
 
 
 DEVLIST = ["2082798662"]
