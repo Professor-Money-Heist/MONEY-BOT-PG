@@ -4,18 +4,18 @@ from userbot import *
 
 from . import *
 
-PM_IMG = "https://telegra.ph/file/c26fc61e904476083baa7.jpg"
-pm_caption = f"⚜『Lêɠêɳ̃dẞø†』Is Ôñĺîne⚜ \n\n"
-pm_caption += f"Ôwñêř ~ 『{legend_mention}』\n"
+PM_IMG = "https://te.legra.ph/file/6c14ed70a84ea325d82c1.jpg"
+pm_caption = f"⚜『MONEYHEIST』Is Ôñĺîne⚜ \n\n"
+pm_caption += f"Ôwñêř ~ 『{AGORA_mention}』\n"
 pm_caption += f"**╭───────────**\n"
 pm_caption += f"┣Ťêlethon ~ `1.15.0` \n"
-pm_caption += f"┣『Lêɠêɳ̃dẞø†』~ `{LEGENDversion}` \n"
-pm_caption += f"┣Çhâññel ~ [Channel](https://t.me/Its_LegendBot)\n"
-pm_caption += f"┣**License** ~ [License v3.0](github.com/The-LegendBot/LEGENBOT/blob/master/LICENSE)\n"
-pm_caption += f"┣Copyright ~ By [『Lêɠêɳ̃dẞø†』 ](https://t.me/Legend_Userbot)\n"
-pm_caption += f"┣Assistant ~ By [『Lêɠêɳ̃dẞøy』 ](https://t.me/Its_LegendBoy)\n"
+pm_caption += f"┣『MONEYHESITBOT』~ `{AGORAversion}` \n"
+pm_caption += f"┣Çhâññel ~ [Channel](https://t.me/MM_UB_UPDATES)\n"
+pm_caption += f"┣**License** ~ [License v3.0](github.com/Professor-Money-Heist/MONEY-HEIST-BOT/blob/master/LICENSE)\n"
+pm_caption += f"┣Copyright ~ By [『Professor-Money-Heist』 ](https://t.me/PROF_AGORA)\n"
+pm_caption += f"┣Assistant ~ By [『Professor-Monet-Heist』 ](https://t.me/PTOF_AGORA)\n"
 pm_caption += f"╰────────────\n"
-pm_caption += f"       »»» [『Lêɠêɳ̃dẞø†』](https://t.me/Legend_Userbot) «««"
+pm_caption += f"       »        [『M and M USERBOTS』](https://t.me/MM_UB_UPDATES) «««"
 
 
 @tgbot.on(events.NewMessage(pattern="^/alive"))
