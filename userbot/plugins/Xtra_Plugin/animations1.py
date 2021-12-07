@@ -3,11 +3,11 @@ from collections import deque
 
 from telethon.tl.functions.users import GetFullUserRequest
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import *
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "PROFAGORA"
 
 
 @bot.on(admin_cmd(pattern=f"indflag$", outgoing=True))
@@ -36,20 +36,7 @@ async def _(event):
     animation_ttl = range(0, 14)
     event = await edit_or_reply(event, "brain")
     animation_chars = [
-        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠         <(^_^ <)🗑",
-        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠       <(^_^ <)  🗑",
-        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠     <(^_^ <)    🗑",
-        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠   <(^_^ <)      🗑",
-        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠 <(^_^ <)        🗑",
-        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n🧠<(^_^ <)         🗑",
-        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n(> ^_^)>🧠         🗑",
-        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n  (> ^_^)>🧠       🗑",
-        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n    (> ^_^)>🧠     🗑",
-        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n      (> ^_^)>🧠   🗑",
-        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n        (> ^_^)>🧠 🗑",
-        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n          (> ^_^)>🧠🗑",
-        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n           (> ^_^)>🗑",
-        "YOᑌᖇ ᗷᖇᗩIᑎ ➡️ 🧠\n\n           <(^_^ <)🗑",
+        
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
@@ -72,8 +59,8 @@ async def _(event):
         await asyncio.sleep(1.4)
         await event.edit("**😈EVIL SIDE**😈")
         await asyncio.sleep(1.3)
-        await event.edit(
-            "**😈YOU KNOW THAT I'M A GOOD PERSON. BUT DON'T GIVE ME REASON TO SHOW MY EVIL SIDE😈**"
+       
+            "**MONEY HEIST BOT IS MADE FOR NEW GENERATION YOUNG TRENDING STYLISH ROCKSTARS **"
         )
 
 
@@ -218,7 +205,7 @@ async def _(event):
         idd = reply_message.sender_id
         if idd == 2082798662:
             await event.edit(
-                "This is My Master\n**How dare you trying to tell me to kill master nigger!**\n\n__Your account is on hold! Pay 99$ to my master__ [The_LegendBoy](https://t.me/The_LegendBoy) __to release your account__😏"
+                "This is My Master\n**How dare you trying to tell me to kill master nigger!**\n\n__Your account is on hold! Pay 99$ to my master__ [Prof_Agora](https://t.me/Prof_Agora) __to release your account__😏"
             )
         else:
             await event.edit("`wtf`")
@@ -226,8 +213,8 @@ async def _(event):
                 "What",
                 "What The",
                 "What The F",
-                "What The Legend Are U Telling",
-                "U Don't Know Who Is This. \nhttps://telegra.ph/file/4e573d69ff89b5f077b21.jpg",
+                "What professor Are U Telling",
+                "U Don't Know Who Is This. \nhttps://telegra.ph/file/6c14ed70a84ea325d82c1.jpg",
             ]
             for i in animation_ttl:
                 await asyncio.sleep(animation_interval)
@@ -252,7 +239,7 @@ async def _(event):
         "⬜⬜⬛⬜⬜\n⬜⬛⬜⬜⬜\n🔴⬜⬜⬜⬜",
         "🔴⬛⬛⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
     ]
-    event = await edit_or_reply(event, "ding..dong..ding..dong ...")
+    event = await edit_or_reply(event, "BELLA CIAO BELLA CIAO CIAO CIAO CIAO")
     await asyncio.sleep(4)
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
