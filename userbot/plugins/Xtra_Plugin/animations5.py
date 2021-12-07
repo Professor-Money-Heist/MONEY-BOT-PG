@@ -1,10 +1,10 @@
 import asyncio
 
-from LEGENDBOT.utils import admin_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd
 from userbot import *
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ProfAgora"
 
 
 @borg.on(admin_cmd(outgoing=True, pattern="bufferedd( (.*)|$)"))
