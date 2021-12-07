@@ -8,7 +8,7 @@ from telethon import Button, TelegramClient, custom, events
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.types import InputMessagesFilterDocument
 
-from userbot import LOGS, LEGENDversion, bot
+from userbot import LOGS, AGORAversion, bot
 from userbot.Config import Config
 from userbot.utils import (
     load_abuse,
@@ -20,7 +20,7 @@ from userbot.utils import (
 from var import Var
 
 l2 = Config.SUDO_COMMAND_HAND_LER
-LEGEND_PIC = "https://telegra.ph/file/e753315316673cff51085.mp4"
+AGORA_PIC = "https://telegra.ph/file/d5b6ad471bd5877b0bff0.mp4"
 l1 = Config.COMMAND_HAND_LER
 
 
@@ -30,7 +30,7 @@ async def add_bot(bot_token):
         bot.me = await bot.get_me()
         bot.uid = telethon.utils.get_peer_id(bot.me)
     except Exception as e:
-        print(f"LEGEND_STRING - {str(e)}")
+        print(f"PROFESSOR_STRING - {str(e)}")
         sys.exit()
 
 
@@ -47,7 +47,7 @@ else:
             LOGS.info("Checking Completed. Proceeding to next step...")
             LOGS.info("♥️ Starting LegendBot ♥️")
             bot.loop.run_until_complete(add_bot(Config.BOT_USERNAME))
-            LOGS.info("🥇🔥 LegendBot Startup Completed 🔥🥇")
+            LOGS.info("🥇🔥 MONEY-HEIST-BOT Startup Completed 🔥🥇")
         else:
             bot.start()
     except Exception as e:
@@ -381,15 +381,15 @@ async def users(event):
     await tgbot.send_message(event.chat_id, grabon)
 
 
-async def legends():
+async def professor():
     LEGEND_USER = bot.me.first_name
     The_LegendBoy = bot.uid
-    legd_mention = f"[{LEGEND_USER}](tg://user?id={The_LegendBoy})"
+    legd_mention = f"[{PROFESSOR_USER}](tg://user?id={Prof_Agora})"
     yescaption = f"Hello Sir/Miss Something Happened \nDing Dong Ting Tong Ping Pong\nSuccessfully LegendBot Has Been Deployed \nMy Master ~ 『{legd_mention}』 \nVersion ~ {LEGENDversion}\nClick Below To Know More About Me👇🏾👇👇🏼"
     try:
         TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
         await tgbot.send_file(
-            bot.me.id, LEGEND_PIC, caption=yescaption, buttons=TRY, incoming=True
+            bot.me.id, PROFESSOR_PIC, caption=yescaption, buttons=TRY, incoming=True
         )
     except:
         pass
@@ -401,30 +401,30 @@ plc = os.environ.get("PLUGGIN", None)
 async def hekp():
     try:
         os.environ[
-            "LEGEND_STRING"
-        ] = "String Is A Sensitive Data \nSo Its Protected By LegendBot"
+            "PROFESSOR_STRING"
+        ] = "String Is A Sensitive Data \nSo Its Protected By MoneyHeistbot"
         if Config.LOGGER_ID != 0:
             await bot.send_file(
                 Config.LOGGER_ID,
                 LEGEND_PIC,
-                caption=f"Deployed Lêɠêɳ̃dẞø† Successfully\n\nLêɠêɳ̃dẞø† ~ {LEGENDversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [LegendBot Channel](t.me/Official_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
+                caption=f"Deployed Money Heist Bot Successfully\n\nMoneyHeistBot ~ {PROFESSORversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [MoneyHeistbot Channel](t.me/MM_USERBOT) for Updates & [MoneyHeistbot Chat](t.me/MM_Userbot) for any query regarding MONEY-HEIST-BOT",
             )
     except Exception as e:
         print(str(e))
 
     try:
-        await bot(JoinChannelRequest("@Official_LegendBot"))
+        await bot(JoinChannelRequest("@MM_USERBOT"))
     except BaseException:
         pass
 
     try:
-        await bot(JoinChannelRequest("@Legend_Userbot"))
+        await bot(JoinChannelRequest("@MM_USERBOT"))
     except BaseException:
         pass
 
     try:
         if plc == "ON":
-            await bot(JoinChannelRequest("@Legend_UserbotPlugin"))
+            await bot(JoinChannelRequest("@MM_UB_UPDATES"))
     except BaseException:
         pass
 
@@ -462,18 +462,18 @@ bot.loop.run_until_complete(install())
 
 print(
     f"""
-╔════❰LEGENDBOT❱═❍⊱❁۪۪
-║┣⪼ OWNER - {Config.ALIVE_NAME}
-║┣⪼ Group - @Legend_Userbot
-║┣⪼ CREATOR - @The_LegendBoy
-║┣⪼ LEGENDBOT - {LEGENDversion}
-║┣⪼ ✨ 『🔱🇱 🇪 🇬 🇪 🇳 🇩 🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
+╔════❰MONEY-HEIST-BOT❱═❍⊱❁۪۪
+║┣⪼ USER - {Config.ALIVE_NAME}
+║┣⪼ Group - @MM_USERBOT
+║┣⪼ OWNER - @PROF_AGORA
+║┣⪼ PROFESSOR - {AGORAversion}
+║┣⪼ ✨ 『𝗣𝗥𝗢𝗙𝗘𝗦𝗦𝗢𝗥 𝗔𝗚𝗢𝗥𝗔 - 𝗠𝗢𝗡𝗘𝗬 𝗛𝗘𝗜𝗦𝗧 𝗕𝗢𝗧』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱"""
 )
 print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
 
-bot.loop.run_until_complete(legends())
+bot.loop.run_until_complete(PROFESSOR())
 
 
 if len(sys.argv) not in (1, 3, 4):
