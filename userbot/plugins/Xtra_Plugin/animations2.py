@@ -1,7 +1,7 @@
 import asyncio
 from collections import deque
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import *
 from userbot.cmdhelp import CmdHelp
 
@@ -43,7 +43,7 @@ async def _(event):
     animation_ttl = range(0, 12)
     event = await edit_or_reply(event, "`Deploying...`")
     animation_chars = [
-        "**Heroku Connecting To Latest [Github Build](LEGEND-OS/LEGENDBOT)**",
+        "**Heroku Connecting To Latest [Github Build](Professor-Money-Heist-/MONEY-HEIST-BOT)**",
         f"**Build started by user** {DEFAULT}",
         f"**Deploy** `535a74f0` **by user** **{DEFAULT}**",
         "**Restarting Heroku Server...**",
@@ -52,8 +52,8 @@ async def _(event):
         "**Process exited with** `status 143`",
         "**Starting process with command** `python3 -m stdborg`",
         "**State changed from starting to up**",
-        "__INFO:LEGENDBOT:Logged in as 557667062__",
-        "__INFO:LEGENDBOT:Successfully loaded all plugins__",
+        "__INFO:MONEY HEIST BOT:Logged in as 557667062__",
+        "__INFO:MONEY HEIST BOT:Successfully loaded all plugins__",
         "**Build Succeeded**",
     ]
     for i in animation_ttl:
@@ -258,7 +258,7 @@ async def _(event):
         "Hacking... 93.50%\n[█████████████████░░░]\n`Decryption successful!`\nETA: 0m, 02s",
         "Hacking... 100%\n[████████████████████]\n`Scanning file...`\nETA: 0m, 00s",
         "Hacking complete!\nUploading file...",
-        "Targeted Account Hacked...!\n\n ✅ File has been successfully uploaded to my server.\nWhatsApp Database:\n`./DOWNLOADS/msgstore.db.crypt12`",
+        "Targeted Account Hacked...!\n\n ✅ File has been successfully uploaded to professor's server.\nWhatsApp Database:\n`./DOWNLOADS/msgstore.db.crypt12`",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
