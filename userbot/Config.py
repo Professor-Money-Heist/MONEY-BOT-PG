@@ -82,11 +82,11 @@ if ENV:
             os.environ.get("PING_PIC", None)
             or "https://te.legra.ph/file/ace5feae5b1ac8ea262ed.jpg"
         )
-        ALIVE_MSG = os.environ.get("ALIVE_MSG", None) or "Lêɠêɳ̃dẞø† Is Online"
+        ALIVE_MSG = os.environ.get("ALIVE_MSG", None) or "MONEY-HEIST-BOT Is Online"
         PM_MSG = os.environ.get("PM_MSG", None)
         INSTANT_BLOCK = os.environ.get("INSTANT_BLOCK", "DISABLE")
-        YOUR_GROUP = os.environ.get("YOUR_GROUP", "@Legend_Userbot")
-        YOUR_CHANNEL = os.environ.get("YOUR_CHANNEL", "@Official_LegendBot.")
+        YOUR_GROUP = os.environ.get("YOUR_GROUP", "@MM_USERBOT")
+        YOUR_CHANNEL = os.environ.get("YOUR_CHANNEL", "@MM_UB_UPDATES.")
         BOT_PIC = os.environ.get("ALIVE_PIC", None)
         # auto bio
         BIO_MSG = os.environ.get("ALIVE_MSG", None)
@@ -95,11 +95,11 @@ if ENV:
         LYDIA_API = os.environ.get("LYDIA_API", None)
         PLUGIN_CHANNEL = os.environ.get("PLUGIN_CHANNEL", None)
         UPSTREAM_REPO = os.environ.get(
-            "UPSTREAM_REPO", "https://github.com/LEGEND-OS/LEGENDBOT"
+            "UPSTREAM_REPO", "https://github.com/Professor-Money-Heist/MONEY-HEIST-BOT"
         )
         APP_ID = os.environ.get("APP_ID", None)
         API_HASH = os.environ.get("API_HASH", None)
-        LEGEND_STRING = os.environ.get("LEGEND_STRING", None)
+        LEGEND_STRING = os.environ.get("PROFESSOR_STRING", None)
         BOT_MODE = os.environ.get("BOT_MODE", "ON")
         BOTLOG = True
         EXTRA_PLUGIN = os.environ.get("EXTRA_PLUGIN", None)
