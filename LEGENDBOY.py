@@ -16,7 +16,7 @@ token = os.environ.get("BOT_TOKEN", None)
 lnbot = TelegramClient("ProfAgora", API_ID, API_HASH).start(bot_token=token)
 
 
-class LegendBoy(TelegramClient):
+class ProfAgora(TelegramClient):
     def __init__(self, string, api_id, api_hash):
         super().__init__(StringSession(string), api_id, api_hash)
         self.id = None
@@ -56,5 +56,5 @@ else:
 if __name__ == "__main__":
     bot.start()
     bot.run_until_disconnected()
-    sweetie.run_until_disconnected()
+    ptofessor.run_until_disconnected()
     lnbot.run_until_disconnected()
