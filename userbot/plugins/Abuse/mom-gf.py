@@ -1,6 +1,6 @@
 import asyncio
 
-from LEGENDBOT.utils import admin_cmd, sudo_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
