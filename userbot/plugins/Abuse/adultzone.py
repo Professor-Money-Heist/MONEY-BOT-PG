@@ -1,5 +1,5 @@
 # credits to userge
-# ported to LEGENDBOT by @Its_LegendBoy
+# ported to Professor-Money-Heist by @Prof-Agora
 # will be adding more soon
 
 import asyncio
