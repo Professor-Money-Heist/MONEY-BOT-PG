@@ -1,6 +1,6 @@
 import asyncio
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import *
 from userbot.cmdhelp import CmdHelp
 
@@ -445,12 +445,12 @@ async def _(event):
         "😧",
         "😡",
         "😢",
-        "‎**Repo of LEGEND**",
+        "‎**Repo of PROF-AGORA**",
         "😁",
         "😧",
         "😡",
         "😢",
-        "__**[Good to see you Guys....]**__(github.com/LEGEND-OS/LEGENDBOT)",
+        "__**[Good to see you Guys....]**__(github.com/Professor-Money-Heist/MONEY-HEIST-BOT)",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
@@ -622,14 +622,14 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@bot.on(admin_cmd(pattern="menoobs$"))
-@bot.on(sudo_cmd(pattern="menoobs$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="Call me Professor$"))
+@bot.on(sudo_cmd(pattern="Call me Professor$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
     animation_interval = 1
     animation_ttl = range(0, 9)
-    event = await edit_or_reply(event, "mE nOoB")
+    event = await edit_or_reply(event, "Call Me Professor")
     animation_chars = [
         "EvErYbOdY",
         "iZ",
