@@ -15,7 +15,7 @@ if okvai == "69":
         client.send_message("me", client.session.save())
         client.send_message(
             "me",
-            "Above is your #LEGENDBOT STRING SESSION \nPaste this string in Heroku Var.\n\n[Team LegendBot](t.me/Official_LegendBot)",
+            "Above is your #PTOF AGORA STRING SESSION \nPaste this string in Heroku Var.\n\n[Team MM USERBOT](t.me/MM_UB_UPDATES)",
         )
 
 else:
