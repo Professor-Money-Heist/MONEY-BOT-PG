@@ -1,10 +1,10 @@
 import asyncio
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import ALIVE_NAME
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND user"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ProfAgora user"
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="kiler( (.*)|$)"))
@@ -51,7 +51,7 @@ async def _(event):
         "👁👁\n  👄  =====> Abe jaa naa chakke",
         "👁👁\n  👅  =====> Aae madarchod apna kaam kar",
         "👁👁\n  💋  =====> Chal abb gand mra bsdk",
-        "👁👁\n  👄  =====> Bhag lode",
+        "👁👁\n  👄  =====> Tera lund legendboy chusa hai kya mv",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
