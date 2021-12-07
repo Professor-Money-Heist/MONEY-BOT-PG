@@ -2,7 +2,7 @@ import asyncio
 import random
 from collections import deque
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import *
 from userbot import ALIVE_NAME
 from userbot.cmdhelp import CmdHelp
