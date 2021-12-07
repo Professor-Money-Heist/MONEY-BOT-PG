@@ -1,14 +1,14 @@
 import os
 
-from LEGENDBOT.utils import *
+from MONEY-HEIST-BOT.utils import *
 from userbot import *
 
 from . import *
 
 DELETE_TIMEOUT = 5
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "『Lêɠêɳ̃dẞø†』"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "『MONEY-HEIST-BOY』"
 legend = bot.uid
-LEGEND = f"[{DEFAULTUSER}](tg://user?id={legend})"
+LEGEND = f"[{DEFAULTUSER}](tg://user?id={PROF_AGORA})"
 
 
 @bot.on(admin_cmd(pattern=r"sends (?P<shortname>\w+)", outgoing=True))
@@ -17,9 +17,9 @@ async def send(event):
     if event.fwd_from:
         return
     message_id = event.message.id
-    thumb = LEGEND_logo1
+    thumb = PROF_AGORA_logo1
     input_str = event.pattern_match.group(1)
-    omk = f"**⍟ 𝙿𝚕𝚞𝚐𝚒𝚗 𝚗𝚊𝚖𝚎 ≈** `{input_str}`\n**⍟ 𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 ≈** {legend_mention}\n\n⚜ **[Lêɠêɳ̃dẞø†](https://t.me/Legend_Userbot)** ⚜"
+    omk = f"**PROF AGORA≈** `{input_str}`\n**⍟ 𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 ≈** {agora_mention}\n\n⚜ **[M and M USERBOT](https://t.me/MM_USERBOT)** ⚜"
     the_plugin_file = "./userbot/plugins/Spam{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
         lauda = await event.client.send_file(
