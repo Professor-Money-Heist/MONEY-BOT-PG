@@ -10,7 +10,7 @@ from userbot.cmdhelp import CmdHelp
 from . import *
 
 # --Constants--#
-sed1 = "https://telegra.ph/file/9102e0041cf2bacffc4a8.mp4"
+sed1 = "ttps://te.legra.ph/file/1ffa2c288795645635c4f.mp4"
 sed2 = "https://telegra.ph/file/2034b44685abbc5d8db4d.mp4"
 sed3 = "https://telegra.ph/file/c7f8f00729fc4147ad8d6.mp4"
 sed4 = "https://telegra.ph/file/f5c968e0dd5bf01748678.mp4"
@@ -247,7 +247,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    deq = deque(list("😂🤣😂🤣😂🤣"))
+    deq = deque(list("😂🤣😂🤣🤣😂🤣😂🤣"))
     for _ in range(999):
         await asyncio.sleep(1)
         await event.edit("".join(deq))
