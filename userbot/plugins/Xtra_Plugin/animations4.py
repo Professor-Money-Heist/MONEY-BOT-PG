@@ -1,6 +1,6 @@
 import asyncio
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
@@ -102,9 +102,9 @@ async def _(event):
 
 @bot.on(admin_cmd(pattern="istar$", outgoing=True))
 @bot.on(sudo_cmd(pattern="istar$", allow_sudo=True))
-async def ammastar(LEGENDstar):
+async def ammastar(ProfAgorastar):
 
-    if LEGENDstar.fwd_from:
+    if ProfAgorastar.fwd_from:
 
         return
 
@@ -112,7 +112,7 @@ async def ammastar(LEGENDstar):
 
     animation_ttl = range(0, 11)
 
-    await edit_or_reply(LEGENDstar, "I am A Star")
+    await edit_or_reply(ProfAgorastar, "I am A Stylish Professor")
 
     animation_chars = [
         "I Party like a rockstar",
@@ -126,7 +126,7 @@ async def ammastar(LEGENDstar):
 
         await asyncio.sleep(animation_interval)
 
-        await LEGENDstar.edit(animation_chars[i % 11])
+        await ProfAgorastar.edit(animation_chars[i % 11])
 
 
 @bot.on(admin_cmd(pattern=r"lmoon", outgoing=True))
