@@ -65,7 +65,7 @@ async def _(event):
             "Hamara income high ho na ho ... outcome toh hamara bhi world class hai"
         )
     if x == 18:
-        await event.edit("Bhoot bhoot ... inki maa ki ")
+        await event.edit("Prof Agora ko bol tere Khandan akela chodega")
     if x == 19:
         await event.edit(
             "Log sunenge to kya kahenge ... chutiya aashiqui ke chakkar mein mar gaya, aur laundiya bhi nahi mili"
