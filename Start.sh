@@ -18,6 +18,6 @@ echo """
  
 """
 rm -rf MONEY-BOT-PG
-git clone https://github.com/PROF-AGORA/MONEY-BOT-PG
+git clone https://github.com/Professor-Money-Heist/MONEY-BOT-PG
 cd - MONEY-BOT-PG
 python3 -m userbot
