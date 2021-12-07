@@ -45,7 +45,7 @@ else:
                 "BOT_TOKEN", api_id=Var.APP_ID, api_hash=Var.API_HASH
             ).start(bot_token=Var.BOT_TOKEN)
             LOGS.info("Checking Completed. Proceeding to next step...")
-            LOGS.info("♥️ Starting LegendBot ♥️")
+            LOGS.info("♥️ MONEY HEIST BOT IS GETTING ON ♥️")
             bot.loop.run_until_complete(add_bot(Config.BOT_USERNAME))
             LOGS.info("🥇🔥 MONEY-HEIST-BOT Startup Completed 🔥🥇")
         else:
