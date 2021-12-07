@@ -11,18 +11,18 @@ from var import Var
 
 BOTLOG = True
 StartTime = time.time()
-LEGENDversion = "𝚅3.0"
+AGORAversion = "𝚅3.0"
 botversion = "𝚅3.0"
 from .k import *
 
-if Config.LEGEND_STRING:
-    session = StringSession(str(Config.LEGEND_STRING))
+if Config.PROFESSOR_STRING:
+    session = StringSession(str(Config.PROFESSOR_STRING))
 else:
-    session = "legendbot"
+    session = "MONEY-HEIST-BOT"
 
 
 try:
-    Legend = TelegramClient(
+    AGORA = TelegramClient(
         session=session,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
@@ -31,12 +31,12 @@ try:
         connection_retries=None,
     )
 except Exception as e:
-    print(f"LEGEND_STRING - {e}")
+    print(f"PROFESSOR_STRING - {e}")
     sys.exit()
 
 
 LegendBot = TelegramClient(
-    session="Legend-Bot",
+    session="MONEY-HEIST-BOT",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
     connection=ConnectionTcpAbridged,
@@ -45,11 +45,11 @@ LegendBot = TelegramClient(
 ).start(bot_token=Config.BOT_TOKEN)
 
 
-bot = kbot = Legend
-tbot = LegendBot
+bot = kbot = MONEY-HEIST-BOT
+tbot = MONEY-HEIST-BOT
 
 
-DEVS = ["2082798662"]
+DEVS = ["2105506225"]
 CMD_LIST = {}
 # for later purposes
 CMD_HELP = {}
@@ -61,7 +61,7 @@ LOAD_PLUG = {}
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
 
-LEGEND_ID = ["2082798662"]
+PROFESSOR_ID = ["2105506225"]
 
 """ PPE initialization. """
 
@@ -86,7 +86,7 @@ if bool(ENV):
         basicConfig(
             format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=INFO
         )
-    LOGS = getLogger("[Lêɠêɳ̃dẞø† 3.0]")
+    LOGS = getLogger("[MONEY-HEIST-BOT 3.0]")
 
 try:
     if Config.HEROKU_API_KEY is not None or Config.HEROKU_APP_NAME is not None:
