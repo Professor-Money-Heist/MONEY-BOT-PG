@@ -10,4 +10,4 @@ else:
     if os.path.exists("exampleconfig.py"):
         pass
 
-# legendbot
+# MONEY-HEIST-BOT
