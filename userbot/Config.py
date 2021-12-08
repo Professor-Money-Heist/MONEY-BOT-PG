@@ -64,23 +64,23 @@ if ENV:
         # alive
         ALIVE_PIC = (
             os.environ.get("ALIVE_PIC", None)
-            or "https://telegra.ph/file/af51de2749a4506d3eb43.jpg"
+            or "https://telegra.ph/file/a2e60104fc9eb207f6641.mp4"
         )
         PM_PIC = (
             os.environ.get("PM_PIC", None)
-            or "https://te.legra.ph/file/0c605739ddaa472cad75f.jpg"
+            or "https://te.legra.ph/file/ce8b8e62cd807f75a1653.jpg"
         )
         AWAKE_PIC = (
             os.environ.get("AWAKE_PIC", None)
-            or "https://telegra.ph/file/47ffec836544b371408ab.mp4"
+            or "https://telegra.ph/file/87289eafea7be4941a90d.jpg"
         )
         HELP_PIC = (
             os.environ.get("OP_PIC", None)
-            or "https://te.legra.ph/file/b5d01ceea49ee0a822661.mp4"
+            or "https://te.legra.ph/file/919cfc634851f56370872.mp4"
         )
         PING_PIC = (
             os.environ.get("PING_PIC", None)
-            or "https://te.legra.ph/file/ace5feae5b1ac8ea262ed.jpg"
+            or "https://te.legra.ph/file/d5b6ad471bd5877b0bff0.mp4"
         )
         ALIVE_MSG = os.environ.get("ALIVE_MSG", None) or "MONEY-HEIST-BOT Is Online"
         PM_MSG = os.environ.get("PM_MSG", None)
@@ -147,7 +147,7 @@ if ENV:
         TMP_DOWNLOAD_DIRECTORY = os.environ.get(
             "TMP_DOWNLOAD_DIRECTORY", "./userbot/DOWNLOADS/"
         )
-        TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "LEGENDBOT")
+        TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "MONEY-HEIST-BOT")
         TG_GLOBAL_ALBUM_LIMIT = int(os.environ.get("TG_GLOBAL_ALBUM_LIMIT", 9))
         # MIRROR ACE API KEY AND TOKEN
         MIRROR_ACE_API_KEY = os.environ.get("MIRROR_ACE_API_KEY", None)
