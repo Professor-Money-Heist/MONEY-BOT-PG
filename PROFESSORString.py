@@ -15,7 +15,7 @@ if okvai == "69":
         client.send_message("me", client.session.save())
         client.send_message(
             "me",
-            "Above is your #PROFESSOR STRING SESSION \nPaste this string in Heroku Var.\n\n[SOLO PROFESSOR AGORA](t.me/MM_USERBOT)",
+            "Above is your #PROFESSOR-STRING-SESSION \nPaste this string in Heroku Var.\n\n[PROFESSOR](t.me/MM_USERBOT)",
         )
 
 else:
