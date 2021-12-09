@@ -17,7 +17,7 @@
 echo """
  
 """
-rm -rf MONEY-BOT-PG
-git clone https://github.com/Professor-Money-Heist/MONEY-BOT-PG
-cd - MONEY-BOT-PG
+rm -rf MONEY-HEIST-BOT
+git clone https://github.com/Professor-Money-Heist/MONEY-HEIST-BOT
+cd - MONEY-HEIST-BOT
 python3 -m userbot
