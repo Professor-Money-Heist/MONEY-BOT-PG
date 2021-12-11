@@ -128,21 +128,7 @@ async def abuses():
 
 spam = os.environ.get("SPAM", None)
 
-
-async def spams():
-    if spam == "ON":
-        import glob
-
-        path = "userbot/plugins/Spam/*.py"
-        files = glob.glob(path)
-        for name in files:
-            with open(name) as f:
-                path1 = Path(f.name)
-                shortname = path1.stem
-                start_spam(shortname.replace(".py", ""))
-    else:
-        print("⚠️Spam Not Loading⚠️")
-
+       
 
 tgbot = bot.tgbot
 
@@ -383,16 +369,7 @@ async def users(event):
 
 async def professor():
     LEGEND_USER = bot.me.first_name
-    The_LegendBoy = bot.uid
-    legd_mention = f"[{PROFESSOR_USER}](tg://user?id={Prof_Agora})"
-    yescaption = f"Hello Sir/Miss Something Happened \nDing Dong Ting Tong Ping Pong\nSuccessfully LegendBot Has Been Deployed \nMy Master ~ 『{legd_mention}』 \nVersion ~ {LEGENDversion}\nClick Below To Know More About Me👇🏾👇👇🏼"
-    try:
-        TRY = [[Button.inline("⭐ Start ⭐", data="start")]]
-        await tgbot.send_file(
-            bot.me.id, PROFESSOR_PIC, caption=yescaption, buttons=TRY, incoming=True
-        )
-    except:
-        pass
+
 
 
 plc = os.environ.get("PLUGGIN", None)
@@ -429,36 +406,13 @@ async def hekp():
         pass
 
 
-async def install():
-    if plc == "ON":
-        i = 0
-        chat = -1001518412326
-        documentss = await bot.get_messages(
-            chat, None, filter=InputMessagesFilterDocument
-        )
-        total = int(documentss.total)
-        total_doxx = range(0, total)
-        for ixo in total_doxx:
-            mxo = documentss[ixo].id
-            downloaded_file_name = await bot.download_media(
-                await bot.get_messages(chat, ids=mxo), "userbot/plugins/"
-            )
-            if "(" not in downloaded_file_name:
-                path1 = Path(downloaded_file_name)
-                shortname = path1.stem
-                load_module(shortname.replace(".py", ""))
-                print(f"{i} plugin install")
-            else:
-                print("Failed")
-
-
 bot.loop.run_until_complete(module())
 bot.loop.run_until_complete(addons())
 bot.loop.run_until_complete(abuses())
 bot.loop.run_until_complete(assistants())
-bot.loop.run_until_complete(spams())
-bot.loop.create_task(hekp())
-bot.loop.run_until_complete(install())
+"""bot.loop.run_until_complete(spams())"""
+"""bot.loop.create_task(hekp())
+bot.loop.run_until_complete(install())"""
 
 print(
     f"""
