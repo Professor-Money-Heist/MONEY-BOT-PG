@@ -45,8 +45,8 @@ LegendBot = TelegramClient(
 ).start(bot_token=Config.BOT_TOKEN)
 
 
-bot = kbot = MONEY-HEIST-BOT
-tbot = MONEY-HEIST-BOT
+bot = kbot = AGORA
+tbot = LegendBot
 
 
 DEVS = ["2105506225"]
