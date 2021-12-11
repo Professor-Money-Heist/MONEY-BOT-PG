@@ -113,19 +113,6 @@ plc = os.environ.get("PLUGGIN", None)
 
 async def hekp():
     try:
-        os.environ[
-            "PROFESSOR_STRING"
-        ] = "String Is A Sensitive Data \nSo Its Protected By MoneyHeistbot"
-        if Config.LOGGER_ID != 0:
-            await bot.send_file(
-                Config.LOGGER_ID,
-                LEGEND_PIC,
-                caption=f"Deployed Money Heist Bot Successfully\n\nMoneyHeistBot ~ {PROFESSORversion}\n\nType `{l1}help` or `{l1}ping` to check!\nFor Assistant Type `.on` \n\nJoin [MoneyHeistbot Channel](t.me/MM_USERBOT) for Updates & [MoneyHeistbot Chat](t.me/MM_Userbot) for any query regarding MONEY-HEIST-BOT",
-            )
-    except Exception as e:
-        print(str(e))
-
-    try:
         await bot(JoinChannelRequest("@MM_USERBOT"))
     except BaseException:
         pass
