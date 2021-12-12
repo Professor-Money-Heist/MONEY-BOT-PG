@@ -11,7 +11,7 @@ from var import Var
 
 BOTLOG = True
 StartTime = time.time()
-AGORAversion = "𝚅3.0"
+MH_version = "𝚅3.0"
 botversion = "𝚅3.0"
 from .k import *
 
