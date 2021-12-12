@@ -15,7 +15,7 @@ from hachoir.parser import createParser
 from pySmartDL import SmartDL
 from telethon.tl.types import DocumentAttributeVideo
 
-from LEGENDBOT.utils import admin_cmd, sudo_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd, sudo_cmd
 from userbot import LOGS, TMP_DOWNLOAD_DIRECTORY
 from userbot.cmdhelp import CmdHelp
 
@@ -416,7 +416,7 @@ async def uploadas(uas_event):
 
 
 CmdHelp("upld_dwl").add_command(
-    "download", "<reply to a file>", "Downloads the file to LEGENDBOT's server"
+    "download", "<reply to a file>", "Downloads the file to MONEY-HEIST-BOT's server"
 ).add_command(
     "upload", "<path>", "Uploads a locally stored file to the chat"
 ).add_command(
