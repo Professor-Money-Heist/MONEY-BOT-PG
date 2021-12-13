@@ -36,7 +36,7 @@ except Exception as e:
 
 
 MoneyBot = TelegramClient(
-    session="Legend-Bot",
+    session="Money",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
     connection=ConnectionTcpAbridged,
