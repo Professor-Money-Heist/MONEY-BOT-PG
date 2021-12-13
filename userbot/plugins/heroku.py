@@ -6,7 +6,7 @@ import heroku3
 import requests
 import urllib3
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 
@@ -49,10 +49,10 @@ async def variable(var):
         await asyncio.sleep(1.5)
         try:
             variable = var.pattern_match.group(2).split()[0]
-            legend = "**ConfigVars**:" f"\n\n {variable} = `{heroku_var[variable]}`\n"
-            if "LEGEND_STRING" in variable:
+            MONEY-HEIST-BOT = "**ConfigVars**:" f"\n\n {variable} = `{heroku_var[variable]}`\n"
+            if "PROFESSOR_STRING" in variable:
                 await eor(
-                    var, "Legend String is a Sensetive Data.\nProtected By LegendBot"
+                    var, "PROFESSOR_STRING is a Sensetive Data.\nPROTECTED BY MONEY HEIST BOT"
                 )
                 return
             elif variable in heroku_var:
@@ -96,7 +96,7 @@ async def variable(var):
             except IndexError:
                 return await var.edit("`.set var <ConfigVars-name> <value>`")
         await asyncio.sleep(1.5)
-        if "LEGEND_STRING" in variable:
+        if "PROFESSOR_STRING" in variable:
             await eor(var, "Successfully Changed To {value}")
             return
         elif variable in heroku_var:
