@@ -1,7 +1,7 @@
 from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 
-from LEGENDBOT.utils import admin_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 
@@ -52,16 +52,16 @@ else:
 
 @bot.on(admin_cmd(pattern="allvar$"))
 @bot.on(admin_cmd(pattern="allvar$", allow_sudo=True))
-async def legend_a(event):
+async def MONEY-HEIST-BOT_a(event):
     try:
-        legend = await bot.inline_query(botname, "varboy")
-        await legend[0].click(event.chat_id)
-        if event.sender_id == The_LegendBoy:
+        MONEY-HEIST-BOT = await bot.inline_query(botname, "varboy")
+        await MONEY-HEIST-BOT[0].click(event.chat_id)
+        if event.sender_id == PROF_AGORA:
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg)
 
 
 CmdHelp("allvar").add_command("allvar", None, "υѕє αи∂ ѕєє").add_info(
-    "U can See All Var Except LEGEND_STRING"
+    "U can See All Var Except PROFESSOR_STRING"
 ).add_warning("Harm Module").add_type("Official").add()
