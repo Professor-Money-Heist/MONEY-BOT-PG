@@ -8,7 +8,7 @@ from telethon import Button, TelegramClient, custom, events
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.types import InputMessagesFilterDocument
 
-from userbot import LOGS, MONEYHEISTversion, bot
+from userbot import LOGS, MONEY-HEIST-SEASON-1, bot
 from userbot.Config import Config
 from userbot.utils import (
     load_abuse,
