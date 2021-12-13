@@ -1,4 +1,4 @@
-import os
+Uimport os
 import re
 import sys
 from pathlib import Path
@@ -132,7 +132,7 @@ print(
 ║┣⪼ USER - {Config.ALIVE_NAME}
 ║┣⪼ Group - @MM_USERBOT
 ║┣⪼ OWNER - @PROF_AGORA
-║┣⪼ PROFESSOR - {MONEY-HEIST-SEASON-1}
+║┣⪼ VERSION - {MH_version}
 ║┣⪼ ✨ PROFESSOR-AGORA'S MONEY-HEIST-BOT✨
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱"""
