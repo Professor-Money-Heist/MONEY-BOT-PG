@@ -22,7 +22,7 @@ else:
 
 
 try:
-    MONEY-HEIST-BOT = TelegramClient(
+    MONEY = TelegramClient(
         session=session,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
@@ -35,8 +35,8 @@ except Exception as e:
     sys.exit()
 
 
-MONEY-HEIST-BOT = TelegramClient(
-    session="MONEY-HEIST-BOT",
+MoneyBot = TelegramClient(
+    session="Legend-Bot",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
     connection=ConnectionTcpAbridged,
@@ -45,8 +45,8 @@ MONEY-HEIST-BOT = TelegramClient(
 ).start(bot_token=Config.BOT_TOKEN)
 
 
-bot = kbot = MONEY-HEIST-BOT
-tbot = MONEY-HEIST-BOT
+bot = kbot = MONEY
+tbot = MoneyBot
 
 
 DEVS = ["2105506225"]
