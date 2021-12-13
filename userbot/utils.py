@@ -16,7 +16,7 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from userbot import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, Legend, LegendBot, bot
+from userbot import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, MONEY, MoneyBot
 from userbot.Config import Config
 from userbot.helpers.exceptions import CancelProcess
 from var import Var
@@ -49,12 +49,10 @@ def load_module(shortname):
         name = "userbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.bot = Money
+        mod.bot = MONEY
         mod.borg = bot
-        # mod.MONEY-HEIST-BOY = MONEY
-        mod.Moneyheistbot= MONEY-HEIST-BOT
-        mod.tbot = MONEY-HEIST-BOT
-        mod.Money = Money
+        mod.MONEY = MONEY
+        mod.tbot = MoneyBot
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.command = command
@@ -63,10 +61,10 @@ def load_module(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.edit_or_reply = edit_or_reply
-        mod.delete_Money = delete_Money
-        mod.eod = delete_LEGEND
+        mod.delete_MONEY = delete_MONEY
+        mod.eod = delete_MONEY
         mod.admin_cmd = admin_cmd
-        mod.Money_cmd = admin_cmd
+        mod.MONEY_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
         # support for MONEY-HEIST-BOT originals
         sys.modules["MONEY-HEIST-BOT.utils"] = userbot.utils
@@ -101,35 +99,6 @@ def start_assistant(shortname):
         print("[🤴Assistant🤴 3.0] ~ HAS ~ 💞Installed💞 ~" + shortname)
 
 
-def start_spam(shortname):
-    if shortname.startswith("__"):
-        pass
-    elif shortname.endswith("_"):
-        import importlib
-        import sys
-        from pathlib import Path
-
-        path = Path(f"userbot/plugins/Spam/{shortname}.py")
-        name = "userbot.plugins.Spam.{}".format(shortname)
-        spec = importlib.util.spec_from_file_location(name, path)
-        mod = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(mod)
-        print("Starting Your Spam Bot.")
-        print("SpamBot Sucessfully imported " + shortname)
-    else:
-        import importlib
-        import sys
-        from pathlib import Path
-
-        path = Path(f"userbot/plugins/Spam/{shortname}.py")
-        name = "userbot.plugins.Spam.{}".format(shortname)
-        spec = importlib.util.spec_from_file_location(name, path)
-        mod = importlib.util.module_from_spec(spec)
-        mod.tgbot = bot.tgbot
-        spec.loader.exec_module(mod)
-        sys.modules["Spam" + shortname] = mod
-        print("[🔰Spam🔰 3.0] ~ HAS ~ 💞Installed💞 ~" + shortname)
-
 
 def load_addons(shortname):
     if shortname.startswith("__"):
@@ -158,20 +127,16 @@ def load_addons(shortname):
         name = "userbot.plugins.Xtra_Plugin.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.Money = Money
-        mod.bot = Money
+        mod.MONEY = MONEY
+        mod.bot = MONEY
         mod.bot = bot
         mod.borg = bot
-        mod.MONEY-HEIST-BOT = bot
-        mod.MONEY-HEIST-BOT = MONEY-HEIST-BOT
-        mod.tbot = MONEY-HEIST-BOT
-        mod.Money = Money
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.Config = Config
         mod.edit_or_reply = edit_or_reply
-        mod.delete_Money = delete_Money
-        mod.eod = delete_Money
+        mod.delete_MONEY = delete_MONEY
+        mod.eod = delete_MONEY
         mod.admin_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
         mod.command = command
@@ -189,60 +154,6 @@ def load_addons(shortname):
         LOGS.info("💰Extra Plugin💰 ~ " + shortname)
 
 
-def load_abuse(shortname):
-    if shortname.startswith("__"):
-        pass
-    elif shortname.endswith("_"):
-        import importlib
-        import sys
-        from pathlib import Path
-
-        import userbot.utils
-
-        path = Path(f"userbot/plugins/Abuse/{shortname}.py")
-        name = "userbot/plugins/Abuse.{}".format(shortname)
-        spec = importlib.util.spec_from_file_location(name, path)
-        mod = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(mod)
-        LOGS.info("MONEY-HEIST-BOT-Abuse ~ " + shortname)
-    else:
-        import importlib
-        import sys
-        from pathlib import Path
-
-        import userbot.utils
-
-        path = Path(f"userbot/plugins/Abuse/{shortname}.py")
-        name = "userbot/plugins/Abuse.{}".format(shortname)
-        spec = importlib.util.spec_from_file_location(name, path)
-        mod = importlib.util.module_from_spec(spec)
-        mod.bot = money
-        mod.MONEY-HEIST-BOT = MONEY-HEIST-BOT
-        mod.tbot = MONEY-HEIST-BOT
-        mod.Money = Money
-        mod.tgbot = bot.tgbot
-        mod.Var = Var
-        mod.command = command
-        mod.logger = logging.getLogger(shortname)
-        # support for uniborg
-        sys.modules["uniborg.util"] = userbot.utils
-        mod.Config = Config
-        mod.borg = bot
-        mod.MONEY-HEIST-BOT = bot
-        mod.edit_or_reply = edit_or_reply
-        mod.delete_Money = delete_Money
-        mod.eod = delete_Mobey
-        mod.admin_cmd = admin_cmd
-        mod.sudo_cmd = sudo_cmd
-        # support for MONEY-HEIST-BOT originals
-        sys.modules["MONEY-HEIST-BOT.utils"] = userbot.utils
-        sys.modules["userbot"] = userbot
-        # support for paperplaneextended
-        sys.modules["userbot.events"] = userbot.utils
-        spec.loader.exec_module(mod)
-        # for imports
-        sys.modules["ABUSE." + shortname] = mod
-        LOGS.info("💰MONEY-HEIST-BOT💰 ~ " + shortname)
 
 
 def assistant_cmd(add_cmd, is_args=False):
@@ -346,7 +257,7 @@ def admin_cmd(pattern=None, command=None, **args):
     return events.NewMessage(**args)
 
 
-def Money_command(**args):
+def command(**args):
     args["func"] = lambda e: e.via_bot_id is None
 
     stack = inspect.stack()
