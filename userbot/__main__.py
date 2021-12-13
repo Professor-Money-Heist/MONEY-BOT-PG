@@ -11,11 +11,9 @@ from telethon.tl.types import InputMessagesFilterDocument
 from userbot import LOGS, MH_version, bot
 from userbot.Config import Config
 from userbot.utils import (
-    load_abuse,
     load_addons,
     load_module,
     start_assistant,
-    start_spam,
 )
 from var import Var
 
