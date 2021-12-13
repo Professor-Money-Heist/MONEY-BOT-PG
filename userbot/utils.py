@@ -41,7 +41,7 @@ def load_module(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("Lêɠêɳ̃dẞø† ~ " + shortname)
+        LOGS.info("MONEY-HEIST-BOT ~ " + shortname)
     else:
         import userbot.utils
 
@@ -49,12 +49,12 @@ def load_module(shortname):
         name = "userbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.bot = Legend
+        mod.bot = Money
         mod.borg = bot
-        # mod.LEGENDBOT = Legend
-        mod.LegendBot = LegendBot
-        mod.tbot = LegendBot
-        mod.Legend = Legend
+        # mod.MONEY-HEIST-BOY = MONEY
+        mod.Moneyheistbot= MONEY-HEIST-BOT
+        mod.tbot = MONEY-HEIST-BOT
+        mod.Money = Money
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.command = command
@@ -63,20 +63,20 @@ def load_module(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.edit_or_reply = edit_or_reply
-        mod.delete_LEGEND = delete_LEGEND
+        mod.delete_Money = delete_Money
         mod.eod = delete_LEGEND
         mod.admin_cmd = admin_cmd
-        mod.legend_cmd = admin_cmd
+        mod.Money_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
-        # support for LEGENDBOT originals
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
-        sys.modules["LEGENDBOT"] = userbot
+        # support for MONEY-HEIST-BOT originals
+        sys.modules["MONEY-HEIST-BOT.utils"] = userbot.utils
+        sys.modules["MONEY-HEIST-BOT"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
-        LOGS.info("🔥⚡Lêɠêɳ̃dẞø†⚡🔥 ~ " + shortname)
+        LOGS.info("🔥⚡MONEY-HEIST-BOT⚡🔥 ~ " + shortname)
 
 
 def start_assistant(shortname):
@@ -146,7 +146,7 @@ def load_addons(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("♦️Extra Plugin♦️ ~ " + shortname)
+        LOGS.info("💰Extra Plugin💰 ~ " + shortname)
     else:
         import importlib
         import sys
@@ -158,35 +158,35 @@ def load_addons(shortname):
         name = "userbot.plugins.Xtra_Plugin.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.Legend = Legend
-        mod.bot = Legend
+        mod.Money = Money
+        mod.bot = Money
         mod.bot = bot
         mod.borg = bot
-        mod.LEGENDBOT = bot
-        mod.LegendBot = LegendBot
-        mod.tbot = LegendBot
-        mod.Legend = Legend
+        mod.MONEY-HEIST-BOT = bot
+        mod.MONEY-HEIST-BOT = MONEY-HEIST-BOT
+        mod.tbot = MONEY-HEIST-BOT
+        mod.Money = Money
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.Config = Config
         mod.edit_or_reply = edit_or_reply
-        mod.delete_LEGEND = delete_LEGEND
-        mod.eod = delete_LEGEND
+        mod.delete_Money = delete_Money
+        mod.eod = delete_Money
         mod.admin_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
         sys.modules["uniborg.util"] = userbot.utils
-        # support for LEGENDBOT originals
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
+        # support for MONEY-HEIST-BOT originals
+        sys.modules["MONEY-HEIST-BOT.utils"] = userbot.utils
         sys.modules["userbot"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["LegendBot-Addons." + shortname] = mod
-        LOGS.info("📍Extra Plugin📍 ~ " + shortname)
+        sys.modules["MONEY-HEIST-BOT-Addons." + shortname] = mod
+        LOGS.info("💰Extra Plugin💰 ~ " + shortname)
 
 
 def load_abuse(shortname):
@@ -204,7 +204,7 @@ def load_abuse(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("LegendBot-Abuse ~ " + shortname)
+        LOGS.info("MONEY-HEIST-BOT-Abuse ~ " + shortname)
     else:
         import importlib
         import sys
@@ -216,10 +216,10 @@ def load_abuse(shortname):
         name = "userbot/plugins/Abuse.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.bot = Legend
-        mod.LegendBot = LegendBot
-        mod.tbot = LegendBot
-        mod.Legend = Legend
+        mod.bot = money
+        mod.MONEY-HEIST-BOT = MONEY-HEIST-BOT
+        mod.tbot = MONEY-HEIST-BOT
+        mod.Money = Money
         mod.tgbot = bot.tgbot
         mod.Var = Var
         mod.command = command
@@ -228,21 +228,21 @@ def load_abuse(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.borg = bot
-        mod.LEGENDBOT = bot
+        mod.MONEY-HEIST-BOT = bot
         mod.edit_or_reply = edit_or_reply
-        mod.delete_LEGEND = delete_LEGEND
-        mod.eod = delete_LEGEND
+        mod.delete_Money = delete_Money
+        mod.eod = delete_Mobey
         mod.admin_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
-        # support for LEGENDBOT originals
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
+        # support for MONEY-HEIST-BOT originals
+        sys.modules["MONEY-HEIST-BOT.utils"] = userbot.utils
         sys.modules["userbot"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["ABUSE." + shortname] = mod
-        LOGS.info("🔱LegendBot-Abuse🔱 ~ " + shortname)
+        LOGS.info("💰MONEY-HEIST-BOT💰 ~ " + shortname)
 
 
 def assistant_cmd(add_cmd, is_args=False):
@@ -302,12 +302,12 @@ def admin_cmd(pattern=None, command=None, **args):
                 CMD_LIST.update({file_test: [cmd]})
         else:
             if len(Config.COMMAND_HAND_LER) == 2:
-                LEGENDreg = "^" + Config.COMMAND_HAND_LER
+                MONEYreg = "^" + Config.COMMAND_HAND_LER
                 reg = Config.COMMAND_HAND_LER[1]
             elif len(Config.COMMAND_HAND_LER) == 1:
-                LEGENDreg = "^\\" + Config.COMMAND_HAND_LER
+                MONEYreg = "^\\" + Config.COMMAND_HAND_LER
                 reg = Config.COMMAND_HAND_LER
-            args["pattern"] = re.compile(LEGENDreg + pattern)
+            args["pattern"] = re.compile(MONEYreg + pattern)
             if command is not None:
                 cmd = reg + command
             else:
@@ -346,7 +346,7 @@ def admin_cmd(pattern=None, command=None, **args):
     return events.NewMessage(**args)
 
 
-def legend_command(**args):
+def Money_command(**args):
     args["func"] = lambda e: e.via_bot_id is None
 
     stack = inspect.stack()
@@ -435,12 +435,12 @@ def sudo_cmd(pattern=None, command=None, **args):
                 SUDO_LIST.update({file_test: [cmd]})
         else:
             if len(Config.SUDO_COMMAND_HAND_LER) == 2:
-                LEGENDreg = "^" + Config.SUDO_COMMAND_HAND_LER
+                MONEYreg = "^" + Config.SUDO_COMMAND_HAND_LER
                 reg = Config.SUDO_COMMAND_HAND_LER[1]
             elif len(Config.SUDO_COMMAND_HAND_LER) == 1:
-                LEGENDreg = "^\\" + Config.SUDO_COMMAND_HAND_LER
+                MONEYreg = "^\\" + Config.SUDO_COMMAND_HAND_LER
                 reg = Config.COMMAND_HAND_LER
-            args["pattern"] = re.compile(LEGENDreg + pattern)
+            args["pattern"] = re.compile(MONEYreg + pattern)
             if command is not None:
                 cmd = reg + command
             else:
@@ -607,13 +607,13 @@ async def eor(
     os.remove(file_name)
 
 
-async def delete_LEGEND(event, text, time=None, parse_mode=None, link_preview=None):
+async def delete_MONEY(event, text, time=None, parse_mode=None, link_preview=None):
     parse_mode = parse_mode or "md"
     link_preview = link_preview or False
     time = time or 5
     if event.sender_id in Config.SUDO_USERS:
         reply_to = await event.get_reply_message()
-        LEGENDevent = (
+        MONEYevent = (
             await reply_to.reply(text, link_preview=link_preview, parse_mode=parse_mode)
             if reply_to
             else await event.reply(
@@ -621,11 +621,11 @@ async def delete_LEGEND(event, text, time=None, parse_mode=None, link_preview=No
             )
         )
     else:
-        LEGENDevent = await event.edit(
+        MONEYevent = await event.edit(
             text, link_preview=link_preview, parse_mode=parse_mode
         )
     await asyncio.sleep(time)
-    return await LEGENDevent.delete()
+    return await MONEYevent.delete()
 
 
 def on(**args):
@@ -651,7 +651,7 @@ def errors_handler(func):
 
             text = "**USERBOT CRASH REPORT**\n\n"
 
-            link = "[here](https://t.me/The_LegendBoy)"
+            link = "[here](https://t.me/PROF_AGORA)"
             text += "If you wanna you can report it"
             text += f"- just forward this message {link}.\n"
             text += "Nothing is logged except the fact of error and date\n"
