@@ -8,7 +8,7 @@ from telethon import Button, TelegramClient, custom, events
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.types import InputMessagesFilterDocument
 
-from userbot import LOGS, AGORAversion, bot
+from userbot import LOGS, MONEYHEISTversion, bot
 from userbot.Config import Config
 from userbot.utils import (
     load_abuse,
@@ -20,7 +20,7 @@ from userbot.utils import (
 from var import Var
 
 l2 = Config.SUDO_COMMAND_HAND_LER
-AGORA_PIC = "https://telegra.ph/file/d5b6ad471bd5877b0bff0.mp4"
+PROFESSOR_PIC = "https://telegra.ph/file/d5b6ad471bd5877b0bff0.mp4"
 l1 = Config.COMMAND_HAND_LER
 
 
@@ -132,8 +132,8 @@ print(
 ║┣⪼ USER - {Config.ALIVE_NAME}
 ║┣⪼ Group - @MM_USERBOT
 ║┣⪼ OWNER - @PROF_AGORA
-║┣⪼ PROFESSOR - {AGORAversion}
-║┣⪼ ✨ 『𝗣𝗥𝗢𝗙𝗘𝗦𝗦𝗢𝗥 𝗔𝗚𝗢𝗥𝗔 - 𝗠𝗢𝗡𝗘𝗬 𝗛𝗘𝗜𝗦𝗧 𝗕𝗢𝗧』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
+║┣⪼ PROFESSOR - {MONEY-HEIST-SEASON-1}
+║┣⪼ ✨ PROFESSOR-AGORA'S MONEY-HEIST-BOT✨
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱"""
 )
