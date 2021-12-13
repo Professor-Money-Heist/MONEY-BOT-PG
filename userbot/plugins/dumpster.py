@@ -1,6 +1,6 @@
 import asyncio
 
-from LEGENDBOT.utils import admin_cmd
+from userbot.utils import admin_cmd
 
 
 @bot.on(admin_cmd(pattern="dump ?(.*)"))
