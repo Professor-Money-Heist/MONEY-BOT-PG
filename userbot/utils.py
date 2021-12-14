@@ -70,6 +70,7 @@ def load_module(shortname):
         sys.modules["MONEY-HEIST-BOT.utils"] = userbot.utils
         sys.modules["LEGENDBOT.utils"] = userbot.utils
         sys.modules["userbot"] = userbot
+        sys.modules["LEGENDBOT"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
@@ -148,6 +149,7 @@ def load_addons(shortname):
         sys.modules["MONEY-HEIST-BOT.utils"] = userbot.utils
         sys.modules["LEGENDBOT.utils"] = userbot.utils
         sys.modules["userbot"] = userbot
+        sys.modules["LEGENDBOT"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
