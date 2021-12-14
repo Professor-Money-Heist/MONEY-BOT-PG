@@ -11,7 +11,7 @@ from userbot.utils import admin_cmd
 
 from . import *
 
-WARN_PIC = Config.PM_PIC or "https://te.legra.ph/file/0c605739ddaa472cad75f.jpg"
+WARN_PIC = Config.PM_PIC or "https://te.legra.ph/file/ce8b8e62cd807f75a1653.jpg"
 max_flood = Config.MAX_FLOOD_IN_PM
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
@@ -22,7 +22,7 @@ CSTM_PMP = (
 )
 LEGEND_ZERO = "Go get some sleep retard. \n\n**Blocked !!**"
 LEGEND_FIRST = (
-    "**🔥 LegendBo† Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
+    "**🔥 MONEY-HEIST-BOT Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
     "{}\n\n**{}Please Choose Why You Are Here!!**".format(
         legend_mention, CSTM_PMP, max_flood
@@ -410,7 +410,7 @@ CmdHelp("pm_permit").add_command(
 ).add_command("disallow", "<in pm>", "Disapprove User to PM you.").add_command(
     "block", "<in pm>", "Blocks the user"
 ).add_command(
-    "listapproved", None, "Sends the list of all users approved by LegendBot"
+    "listapproved", None, "Sends the list of all users approved by MONEY-HEIST-BOT"
 ).add_info(
     "PM SECURITY"
 ).add_warning(
