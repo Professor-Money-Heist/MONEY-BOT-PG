@@ -1,7 +1,7 @@
 import asyncio
 import os
 
-from MONEY-HEIST-BOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import CmdHelp
 from userbot import bot as MONEY-HEIST-BOT
 
