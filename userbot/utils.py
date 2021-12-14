@@ -69,7 +69,7 @@ def load_module(shortname):
         # support for MONEY-HEIST-BOT originals
         sys.modules["MONEY-HEIST-BOT.utils"] = userbot.utils
         sys.modules["LEGENDBOT.utils"] = userbot.utils
-        sys.modules["MONEY-HEIST-BOT"] = userbot
+        sys.modules["userbot"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
