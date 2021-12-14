@@ -2,8 +2,8 @@ import time
 
 from telethon import version
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot import LEGENDversion, StartTime
+from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from userbot import MHversion, StartTime
 from userbot.cmdhelp import CmdHelp
 
 from . import *
@@ -18,9 +18,9 @@ async def reply_id(event):
     return reply_to_id
 
 
-LEGEND_IMG = Config.AWAKE_PIC
-CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "ℓєgєи∂ Choice ℓєgєи∂ϐοτ"
-CUSTOM_YOUR_GROUP = Config.YOUR_GROUP or "@Legend_Userbot"
+MONEY_IMG = Config.AWAKE_PIC
+CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "PROFESSOR AGORA"
+CUSTOM_YOUR_GROUP = Config.YOUR_GROUP or "@MM_Userbot"
 
 
 def get_readable_time(seconds: int) -> str:
@@ -61,19 +61,19 @@ async def amireallyalive(event):
         return
     reply_to_id = await reply_id(event)
 
-    if LEGEND_IMG:
-        LEGEND_caption = f"**{legend_mention}**\n"
+    if MONEY_IMG:
+        MONEY_caption = f"**{MONEY_mention}**\n"
 
-        LEGEND_caption += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
-        LEGEND_caption += f"     ⚜ 𝓛𝓮𝓰𝓮𝓷𝓭𝓑𝓸𝓽 𝓘𝓼 𝓐𝔀𝓪𝓴𝓮 ⚜\n"
-        LEGEND_caption += f"•🔥• Lêɠêɳ̃dẞø†     : ν3.0\n"
-        LEGEND_caption += f"•🔥• 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽      : `{version.__version__}`\n"
-        LEGEND_caption += f"•🔥• 𝚄𝙿𝚃𝙸𝙼𝙴         : `{uptime}`\n"
-        LEGEND_caption += f"•🔥• 𝙲𝙷𝙰𝙽𝙽𝙴𝙻        : [𝕮нαииєℓ](t.me/Official_LegendBot)\n"
-        LEGEND_caption += f"•🔥• ᴹʸ 𝙶𝚁𝙾𝚄𝙿 : {CUSTOM_YOUR_GROUP}\n"
+        MONEY_caption += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
+        MONEY_caption += f"     💰𝙼𝙾𝙽𝙴𝚈 𝙷𝙴𝙸𝚂𝚃 𝙸𝚂 𝙰𝚆𝙰𝙺𝙴💰\n"
+        MONEY_caption += f"•🔥• 𝙼𝙾𝙽𝙴𝚈 𝙷𝙴𝙸𝚂𝚃 𝙱𝙾𝚃    : ν3.0\n"
+        MONEY_caption += f"•🔥• 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽           : `{version.__version__}`\n"
+        MONEY_caption += f"•🔥• 𝚄𝙿𝚃𝙸𝙼𝙴             : `{uptime}`\n"
+        MONEY_caption += f"•🔥• 𝙲𝙷𝙰𝙽𝙽𝙴𝙻            : `[𝙲𝙷𝙰𝙽𝙽𝙴𝙻](t.me/MM_UB_UPDATES)\n"
+        MONEY_caption += f"•🔥• 𝙶𝚁𝙾𝚄𝙿:             : `[𝙶𝚁𝙾𝚄𝙿](t.me/MM_USERBOT)\n"
 
         await event.client.send_file(
-            event.chat_id, LEGEND_IMG, caption=LEGEND_caption, reply_to=reply_to_id
+            event.chat_id, MONEY_IMG, caption=MONEY_caption, reply_to=reply_to_id
         )
         await event.delete()
     else:
@@ -81,12 +81,12 @@ async def amireallyalive(event):
             awake,
             f"**{CUSTOM_ALIVE_TEXT}**\n\n"
             f"~~~~~~~~~~~~~~~~~~~~~~~ \n"
-            f"         𝕭𝖔𝖙 𝕾𝖙𝖆𝖙𝖚𝖘\n"
-            f"•⚡• 𝕿єℓєτнοи    : `{version.__version__}`\n"
-            f"🇮🇳 ℓєgєи∂ϐοτ  : `{LEGENDversion}`\n"
-            f"🇮🇳 υρτιмє        : `{uptime}`\n"
-            f"🔱 ɱαรƭεɾ        : {mention}\n"
-            f"🔱 σωɳεɾ         : [ℓєgєи∂](t.me/The_LegendBoy)\n",
+            f"         𝕸𝖔𝖓𝖊𝖞 𝕳𝖊𝖎𝖘𝖙 𝕾𝖙𝖆𝖙𝖚𝖘\n"
+            f"•⚡• 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽       : `{version.__version__}`\n"
+            f"•💰• 𝙼𝙾𝙽𝙴𝚈𝙷𝙴𝙸𝚂𝚃𝙱𝙾𝚃  : `{MONEYversion}`\n"
+            f"•💥• 𝚄𝙿𝚃𝙸𝙼𝙴         : `{uptime}`\n"
+            f"•💰• 𝙼𝙰𝚂𝚃𝙴𝚁         : {mention}\n"
+            f"•👨‍🏫• 𝙾𝚆𝙽𝙴𝚁          : [𝙿𝚁𝙾𝙵𝙴𝚂𝚂𝙾𝚁](t.me/PROF_AGORA)\n",
         )
 
 
