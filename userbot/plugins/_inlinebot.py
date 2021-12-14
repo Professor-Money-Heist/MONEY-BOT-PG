@@ -21,7 +21,7 @@ legend_row = Config.BUTTONS_IN_HELP
 legend_emoji1 = Config.EMOJI_IN_HELP1 or "♦️"
 legend_emoji2 = Config.EMOJI_IN_HELP2 or "♦️"
 alive_emoji = Config.ALIVE_EMOJI or "⚜"
-legend_pic = Config.PM_PIC or "https://te.legra.ph/file/0c605739ddaa472cad75f.jpg"
+legend_pic = Config.PM_PIC or "https://te.legra.ph/file/ce8b8e62cd807f75a1653.jpg"
 cstm_pmp = Config.PM_MSG
 ALV_PIC = Config.ALIVE_PIC
 help_pic = Config.HELP_PIC
@@ -67,13 +67,13 @@ var_txt = """
 
 alive_txt = """
 **{}**\n
-  🏅Bø† ẞ†α†µѕ🏅
-**•{}•Oաղ̃ҽ̈r :** {}\n
-**•{}•Lêɠêɳ̃dẞø† :** {}
-**•{}•†ҽ̀lҽ́ƭhøղ  :** {}
-**•{}•Ãbûßê     :** {}
-**•{}•ßudø      :** {}
-**•{}•Bø†       :** {}
+  💰BOT STATUS💰
+**•{}•User :** {}\n
+**•{}•MONEYHEISTBOT :** {}
+**•{}•TELETHON  :** {}
+**•{}•ABUSE     :** {}
+**•{}•SUDO      :** {}
+**•{}•BOT       :** {}
 """
 
 
@@ -170,12 +170,12 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             alv_btn = [
                 [
                     Button.url(
-                        f"{LEGEND_USER}", f"tg://openmessage?user_id={The_LegendBoy}"
+                        f"{LEGEND_USER}", f"tg://openmessage?user_id={PROF_AGORA}"
                     )
                 ],
                 [
-                    Button.url("My Channel", f"https://t.me/{my_channel}"),
-                    Button.url("My Group", f"https://t.me/{my_group}"),
+                    Button.url("My Channel", f"https://t.me/mm_ub_updates{my_channel}"),
+                    Button.url("My Group", f"https://t.me/mm_userbot{my_group}"),
                 ],
             ]
             if ALV_PIC and ALV_PIC.endswith((".jpg", ".png")):
@@ -189,14 +189,14 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 result = builder.document(
                     ALV_PIC,
                     text=leg_end,
-                    title="LegendBot Alive",
+                    title="MONEY HEIST BOT IS Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
             else:
                 result = builder.article(
                     text=leg_end,
-                    title="LegendBot Alive",
+                    title="MONEY HEIST BOT Alive",
                     buttons=alv_btn,
                     link_preview=False,
                 )
@@ -208,8 +208,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     )
                 ],
                 [
-                    Button.url("📍My Channel📍", f"https://t.me/{my_channel}"),
-                    Button.url("💝My Group💝", f"https://t.me/{my_group}"),
+                    Button.url("📍My Channel📍", f"https://t.me/mm_ub_updates{my_channel}"),
+                    Button.url("💝My Group💝", f"https://t.me/mm_userbot{my_group}"),
                 ],
             ]
             if ALV_PIC and ALV_PIC.endswith((".jpg", ".png")):
@@ -261,7 +261,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             var_btn = [
                 [
                     Button.url(
-                        f"{LEGEND_USER}", f"tg://openmessage?user_id={The_LegendBoy}"
+                        f"{LEGEND_USER}", f"tg://openmessage?user_id={PROF_AGORA}"
                     )
                 ],
                 [
@@ -279,14 +279,14 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 result = builder.document(
                     VAR_PIC,
                     text=le_gend,
-                    title="LegendBot Alive",
+                    title="MONEY HEIST BOT Alive",
                     buttons=var_btn,
                     link_preview=False,
                 )
             else:
                 result = builder.article(
                     text=le_gend,
-                    title="LegendBot Alive",
+                    title="MONEY HEIST BOT Alive",
                     buttons=var_btn,
                     link_preview=False,
                 )
@@ -294,14 +294,14 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         elif event.query.user_id == bot.uid and query == "repo":
             result = builder.article(
                 title="Repository",
-                text=f"**⚜ 𝙻𝚎𝚐𝚎𝚗𝚍𝚊𝚛𝚢 𝙰𝚏 𝙻𝚎𝚐𝚎𝚗𝚍𝙱𝚘𝚝 ⚜**",
+                text=f"**⚜ MONEY HEIST BOT ⚜**",
                 buttons=[
-                    [Button.url("♥️ Tutorial ♥", "https://youtu.be/9dQgdUJfk_k")],
-                    [Button.url("📍 𝚁𝚎𝚙𝚘 📍", "https://github.com/LEGEND-OS/LEGENDBOT")],
+                    [Button.url("♥️ Tutorial ♥", "https://youtu.be/UC-4mVE6HjhtYygaf2l5DHvA")],
+                    [Button.url("📍 𝚁𝚎𝚙𝚘 📍", "https://github.com/Professor-Money-Heist/MONEY-HEIST-BOT")],
                     [
                         Button.url(
                             "💞 Deploy 💞",
-                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FLEGEND-OS%2FLEGENDBOT&template=https%3A%2F%2Fgithub.com%2FLEGEND-OS%2FLEGENDBOT",
+                            "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FProfessor%2FMoney%2FHeist%2FMONEY-HEIST-BOT&template=https%3A%2F%2Fgithub.com%2FProfessor-Monet-Heist%2FMONEY-HEIST-BOT",
                         )
                     ],
                 ],
@@ -318,11 +318,11 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.photo(
                 ALV_PIC,
-                text="""Hey! This is [Lêɠêɳ̃dẞø†](https://t.me/Official_LegendBot) \nYou can know more about me from the links given below 👇""",
+                text="""Hey! This is [MONEYHEISTBOT](https://t.me/MM_USERBOT) \nYou can know more about me from the links given below 👇""",
                 buttons=[
                     [
                         custom.Button.url(
-                            "⭐ Repo ⭐", "https://Github.com/LEGEND-OS/LEGENDBOT"
+                            "⭐ Repo ⭐", "https://Github.com/Professor-Money-Heist/MONEY-HEIST-BOT"
                         ),
                         custom.Button.url(
                             "⚡ Repl ⚡",
@@ -341,7 +341,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         else:
             await event.edit(
-                f"🔰 This is Lêɠêɳ̃dẞø† PM Security for {legend_mention} to keep away unwanted retards from spamming PM..."
+                f"🔰 This is MONEYHEISTBOT PM Security for {legend_mention} to keep away unwanted retards from spamming PM..."
             )
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"req")))
@@ -520,12 +520,12 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 f"{legend_emoji1} Re-Open Menu {legend_emoji2}", data="reopen"
             )
             await event.edit(
-                f"**⚜️ Lêɠêɳ̃dẞø† Mêñû Prõvîdêr háš běěn čłøšĕd ⚜️**\n\n**Bot Of :**  {legend_mention}\n\n            [©️Lêɠêɳ̃dẞø†]({chnl_link})",
+                f"**⚜️ MoneyHeistbot Mêñû Prõvîdêr háš běěn čłøšĕd ⚜️**\n\n**Bot Of :**  {legend_mention}\n\n            [©️MONEY-HEIST-BOT]({chnl_link})",
                 buttons=veriler,
                 link_preview=False,
             )
         else:
-            reply_pop_up_alert = "κγα υиgℓι καя янє нο мєяє ϐοτ ραя αgαя ϲнαнιγє τοн κнυ∂ κα ϐαиα ℓο иα. Aα נατє нο υиgℓι καяиє мєяє ϐοτ ρє.   ©Lêɠêɳ̃dẞø†"
+            reply_pop_up_alert = "κγα υиgℓι καя янє нο мєяє ϐοτ ραя αgαя ϲнαнιγє τοн κнυ∂ κα ϐαиα ℓο иα. Aα נατє нο υиgℓι καяиє мєяє ϐοτ ρє.   ©MONEY-HEIST-BOT"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"page\((.+?)\)")))
@@ -544,7 +544,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "This Button Only For My Master.   ©Lêɠêɳ̃dẞø†",
+                "This Button Only For My Master.   ©MONEY-HEIST-BOT",
                 cache_time=0,
                 alert=True,
             )
@@ -584,7 +584,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. ©Lêɠêɳ̃dẞø†™",
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. ©MONEY-HEIST-BOT™",
                 cache_time=0,
                 alert=True,
             )
@@ -635,7 +635,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "MY MASTER ONLY CAN ACCESS THIS BUTTON. DEPLOY UR OWN ©Lêɠêɳ̃dẞø†™ ",
+                "MY MASTER ONLY CAN ACCESS THIS BUTTON. DEPLOY UR OWN ©MONEY-HEIST-BOT™ ",
                 cache_time=0,
                 alert=True,
             )
