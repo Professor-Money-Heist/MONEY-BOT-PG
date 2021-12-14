@@ -1,7 +1,7 @@
 from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 
-from MONEY-HEIST-BOT.utils import admin_cmd
+from userbot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot.Config import Config
 
