@@ -2,7 +2,7 @@ import os
 
 import requests
 
-from LEGENDBOT.utils import admin_cmd, sudo_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd, sudo_cmd
 from userbot import CmdHelp
 
 
@@ -16,14 +16,14 @@ async def _(event):
     response = requests.get(url)
     await event.edit("`Creating a fake face...`")
     if response.status_code == 200:
-        with open("LEGENDBOT.jpg", "wb") as f:
+        with open("MONEY-HEIST-BOT.jpg", "wb") as f:
             f.write(response.content)
 
-    captin = f"Fake Image By LEGENDBOT."
-    fole = "LEGENDBOT.jpg"
+    captin = f"Fake Image By MONEY-HEIST-BOT."
+    fole = "MONEY-HEIST-BOT.jpg"
     await borg.send_file(event.chat_id, fole, caption=captin)
     await event.delete()
-    os.system("rm /root/userbot/LEGENDBOT.jpg ")
+    os.system("rm /root/userbot/MONEY-HEIST-BOT.jpg ")
 
 
 CmdHelp("fakeimg").add_command("picgen", None, "Fake Pic Generation").add()
