@@ -12,6 +12,7 @@ from var import Var
 BOTLOG = True
 StartTime = time.time()
 MH_version = "𝚅3.0"
+LEGENDversion = MH_version
 botversion = "𝚅3.0"
 from .k import *
 
