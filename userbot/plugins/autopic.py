@@ -9,7 +9,7 @@ import requests
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl import functions
 
-from LEGENDBOT.utils import admin_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 
 COLLECTION_STRING = [
@@ -78,7 +78,7 @@ import requests
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl import functions
 
-from LEGENDBOT.utils import admin_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 
 COLLECTION_STRING = [
@@ -122,7 +122,7 @@ async def avengersdps():
 async def main(event):
 
     await event.edit(
-        "**Starting Avengers Profile Pic...\n\nDone !!! Check Your DP By @Legend_Userbot**"
+        "**Starting Avengers Profile Pic...\n\nDone !!! Check Your DP By @mm_userbot**"
     )
 
     while True:
@@ -149,7 +149,7 @@ import requests
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl import functions
 
-from LEGENDBOT.utils import admin_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd
 
 COLLECTION_STRINGZ = ["hacker-background"]
 
@@ -213,7 +213,7 @@ import requests
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl import functions
 
-from LEGENDBOT.utils import admin_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd
 
 COLLECTION_STRING = [
     "avengers-logo-wallpaper",
@@ -350,7 +350,7 @@ import requests
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl import functions
 
-from LEGENDBOT.utils import admin_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd
 
 # Space lovers
 COLLECTION_STRINGS = [
@@ -419,7 +419,7 @@ from PIL import Image, ImageDraw, ImageFont
 from pySmartDL import SmartDL
 from telethon.tl import functions
 
-from LEGENDBOT.utils import admin_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
@@ -486,7 +486,7 @@ import requests
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl import functions
 
-from LEGENDBOT.utils import admin_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd
 
 COLLECTION_STRINGZ = [
     "Vietnam-War-Wallpapers",
@@ -557,7 +557,7 @@ import requests
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl import functions
 
-from LEGENDBOT.utils import admin_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd
 
 COLLECTION_STRING = [
     "pokemon-serena-wallpaper",
