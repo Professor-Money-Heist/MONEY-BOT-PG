@@ -6,7 +6,7 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
-from MONEY-HEIST-BOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 from userbot.helpers.funct import awooify, baguette, convert_toimage, iphonex, lolice
 
@@ -20,7 +20,7 @@ async def _(MONEY-HEIST-BOT):
         return
     chat = "@hazmat_suit_bot"
     if reply_message.sender.bot:
-        await edit_or_reply(LEGENDBOT, "```Reply to actual users message.```")
+        await edit_or_reply(MONEY-HEIST-BOT, "```Reply to actual users message.```")
         return
     event = await MONEY-HEIST-BOT.edit("```Processing```")
     async with MONEY-HEIST-BOT.client.conversation(chat) as conv:
