@@ -18,7 +18,7 @@ async def reply_id(event):
     return reply_to_id
 
 
-MONEY_IMG = Config.AWAKE_PIC
+LEGEND_IMG = Config.AWAKE_PIC
 CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "PROFESSOR AGORA"
 CUSTOM_YOUR_GROUP = Config.YOUR_GROUP or "@MM_Userbot"
 
@@ -61,19 +61,19 @@ async def amireallyalive(event):
         return
     reply_to_id = await reply_id(event)
 
-    if MONEY_IMG:
-        MONEY_caption = f"**{MONEY_mention}**\n"
+    if LEGEND_IMG:
+        LEGEND_caption = f"**{LEGEND_mention}**\n"
 
-        MONEY_caption += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
-        MONEY_caption += f"     💰𝙼𝙾𝙽𝙴𝚈 𝙷𝙴𝙸𝚂𝚃 𝙸𝚂 𝙰𝚆𝙰𝙺𝙴💰\n"
-        MONEY_caption += f"•🔥• 𝙼𝙾𝙽𝙴𝚈 𝙷𝙴𝙸𝚂𝚃 𝙱𝙾𝚃    : ν3.0\n"
-        MONEY_caption += f"•🔥• 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽           : `{version.__version__}`\n"
-        MONEY_caption += f"•🔥• 𝚄𝙿𝚃𝙸𝙼𝙴             : `{uptime}`\n"
-        MONEY_caption += f"•🔥• 𝙲𝙷𝙰𝙽𝙽𝙴𝙻            : `[𝙲𝙷𝙰𝙽𝙽𝙴𝙻](t.me/MM_UB_UPDATES)\n"
-        MONEY_caption += f"•🔥• 𝙶𝚁𝙾𝚄𝙿:             : `[𝙶𝚁𝙾𝚄𝙿](t.me/MM_USERBOT)\n"
+        LEGEND_caption += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
+        LEGEND_caption += f"     💰𝙼𝙾𝙽𝙴𝚈 𝙷𝙴𝙸𝚂𝚃 𝙸𝚂 𝙰𝚆𝙰𝙺𝙴💰\n"
+        LEGEND_caption += f"•🔥• 𝙼𝙾𝙽𝙴𝚈 𝙷𝙴𝙸𝚂𝚃 𝙱𝙾𝚃    : ν3.0\n"
+        LEGEND_caption += f"•🔥• 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽           : `{version.__version__}`\n"
+        LEGEND_caption += f"•🔥• 𝚄𝙿𝚃𝙸𝙼𝙴             : `{uptime}`\n"
+        LEGEND_caption += f"•🔥• 𝙲𝙷𝙰𝙽𝙽𝙴𝙻            : `[𝙲𝙷𝙰𝙽𝙽𝙴𝙻](t.me/MM_UB_UPDATES)\n"
+        LEGEND_caption += f"•🔥• 𝙶𝚁𝙾𝚄𝙿:             : `[𝙶𝚁𝙾𝚄𝙿](t.me/MM_USERBOT)\n"
 
         await event.client.send_file(
-            event.chat_id, MONEY_IMG, caption=MONEY_caption, reply_to=reply_to_id
+            event.chat_id, LEGEND_IMG, caption=LEGEND_caption, reply_to=reply_to_id
         )
         await event.delete()
     else:
@@ -83,7 +83,7 @@ async def amireallyalive(event):
             f"~~~~~~~~~~~~~~~~~~~~~~~ \n"
             f"         𝕸𝖔𝖓𝖊𝖞 𝕳𝖊𝖎𝖘𝖙 𝕾𝖙𝖆𝖙𝖚𝖘\n"
             f"•⚡• 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽       : `{version.__version__}`\n"
-            f"•💰• 𝙼𝙾𝙽𝙴𝚈𝙷𝙴𝙸𝚂𝚃𝙱𝙾𝚃  : `{MONEYversion}`\n"
+            f"•💰• 𝙼𝙾𝙽𝙴𝚈𝙷𝙴𝙸𝚂𝚃𝙱𝙾𝚃  : `{version}`\n"
             f"•💥• 𝚄𝙿𝚃𝙸𝙼𝙴         : `{uptime}`\n"
             f"•💰• 𝙼𝙰𝚂𝚃𝙴𝚁         : {mention}\n"
             f"•👨‍🏫• 𝙾𝚆𝙽𝙴𝚁          : [𝙿𝚁𝙾𝙵𝙴𝚂𝚂𝙾𝚁](t.me/PROF_AGORA)\n",
