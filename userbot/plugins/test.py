@@ -1,6 +1,6 @@
 import asyncio
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
@@ -9,17 +9,17 @@ from userbot.cmdhelp import CmdHelp
 async def _(event):
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
 
-        await edit_or_reply(event, "`Testing LEGENDBOT`")
+        await edit_or_reply(event, "`Testing MONEY-HEIST-BOT`")
         await asyncio.sleep(1)
-        await edit_or_reply(event, "`Testing LEGENDBOT.`")
+        await edit_or_reply(event, "`Testing MONEY-HEIST-BOT.`")
         await asyncio.sleep(1)
-        await edit_or_reply(event, "`Testing LEGENDBOT..`")
+        await edit_or_reply(event, "`Testing MONEY-HEIST-BOT..`")
         await asyncio.sleep(1)
-        await edit_or_reply(event, "`Testing LEGENDBOT...`")
+        await edit_or_reply(event, "`Testing MONEY-HEIST-BOT...`")
         await asyncio.sleep(1)
-        await edit_or_reply(event, "`Testing LEGENDBOT....`")
+        await edit_or_reply(event, "`Testing MONEY-HEIST-BOT....`")
         await asyncio.sleep(1)
-        await edit_or_reply(event, "`Testing LEGENDBOT.....`")
+        await edit_or_reply(event, "`Testing MONEY-HEIST-BOT.....`")
         await asyncio.sleep(2)
         await edit_or_reply(event, "__Testing Successful__")
         await asyncio.sleep(2)
@@ -27,11 +27,11 @@ async def _(event):
         await asyncio.sleep(2)
         await edit_or_reply(event, "__Output Generated Successfully__")
         await asyncio.sleep(2)
-        await edit_or_reply(event, "**SAVING OUTPUT TO LEGENDBOT LOCAL DATABASE**")
+        await edit_or_reply(event, "**SAVING OUTPUT TO MONEY-HEIST-BOT LOCAL DATABASE**")
         await asyncio.sleep(3.5)
         await edit_or_reply(
             event,
-            "Your [LEGENDBOT](https:/t.me/Legend_Userbot) is working Fine...\n       Join @Legend_Userbot For Any Help......",
+            "Your [MONEY-HEIST-BOT](https:/t.me/MM_USERBOT) is working Fine...\n       Join @Legend_Userbot For Any Help......",
         )
 
 
