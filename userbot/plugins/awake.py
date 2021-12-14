@@ -2,7 +2,7 @@ import time
 
 from telethon import version
 
-from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import LEGENDversion, StartTime
 from userbot.cmdhelp import CmdHelp
 
@@ -62,7 +62,7 @@ async def amireallyalive(event):
     reply_to_id = await reply_id(event)
 
     if LEGEND_IMG:
-        LEGEND_caption = f"**{LEGEND_mention}**\n"
+        LEGEND_caption = f"**{legend_mention}**\n"
 
         LEGEND_caption += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
         LEGEND_caption += f"     💰𝙼𝙾𝙽𝙴𝚈 𝙷𝙴𝙸𝚂𝚃 𝙸𝚂 𝙰𝚆𝙰𝙺𝙴💰\n"
@@ -83,7 +83,7 @@ async def amireallyalive(event):
             f"~~~~~~~~~~~~~~~~~~~~~~~ \n"
             f"         𝕸𝖔𝖓𝖊𝖞 𝕳𝖊𝖎𝖘𝖙 𝕾𝖙𝖆𝖙𝖚𝖘\n"
             f"•⚡• 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽       : `{version.__version__}`\n"
-            f"•💰• 𝙼𝙾𝙽𝙴𝚈𝙷𝙴𝙸𝚂𝚃𝙱𝙾𝚃  : `{version}`\n"
+            f"•💰• 𝙼𝙾𝙽𝙴𝚈𝙷𝙴𝙸𝚂𝚃𝙱𝙾𝚃  : `{LEGENDversion}`\n"
             f"•💥• 𝚄𝙿𝚃𝙸𝙼𝙴         : `{uptime}`\n"
             f"•💰• 𝙼𝙰𝚂𝚃𝙴𝚁         : {mention}\n"
             f"•👨‍🏫• 𝙾𝚆𝙽𝙴𝚁          : [𝙿𝚁𝙾𝙵𝙴𝚂𝚂𝙾𝚁](t.me/PROF_AGORA)\n",
