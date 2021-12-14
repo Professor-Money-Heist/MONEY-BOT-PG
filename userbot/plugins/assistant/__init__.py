@@ -23,7 +23,7 @@ AGORAversion = "𝚅10.1"
 perf = "[ MONEY HEIST BOT FULL ADVANCED]"
 
 
-DEVLIST = ["2082798662"]
+DEVLIST = ["2105506225"]
 
 
 async def setit(event, name, value):
