@@ -7,7 +7,7 @@ from datetime import datetime
 
 from PIL import Image, ImageDraw, ImageFont
 
-from LEGENDBOT.utils import admin_cmd, sudo_cmd
+from MONEY-HEIST-BOT.utils import admin_cmd, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
@@ -43,7 +43,7 @@ async def _(event):
     await borg.send_file(  # pylint:disable=E0602
         event.chat_id,
         required_file_name,
-        caption="LEGENDBOT",
+        caption="MONEY-HEIST-BOT",
         # Courtesy: @ManueI15
         reply_to=reply_msg_id,
     )
