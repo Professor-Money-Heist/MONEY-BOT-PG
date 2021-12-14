@@ -1,7 +1,7 @@
 import os
 import sys
 
-from MONEY-HEIST-BOT.utils import admin_cmd, eor, sudo_cmd
+from userbot.utils import admin_cmd, eor, sudo_cmd
 from userbot import HEROKU_APP, MONEYversion, bot
 from userbot.cmdhelp import CmdHelp
 from userbot.helpers.runner import reload_MONEY-HEIST-BOT
