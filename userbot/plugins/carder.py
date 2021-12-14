@@ -2,33 +2,33 @@ from faker import Faker
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from LEGENDBOT import CmdHelp
-from LEGENDBOT import bot as LEGENDBOT
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MONEY-HEIST-BOT import CmdHelp
+from MONEY-HEIST-BOT import bot as MONEY-HEIST-BOT
+from MONEY-HEIST-BOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
-@LEGENDBOT.on(admin_cmd("gencc$"))
-@LEGENDBOT.on(sudo_cmd("gencc$", allow_sudo=True))
-async def _(LEGENDevent):
-    if LEGENDevent.fwd_from:
+@MONEY_HEIST_BOT.on(admin_cmd("gencc$"))
+@MONEY_HEIST_BOT.on(sudo_cmd("gencc$", allow_sudo=True))
+async def _(MONEYevent):
+    if MONEYevent.fwd_from:
         return
-    LEGENDcc = Faker()
-    LEGENDname = LEGENDcc.name()
-    LEGENDadre = LEGENDcc.address()
-    LEGENDcard = LEGENDcc.credit_card_full()
+    MONEYcc = Faker()
+    MONEYname = MONEYcc.name()
+    MONEYadre = MONEYcc.address()
+    MONEYcard = MOBEYcc.credit_card_full()
 
     await edit_or_reply(
-        LEGENDevent,
-        f"__**👤 NAME :- **__\n`{LEGENDname}`\n\n__**🏡 ADDRESS :- **__\n`{LEGENDadre}`\n\n__**💸 CARD :- **__\n`{LEGENDcard}`",
+        MONEYevent,
+        f"__**👤 NAME :- **__\n`{MONEYname}`\n\n__**🏡 ADDRESS :- **__\n`{MONEYadre}`\n\n__**💸 CARD :- **__\n`{MONEYcard}`",
     )
 
 
-@LEGENDBOT.on(admin_cmd(pattern="bin ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="bin ?(.*)", allow_sudo=True))
+@MONEY_HEIST_BOT.on(admin_cmd(pattern="bin ?(.*)"))
+@MONEY_HEIST_BOT.on(sudo_cmd(pattern="bin ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
-    LEGEND_input = event.pattern_match.group(1)
+    MONEY_input = event.pattern_match.group(1)
     chat = "@szbinscheckerbot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
@@ -36,7 +36,7 @@ async def _(event):
             response = conv.wait_event(
                 events.NewMessage(incoming=True, from_users=2143004427)
             )
-            await event.client.send_message(chat, f"/bin {LEGEND_input}")
+            await event.client.send_message(chat, f"/bin {MONEY_input}")
             response = await response
         except YouBlockedUserError:
             await event.reply("Please Unblock @szbinscheckerbot")
@@ -46,12 +46,12 @@ async def _(event):
             await event.client.send_message(event.chat_id, response.message)
 
 
-@LEGENDBOT.on(admin_cmd(pattern="register ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="register ?(.*)", allow_sudo=True))
+@MONEY_HEIST_BOT.on(admin_cmd(pattern="register ?(.*)"))
+@MONEY_HEIST_BOT.on(sudo_cmd(pattern="register ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
-    LEGEND_input = event.pattern_match.group(1)
+    MONEY_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
@@ -69,12 +69,12 @@ async def _(event):
             await event.client.send_message(event.chat_id, response.message)
 
 
-@LEGENDBOT.on(admin_cmd(pattern="password ?(.*)"))
-@LEGENDBOT.on(sudo_cmd(pattern="password ?(.*)", allow_sudo=True))
+@MONEY_HEIST_BOT.on(admin_cmd(pattern="password ?(.*)"))
+@MONEY_HEIST_BOT.on(sudo_cmd(pattern="password ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
-    LEGEND_input = event.pattern_match.group(1)
+    MONEY_input = event.pattern_match.group(1)
     chat = "@carol5_bot"
     await event.edit("Checking...")
     async with event.client.conversation(chat) as conv:
