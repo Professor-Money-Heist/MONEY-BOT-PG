@@ -2,13 +2,13 @@
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.types import MessageEntityMentionName
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from MONEY-HEIST-BOY.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import ALIVE_NAME, bot
 from userbot.cmdhelp import CmdHelp
 
 from . import *
 
-The_LegendBoy = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
+PROF_AGORA = str(ALIVE_NAME) if ALIVE_NAME else "MONEY User"
 papa = borg.uid
 
 
@@ -63,11 +63,11 @@ async def gban(userbot):
     sender = await ids.get_sender()
     hum = await ids.client.get_me()
     if not sender.id == hum.id:
-        LEGENDBOT = await edit_or_reply(ids, "Trying to gban this retard!")
+        MONEY-HEIST-BOT = await edit_or_reply(ids, "Trying to gban this retard!")
     else:
-        LEGENDBOT = await edit_or_reply(ids, "`Ok! Gban ho rha h intzarrr karo....`")
+        MONEY-HEIST-BOT = await edit_or_reply(ids, "`Ok! Gban ho rha h intzarrr karo....`")
     hum = await userbot.client.get_me()
-    await LEGENDBOT.edit(
+    await MONEY-HEIST-BOT.edit(
         f"`🔥Global Ban ho rha h ruko'💦....dekhte jaao bus kya hota h 😎 `"
     )
     my_mention = "[{}](tg://user?id={})".format(hum.first_name, hum.id)
@@ -134,11 +134,11 @@ async def gunban(userbot):
     sender = await ids.get_sender()
     hum = await ids.client.get_me()
     if not sender.id == hum.id:
-        LEGENDBOT = await edit_or_reply(ids, "`Trying to ungban this kid...`")
+        MONEY-HEIST-BOT = await edit_or_reply(ids, "`Trying to ungban this kid...`")
     else:
-        LEGENDBOT = await edit_or_reply(ids, "`Ungban in progress...`")
+        MONEY-HEIST-BOT = await edit_or_reply(ids, "`Ungban in progress...`")
     hum = await userbot.client.get_me()
-    await LEGENDBOT.edit(f"`Trying to ungban this kiddo...`")
+    await MONEY-HEIST-BOT.edit(f"`Trying to ungban this kiddo...`")
     my_mention = "[{}](tg://user?id={})".format(hum.first_name, hum.id)
     f"@{hum.username}" if hum.username else my_mention
     await userbot.get_chat()
@@ -156,10 +156,10 @@ async def gunban(userbot):
         if not reason:
             reason = "Private"
     except:
-        return await LEGENDBOT.edit("**Som3ting W3nt Wr0ng**")
+        return await MONEY-HEIST-BOT.edit("**Som3ting W3nt Wr0ng**")
     if user:
         if user.id == 2082798662:
-            return await LEGENDBOT.edit(
+            return await MONEY-HEIST-BOT.edit(
                 "**You need to grow some balls to gban / ungban my creator**"
             )
         try:
@@ -179,26 +179,26 @@ async def gunban(userbot):
             try:
                 await userbot.client.edit_permissions(i, user, send_messages=True)
                 a += 1
-                await LEGENDBOT.edit(
+                await MONEY-HEIST-BOT.edit(
                     f"Ok! Now Ungbaning ho rha h nhi to yhi patak kr chod dete.\nChats:- `{a}`"
                 )
             except:
                 b += 1
     else:
-        await LEGENDBOT.edit("**Reply to a user**")
+        await MONEY-HEIST-BOT.edit("**Reply to a user**")
     try:
         if ungmute(user.id) is False:
-            return await LEGENDBOT.edit("**Error! User already ungbanned.**")
+            return await MONEY-HEIST-BOT.edit("**Error! User already ungbanned.**")
     except:
         pass
-    return await LEGENDBOT.edit(
+    return await MONEY-HEIST-BOT.edit(
         f"**[{user.first_name}](tg://user?id={user.id}) Purani Baate bhul jaa... ab Friend ban ja 😂.**\n\nUngban Successful 🔥\nChats :- `{a}`"
     )
 
 
 @borg.on(ChatAction)
-async def handler(legend):
-    if legend.user_joined or legend.user_added:
+async def handler(MONEY):
+    if MONEY.user_joined or MONEY.user_added:
         try:
             from userbot.plugins.sql_helper.gmute_sql import is_gmuted
 
@@ -215,15 +215,15 @@ async def handler(legend):
                     if admin or creator:
                         try:
                             await client.edit_permissions(
-                                legend.chat_id, guser.id, view_messages=False
+                                MONEY.chat_id, guser.id, view_messages=False
                             )
-                            await legend.reply(
+                            await MONEY.reply(
                                 f"⚠️⚠️**Warning**⚠️⚠️\n\n`Gbanned User Joined the chat!!`\n"
                                 f"**⚜️ Victim Id ⚜️**:\n[{guser.id}](tg://user?id={guser.id})\n"
                                 f"**🔥 Action 🔥**  :\n`Banned this piece of shit....` **AGAIN!**"
                             )
                         except:
-                            legend.reply(
+                            MONEY.reply(
                                 "`Sheit!! No permission to ban users.\n@admins ban this retard.\nGlobally Banned User And A Potential Spammer`\n**Make your group a safe place by cleaning this shit**"
                             )
                             return
