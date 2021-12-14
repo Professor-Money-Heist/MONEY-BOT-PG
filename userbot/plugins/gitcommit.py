@@ -26,9 +26,9 @@ async def download(event):
         await edit_or_reply(event, "`Please ADD Proper Access Token from github.com`")
         return
     if Var.GIT_REPO_NAME is None:
-        await edit_or_reply(event, "`Please ADD Proper Github Repo Name of LEGENDBOT`")
+        await edit_or_reply(event, "`Please ADD Proper Github Repo Name of MONEY-HEIST-BOT`")
         return
-    LEGENDBOT = await edit_or_reply(event, "Processing ...")
+    MONEY-HEIST-BOT = await edit_or_reply(event, "Processing ...")
     if not os.path.isdir(GIT_TEMP_DIR):
         os.makedirs(GIT_TEMP_DIR)
     start = datetime.now()
@@ -40,19 +40,19 @@ async def download(event):
             reply_message.media, GIT_TEMP_DIR
         )
     except Exception as e:
-        await LEGENDBOT.edit(str(e))
+        await MONEY-HEIST-BOT.edit(str(e))
     else:
         end = datetime.now()
         ms = (end - start).seconds
         await event.delete()
-        await LEGENDBOT.edit(
+        await MONEY-HEIST-BOT.edit(
             "Downloaded to `{}` in {} seconds.".format(downloaded_file_name, ms)
         )
-        await LEGENDBOT.edit("Committing to Github....")
-        await git_commit(downloaded_file_name, LEGENDBOT)
+        await MONEY-HEIST-BOT.edit("Committing to Github....")
+        await git_commit(downloaded_file_name, MONEY-HEIST-BOT)
 
 
-async def git_commit(file_name, LEGENDBOT):
+async def git_commit(file_name, MONEY-HEIST-BOT):
     content_list = []
     access_token = Var.GITHUB_ACCESS_TOKEN
     g = Github(access_token)
@@ -68,7 +68,7 @@ async def git_commit(file_name, LEGENDBOT):
     for i in content_list:
         create_file = True
         if i == 'ContentFile(path="' + file_name + '")':
-            return await LEGENDBOT.edit("`File Already Exists`")
+            return await MONEY-HEIST-BOT.edit("`File Already Exists`")
             create_file = False
     file_name = "userbot/plugins/" + file_name
     if create_file == True:
@@ -81,14 +81,14 @@ async def git_commit(file_name, LEGENDBOT):
             print("Committed File")
             ccess = Var.GIT_REPO_NAME
             ccess = ccess.strip()
-            await LEGENDBOT.edit(
+            await MONEY-HEIST-BOT.edit(
                 f"`Commited On Your Github Repo`\n\n[Your STDPLUGINS](https://github.com/{ccess}/tree/master/userbot/plugins/)"
             )
         except:
             print("Cannot Create Plugin")
-            await LEGENDBOT.edit("Cannot Upload Plugin")
+            await MONEY-HEIST-BOT.edit("Cannot Upload Plugin")
     else:
-        return await LEGENDBOT.edit("`Committed Suicide`")
+        return await MONEY-HEIST-BOT.edit("`Committed Suicide`")
 
 
 CmdHelp("github").add_command(
