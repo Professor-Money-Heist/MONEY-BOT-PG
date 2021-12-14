@@ -68,6 +68,7 @@ def load_module(shortname):
         mod.sudo_cmd = sudo_cmd
         # support for MONEY-HEIST-BOT originals
         sys.modules["MONEY-HEIST-BOT.utils"] = userbot.utils
+        sys.modules["LEGENDBOT.utils"] = userbot.utils
         sys.modules["MONEY-HEIST-BOT"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
@@ -145,6 +146,7 @@ def load_addons(shortname):
         sys.modules["uniborg.util"] = userbot.utils
         # support for MONEY-HEIST-BOT originals
         sys.modules["MONEY-HEIST-BOT.utils"] = userbot.utils
+        sys.modules["LEGENDBOT.utils"] = userbot.utils
         sys.modules["userbot"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
