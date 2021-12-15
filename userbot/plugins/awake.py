@@ -69,7 +69,7 @@ async def amireallyalive(event):
         LEGEND_caption += f"•🔥• 𝙼𝙾𝙽𝙴𝚈 𝙷𝙴𝙸𝚂𝚃 𝙱𝙾𝚃    : ν3.0\n"
         LEGEND_caption += f"•🔥• 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽 : `{version.__version__}`\n"
         LEGEND_caption += f"•🔥• 𝚄𝙿𝚃𝙸𝙼𝙴  : `{uptime}`\n"
-        LEGEND_caption += f"•🔥• 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 : `[𝙲𝙷𝙰𝙽𝙽𝙴𝙻](t me/mm_ub_updates)\n"
+        LEGEND_caption += f"•🔥• 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 : `[𝙲𝙷𝙰𝙽𝙽𝙴𝙻](t.me/mm_ub_updates)\n"
         LEGEND_caption += f"•🔥• 𝙶𝚁𝙾𝚄𝙿:   : `[𝙶𝚁𝙾𝚄𝙿](t.me/MM_USERBOT)\n"
 
         await event.client.send_file(
