@@ -67,13 +67,13 @@ async def amireallyalive(event):
         LEGEND_caption += f"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
         LEGEND_caption += f"     💰𝙼𝙾𝙽𝙴𝚈 𝙷𝙴𝙸𝚂𝚃 𝙸𝚂 𝙰𝚆𝙰𝙺𝙴💰\n"
         LEGEND_caption += f"•🔥• 𝙼𝙾𝙽𝙴𝚈 𝙷𝙴𝙸𝚂𝚃 𝙱𝙾𝚃 : ν3.0\n"
-        LEGEND_caption += f"•🔥• 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽:`{version.__version__}`\n"
-        LEGEND_caption += f"•🔥• 𝚄𝙿𝚃𝙸𝙼𝙴:`{uptime}`\n"
-        LEGEND_caption += f"•🔥• 𝙲𝙷𝙰𝙽𝙽𝙴𝙻:`[𝙲𝙷𝙰𝙽𝙽𝙴𝙻](t.me/mm_ub_updates)`\n"
-        LEGEND_caption += f"•🔥• 𝙿𝚁𝙾𝙵𝙴𝚂𝚂𝙾𝚁:`[𝙰𝙶𝙾𝚁𝙰](t.me/prof_agora)`\n"
-        LEGEND_caption += f"•🔥• 𝙲𝙾𝙿𝚈𝚁𝙸𝙶𝙷𝚃𝚂:`[𝙼𝙾𝙽𝙴𝚈𝙷𝙴𝙸𝚂𝚃](t.me/mm_userbot)`\n"
-        LEGEND_caption += f"•🔥• 𝚂𝙿𝙰𝙼:`[𝚂𝙿𝙰𝙼](t.me/mm_ub_updates)`\n"
-        LEGEND_caption += f"•🔥• 𝙶𝚁𝙾𝚄𝙿:`[𝙶𝚁𝙾𝚄𝙿](t.me/MM_USERBOT)`\n"
+        LEGEND_caption += f"•🔥• 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽: `{version.__version__}`\n"
+        LEGEND_caption += f"•🔥• 𝚄𝙿𝚃𝙸𝙼𝙴: `{uptime}`\n"
+        LEGEND_caption += f"•🔥• 𝙲𝙷𝙰𝙽𝙽𝙴𝙻: `[𝙲𝙷𝙰𝙽𝙽𝙴𝙻](t.me/mm_ub_updates)\n"
+        LEGEND_caption += f"•🔥• 𝙿𝚁𝙾𝙵𝙴𝚂𝚂𝙾𝚁: `[𝙰𝙶𝙾𝚁𝙰](t.me/prof_agora)\n"
+        LEGEND_caption += f"•🔥• 𝙲𝙾𝙿𝚈𝚁𝙸𝙶𝙷𝚃𝚂: `[𝙼𝙷𝚄𝙱](t.me/mm_userbot)\n"
+        LEGEND_caption += f"•🔥• 𝚂𝙿𝙰𝙼: `[𝚂𝙿𝙰𝙼](t.me/mm_ub_updates)\n"
+        LEGEND_caption += f"•🔥• 𝙶𝚁𝙾𝚄𝙿: `[𝙶𝚁𝙾𝚄𝙿](t.me/MM_USERBOT)\n"
 
         await event.client.send_file(
             event.chat_id, LEGEND_IMG, caption=LEGEND_caption, reply_to=reply_to_id
