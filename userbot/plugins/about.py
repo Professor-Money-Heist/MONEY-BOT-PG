@@ -7,25 +7,25 @@ from userbot.Config import Config
 from . import *
 
 CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG
-# animation Idea by @The_LegendBoy (op coder)
+# animation Idea by @Prof_Agora (op coder)
 # Kang with credits else gay...
 # alive.py for
 
 edit_time = 12
 """ =======================CONSTANTS====================== """
-file1 = "https://te.legra.ph/file/2426eab17330c6e6310ea.mp4"
-file2 = "https://te.legra.ph/file/11ec9dd576ee5536125b2.jpg"
-file3 = "https://te.legra.ph/file/d2a5265abdc4e73af1f94.jpg"
-file4 = "https://te.legra.ph/file/d17467283e73c884834a5.jpg"
-file5 = "https://telegra.ph/file/af51de2749a4506d3eb43.jpg"
+file1 = "https://te.legra.ph/file/d5b6ad471bd5877b0bff0.mp4"
+file2 = "https://te.legra.ph/file/e2382264c33ebe6f362cc.jpg"
+file3 = "https://te.legra.ph/file/87289eafea7be4941a90d.jpg"
+file4 = "https://te.legra.ph/file/e6e3b909036da4a9cac34.jpg"
+file5 = "https://te.legra.ph/file/c03471b99f33dc5910b30.jpg"
 """ =======================CONSTANTS====================== """
 pm_caption = f"** {CUSTOM_ALIVE_TEXT}**\n"
 pm_caption += f"**╭────────────**\n"
 pm_caption += f"┣»»»『{legend_mention}』«««\n"
-pm_caption += f"┣Lêɠêɳ̃dẞø† ~ {LEGENDversion}\n"
-pm_caption += f"┣Lêɠêɳ̃d  ~ [Owner](https://t.me/The_LegendBoy)\n"
-pm_caption += f"┣Support ~ [G𝖗ουρ](https://t.me/Legend_Userbot)\n"
-pm_caption += f"┣Řepô    ~ [Rєρο](https://github.com/LEGEND-OS/LEGENDBOT)\n"
+pm_caption += f"┣MONEY HEIST ~ {LEGENDversion}\n"
+pm_caption += f"┣PROFESSOR  ~ [Owner](https://t.me/Prof_Agora)\n"
+pm_caption += f"┣Support ~ [G𝖗ουρ](https://t.me/MM_USERBOT)\n"
+pm_caption += f"┣Řepô    ~ [Rєρο](https://github.com/Professor-Money-Heist/MONEY-HEIST-BOT)\n"
 pm_caption += f"**╰────────────**\n"
 
 
