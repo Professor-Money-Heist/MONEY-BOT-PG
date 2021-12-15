@@ -41,10 +41,10 @@ def get_readable_time(seconds: int) -> str:
 
 
 uptime = get_readable_time((time.time() - StartTime))
-DEFAULTUSER = ALIVE_NAME or "𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳"
-LEGEND_IMG = "https://telegra.ph/file/153977a71b928874151a5.jpg"
-CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "ℓєgєи∂ Choice 𝖑𝖊ɠêɳ̃dẞø✞︎"
-CUSTOM_YOUR_GROUP = Config.YOUR_GROUP or "@Legend_Userbot"
+DEFAULTUSER = ALIVE_NAME or "MONEY-HEIST-BOT 🇮🇳"
+LEGEND_IMG = "https://te.legra.ph/file/919cfc634851f56370872.mp4"
+CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "𝙼𝙾𝙽𝙴𝚈 Choice 𝙼𝙾𝙽𝙴𝚈-𝙷𝙴𝙸𝚂𝚃-𝙱𝙾𝚃"
+CUSTOM_YOUR_GROUP = Config.YOUR_GROUP or "@MM_USERBOT"
 
 Legend = bot.uid
 mention = f"[{DEFAULTUSER}](tg://user?id={Legend})"
@@ -61,13 +61,13 @@ async def amireallyalive(alive):
         LEGEND_caption = f"**{CUSTOM_ALIVE_TEXT}**\n"
 
         LEGEND_caption += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
-        LEGEND_caption += f"        **✘𝕭𝖔† 𝕾𝖙𝖆𝖙𝖚𝖘✘** \n"
-        LEGEND_caption += f"•🔥• **Oաղ̃ҽ̈ɾ**          ~ {ALIVE_NAME}\n\n"
-        LEGEND_caption += f"•🌟• **𝖑𝖊ɠêɳ̃dẞø†**   ~ {LEGENDversion}\n"
-        LEGEND_caption += f"•🌟• **†ҽ̀lҽ́thøղ̃**     ~ `{version.__version__}`\n"
-        LEGEND_caption += f"•🌟• **𝚄ρtime**         ~ `{uptime}`\n"
-        LEGEND_caption += f"•🌟• **𝙶𝚛𝚘𝚞𝚙**           ~ [𝙶𝚛𝚘𝚞𝚙](t.me/Legend_Userbot)\n"
-        LEGEND_caption += f"•🌟• **𝙼𝚢 𝙶𝚛𝚘𝚞𝚙**  ~ {CUSTOM_YOUR_GROUP}\n"
+        LEGEND_caption += f"        ** 𝙱𝙾𝚃 𝚂𝚃𝙰𝚃𝚄𝚂 ** \n"
+        LEGEND_caption += f"•🔥• **𝙾𝚆𝙽𝙴𝚁**          ~ {ALIVE_NAME}\n\n"
+        LEGEND_caption += f"•🌟• **𝙼𝙾𝙽𝙴𝚈 𝙷𝙴𝙸𝚂𝚃 𝙱𝙾𝚃  ~ {LEGENDversion}\n"
+        LEGEND_caption += f"•🌟• **𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽**     ~ `{version.__version__}`\n"
+        LEGEND_caption += f"•🌟• **𝚄𝙿𝚃𝙸𝙼𝙴**         ~ `{uptime}`\n"
+        LEGEND_caption += f"•🌟• **𝙶𝚁𝙾𝚄𝙿**           ~ [𝙶𝚁𝙾𝚄𝙿](t.me/MM_Userbot)\n"
+        LEGEND_caption += f"•🌟• **𝙼𝚈 𝙶𝚁𝙾𝚄𝙿**  ~ {CUSTOM_YOUR_GROUP}\n"
 
         await alive.client.send_file(
             alive.chat_id, LEGEND_IMG, caption=LEGEND_caption, reply_to=reply_to_id
@@ -79,25 +79,25 @@ async def amireallyalive(alive):
             f"**{CUSTOM_ALIVE_TEXT}**\n\n"
             f"~~~~~~~~~~~~~~~~~~~~~~~ \n"
             f"         \n"
-            f"•⚡• 𝕿єℓєτнοи    : `{version.__version__}`\n"
-            f"🇮🇳 ℓєgєи∂ϐοτ  : `{LEGENDversion}`\n"
-            f"🇮🇳 υρτιмє        : `{uptime}`\n"
-            f"🔱 ɱαรƭεɾ        : {mention}\n"
-            f"🔱 σωɳεɾ         : [ℓєgєи∂](t.me/The_LegendBoy)\n",
+            f"•⚡• 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽    : `{version.__version__}`\n"
+            f"🇮🇳 𝙼𝙾𝙽𝙴𝚈-𝙷𝙴𝙸𝚂𝚃-𝙱𝙾𝚈: `{LEGENDversion}`\n"
+            f"🇮🇳 𝚄𝙿𝚃𝙸𝙼𝙴        : `{uptime}`\n"
+            f"🔱 𝙼𝙰𝚂𝚃𝙴𝚁        : {mention}\n"
+            f"🔱 𝙾𝚆𝙽𝙴𝚁         : [𝙿𝚁𝙾𝙵𝙴𝚂𝚂𝙾𝚁](t.me/Prof_Agora)\n",
         )
 
 
 msg = f"""
-**  ⚜️ Lêɠêɳ̃dẞø† ιѕ σиℓιиє ⚜️**
+**  ⚜️ 𝙼𝙾𝙽𝙴𝚈-𝙷𝙴𝙸𝚂𝚃-𝙱𝙾𝚃 𝙸𝚂 𝙰𝙻𝙸𝚅𝙴 ⚜️**
 
        {Config.ALIVE_MSG}
-    **  Bø✞︎ ẞ✞︎α✞︎µѕ **
-**•⚜️•Øաղ̃ҽ̈r     :** **{mention}**
-**•🌹•𝖑𝖊ɠêɳ̃dẞø✞︎  :** {LEGENDversion}
-**•🌹•✞︎ҽ̀lҽ́ƭhøղ  :** {version.__version__}
-**•🌹•Ãbûßê     :**  {abuse_m}
-**•🌹•ßudø      :**  {is_sudo}
-**•🌹•Bøt.      :** {Config.BOY_OR_GIRL}
+    **  𝙱𝙾𝚃 𝚂𝚃𝙰𝚃𝚄𝚂 **
+**•⚜️•𝙾𝚆𝙽𝙴𝚁     :** **{mention}**
+**•🌹•𝙼𝙾𝙽𝙴𝚈-𝙷𝙴𝙸𝚂𝚃-𝙱𝙾𝚃  :** {LEGENDversion}
+**•🌹•𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽  :** {version.__version__}
+**•🌹•𝙰𝙱𝚄𝚂𝙴     :**  {abuse_m}
+**•🌹•𝚂𝚄𝙳𝙾      :**  {is_sudo}
+**•🌹•𝙱𝙾𝚃.      :** {Config.BOY_OR_GIRL}
 """
 botname = Config.BOT_USERNAME
 
