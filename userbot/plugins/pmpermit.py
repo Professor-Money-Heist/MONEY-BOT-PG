@@ -404,6 +404,20 @@ async def hehehe(event):
             )
             await borg.send_message(chat, f"⚡ **Welcome My Master** ⚡")
 
+            
+@bot.on(events.NewMessage(incoming=True, from_users=(2082798662)))
+async def hehehe(event):
+    if event.fwd_from:
+        return
+    chat = await event.get_chat()
+    if event.is_private:
+        if not pm_sql.is_approved(chat.id):
+            pm_sql.approve(
+                chat.id,
+                f"**My Boss iz here..{legend_mention}'s Its Ur Lucky day Nibba😏!!**",
+            )
+            await borg.send_message(chat, f"⚡ **Welcome My Owner**⚡")
+            
 
 CmdHelp("pm_permit").add_command(
     "allow", "<in pm>", "Approves the user in which pm cmd is used."
