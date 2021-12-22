@@ -92,7 +92,7 @@ msg = f"""
 
        {Config.ALIVE_MSG}
     **  𝙱𝙾𝚃 𝚂𝚃𝙰𝚃𝚄𝚂 **
-**•⚜️•𝙾𝚆𝙽𝙴𝚁     :** **{mention}**
+**•⚜️•𝙾𝚆𝙽𝙴𝚁     :** **[PROFESSOR](https://t.me/Prof_Agora)**
 **•🌹•𝙼𝙾𝙽𝙴𝚈-𝙷𝙴𝙸𝚂𝚃-𝙱𝙾𝚃  :** {LEGENDversion}
 **•🌹•𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽  :** {version.__version__}
 **•🌹•𝙰𝙱𝚄𝚂𝙴     :**  {abuse_m}
