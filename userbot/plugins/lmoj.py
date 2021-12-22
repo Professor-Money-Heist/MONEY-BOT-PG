@@ -13,24 +13,24 @@ async def _(event):
         await asyncio.sleep(1)
         await event.edit("BETE")
         await asyncio.sleep(0.8)
-        await event.edit("MOJ ")
+        await event.edit("KYA ")
         await asyncio.sleep(0.9)
-        await event.edit("KRDI")
+        await event.edit("MONEY")
         await asyncio.sleep(1)
-        await event.edit("TUM TO")
+        await event.edit("MONEY")
         await asyncio.sleep(0.8)
         await event.edit("😈")
         await asyncio.sleep(0.7)
-        await event.edit("BADE HEAVY DRIVER HO BETE")
+        await event.edit("KAR RAHE HO , PROFESSOR KO BOLU KYA ? BC")
         await asyncio.sleep(1)
-        await event.edit("😂RE BHSDK BETE MOJ KRDI TUM TO BADE HEAVY DRIVER HO🤣 ")
+        await event.edit("😂RE BHSDK BETE KYA MONEY MONEY KAR RAHE HO, PROFESSOR KO BOLU KYA ? BC🤣 ")
 
 
 @borg.on(events.NewMessage(pattern=r"\.nonehi", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
-    await event.edit("bhsdk beteeeeeeesssesseeeee ma chuda")
+    await event.edit("madarchod chodnebi nhi dete")
     await asyncio.sleep(999)
 
 
