@@ -9,7 +9,7 @@ from telethon.tl import functions
 from telethon.tl.functions.channels import GetFullChannelRequest, InviteToChannelRequest
 from telethon.tl.functions.messages import GetFullChatRequest
 
-from LEGENDBOT.utils import admin_cmd, edit_or_reply, eor, sudo_cmd
+from userbot.utils import admin_cmd, edit_or_reply, eor, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
@@ -62,7 +62,7 @@ def user_full_name(user):
 async def get_users(event):
     legen_ = event.text[11:]
     legend_chat = legen_.lower
-    restricted = ["@Legend_Userbot", "@Official_LegendBot"]
+    restricted = ["@mm_userbot", "@mm_userbot"]
     legend = await eor(event, f"**Inviting members from** {legen_}")
     if legend_chat in restricted:
         await event.edit("You can't Invite Members from there.")
@@ -83,7 +83,7 @@ async def get_users(event):
     error = "None"
 
     await LEGEND.edit(
-        "**⚜️[Ͳєямιиαℓ Տτατυѕ](https://t.me/Legend_Userbot)**\n\n`🔸Inviting Users.......`"
+        "**💰[Ͳєямιиαℓ Տτατυѕ](https://t.me/mm_userbot)**\n\n`♛︎ Inviting Users.......`"
     )
     async for user in event.client.iter_participants(legend.full_chat.id):
         try:
