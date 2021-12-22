@@ -69,8 +69,8 @@ async def amireallyalive(event):
         LEGEND_caption += f"•🔥• 𝙼𝙾𝙽𝙴𝚈 𝙷𝙴𝙸𝚂𝚃 𝙱𝙾𝚃 : ν3.0\n"
         LEGEND_caption += f"•🔥• 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽: `{version.__version__}`\n"
         LEGEND_caption += f"•🔥• 𝚄𝙿𝚃𝙸𝙼𝙴: `{uptime}`\n"  
-        LEGEND_caption += f"•🔥• 𝚂𝙿𝙰𝙼: `[𝚂𝙿𝙰𝙼](https://t.me/MM_UB_SPAM)\n"
-        LEGEND_caption += f"•🔥• 𝙶𝚁𝙾𝚄𝙿: `[𝙶𝚁𝙾𝚄𝙿](https://t.me/MM_USERBOT)\n"
+        LEGEND_caption += f"•🔥• 𝙶𝚁𝙾𝚄𝙿: `{ur_group}\n"
+        LEGEND_caption += f"•🔥• 𝚂𝚄𝙿𝙿𝙾𝚁𝚃: `[𝙼𝙷𝚄𝙱](https://t.me/MM_USERBOT)\n"
 
         await event.client.send_file(
             event.chat_id, LEGEND_IMG, caption=LEGEND_caption, reply_to=reply_to_id
