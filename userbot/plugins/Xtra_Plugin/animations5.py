@@ -1,6 +1,6 @@
 import asyncio
 
-from MONEY-HEIST-BOT.utils import admin_cmd
+from userbot.utils import admin_cmd
 from userbot import *
 from userbot.cmdhelp import CmdHelp
 
