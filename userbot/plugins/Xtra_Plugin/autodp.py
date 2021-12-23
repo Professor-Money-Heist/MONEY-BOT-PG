@@ -365,4 +365,4 @@ async def main(event):
         )
         await event.client(functions.photos.UploadProfilePhotoRequest(file))
         os.system("rm -rf donottouch.jpg")
-        await asyncio.sleep(600)Ptofesaor Agora
+        await asyncio.sleep(600)userbot
