@@ -3,7 +3,7 @@ from collections import deque
 
 from telethon.tl.functions.users import GetFullUserRequest
 
-from MONEY-HEIST-BOT.utils import admin_cmd, edit_or_reply, sudo_cmd
+from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import *
 from userbot.cmdhelp import CmdHelp
 
