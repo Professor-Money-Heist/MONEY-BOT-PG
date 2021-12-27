@@ -9,9 +9,9 @@ from userbot import *
 from . import *
 
 DELETE_TIMEOUT = 5
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "『Lêɠêɳ̃dẞø†』"
-legend = bot.uid
-LEGEND = f"[{DEFAULTUSER}](tg://user?id={legend})"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "『Money Heist Bot』"
+money = bot.uid
+money = f"[{DEFAULTUSER}](tg://user?id={money})"
 EVAL = os.environ.get("EVAL", None)
 
 
@@ -21,7 +21,7 @@ async def send(event):
     if event.fwd_from:
         return
     message_id = event.message.id
-    thumb = LEGEND_logo1
+    thumb = money_logo1
     input_str = event.pattern_match.group(1)
     omk = f"**⍟ 𝙿𝚕𝚞𝚐𝚒𝚗 𝚗𝚊𝚖𝚎 ≈** `{input_str}`\n**⍟ 𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 ≈** {legend_mention}\n\n⚜ **[Lêɠêɳ̃dẞø†](https://t.me/Legend_Userbot)** ⚜"
     the_plugin_file = "./userbot/plugins/{}.py".format(input_str)
