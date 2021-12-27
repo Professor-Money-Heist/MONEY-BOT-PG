@@ -3,7 +3,7 @@ import io
 import os
 from pathlib import Path
 
-from LEGENDBOT.utils import *
+from userbot.utils import *
 from userbot import *
 
 from . import *
@@ -86,7 +86,7 @@ async def install(event):
         return
     b = 1
     owo = event.text[9:]
-    legend = await eor(event, "__Installing.__")
+    money = await eor(event, "__Installing.__")
     if event.reply_to_msg_id:
         try:
             downloaded_file_name = (
@@ -102,7 +102,7 @@ async def install(event):
                 if EVAL == "ON":
                     if "session" in rd:
                         os.remove(downloaded_file_name)
-                        await legend.edit(
+                        await money.edit(
                             f"**⚠️ WARNING !!** \n\n__Replied plugin file contains some harmful codes__."
                         )
                         return
@@ -123,34 +123,34 @@ async def install(event):
                                 else:
                                     a = "__Installing...__"
                                     b = 1
-                                    await legend.edit(a)
+                                    await money.edit(a)
                                     return
-                                await legend.edit(
-                                    f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {legend_mention}\n\n{string}\n\n        ⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ Lêɠêɳ̃dẞø†]({chnl_link})** ⚡",
+                                await money.edit(
+                                    f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {money_mention}\n\n{string}\n\n        ⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ Lêɠêɳ̃dẞø†]({chnl_link})** ⚡",
                                     link_preview=False,
                                 )
                                 return
-                            await legend.edit(
+                            await money.edit(
                                 f"Installed module `{os.path.basename(downloaded_file_name)}`"
                             )
                             return
                         else:
-                            await eod(legend, f"{e}")
+                            await eod(money, f"{e}")
                             return
                     else:
-                        await eod(legend, "First Turn On Eval = ON")
+                        await eod(money, "First Turn On Eval = ON")
                         return
             except Exception as e:
-                await eod(legend, f"{e}")
+                await eod(money, f"{e}")
                 return
             else:
                 os.remove(downloaded_file_name)
                 return await eod(
-                    legend,
+                    money,
                     f"**Failed to Install** \n`Error`\nModule already installed or unknown format",
                 )
         except Exception as e:
-            await eod(legend, f"**Failed to Install** \n`Error`\n{str(e)}")
+            await eod(money, f"**Failed to Install** \n`Error`\n{str(e)}")
             return os.remove(downloaded_file_name)
 
 
@@ -212,7 +212,7 @@ async def install(event):
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
     cmd = "ls userbot/plugins"
-    thumb = LEGEND_logo1
+    thumb = money_logo1
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
@@ -220,11 +220,11 @@ async def install(event):
     o = stdout.decode()
     _o = o.split("\n")
     o = "\n".join(_o)
-    OUTPUT = f"♥️List Of Plugins In 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳 :- \n\n{o}\n\n<><><><><><><><><><><><><><><><><><><><><><><><>\nHELP:- If you want to know the commands for a plugin, do :- \n.plinfo <plugin name> without the < > brackets. \nJoin https://t.me/Legend_Userbot for help."
+    OUTPUT = f"♥️List Of Plugins In Money Heist Bot 🇮🇳 :- \n\n{o}\n\n<><><><><><><><><><><><><><><><><><><><><><><><>\nHELP:- If you want to know the commands for a plugin, do :- \n.plinfo <plugin name> without the < > brackets. \nJoin https://t.me/mm_userbot for help."
     if len(OUTPUT) > 69:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "cmnds_list.text"
-            LEGEND_file = await bot.send_file(
+            money_file = await bot.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -233,7 +233,7 @@ async def install(event):
                 reply_to=reply_to_id,
             )
             await edit_or_reply(
-                LEGEND_file,
+                money_file,
                 f"**Output Too Large. This is the file for the list of plugins in ✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ .\n\n**BY :- {DEFAULTUSER}**",
             )
             await event.delete()
