@@ -6,9 +6,9 @@ import telethon.utils
 from telethon import Button, TelegramClient, custom, events
 from telethon.tl.functions.channels import JoinChannelRequest
 
-from userbot import LOGS, money_version, bot
+from userbot import LOGS, LEGENDversion, bot
 from userbot.Config import Config
-from MONEY-BOT-PG.utils import (
+from userbot.utils import (
     load_abuse,
     load_addons,
     load_module,
