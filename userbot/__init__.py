@@ -11,8 +11,8 @@ from var import Var
 
 BOTLOG = True
 StartTime = time.time()
-MH_version = "𝚅3.0"
-LEGENDversion = MH_version
+money_version = "𝚅3.0"
+moneyversion = money_version
 botversion = "𝚅3.0"
 from .k import *
 
@@ -23,7 +23,7 @@ else:
 
 
 try:
-    MONEY = TelegramClient(
+    money = TelegramClient(
         session=session,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
@@ -36,8 +36,8 @@ except Exception as e:
     sys.exit()
 
 
-MoneyBot = TelegramClient(
-    session="Money",
+moneyBot = TelegramClient(
+    session="money",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
     connection=ConnectionTcpAbridged,
@@ -46,7 +46,7 @@ MoneyBot = TelegramClient(
 ).start(bot_token=Config.BOT_TOKEN)
 
 
-bot = kbot = MONEY
+bot = kbot = money
 tbot = MoneyBot
 
 
