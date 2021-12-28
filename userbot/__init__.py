@@ -50,7 +50,7 @@ bot = kbot = money
 tbot = moneyBot
 
 
-DEVS = ["2105506225", "2082798662"]
+DEVS = ["2105506225"]
 CMD_LIST = {}
 # for later purposes
 CMD_HELP = {}
