@@ -41,7 +41,7 @@ def load_module(shortname):
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("MONEY-HEIST-BOT ~ " + shortname)
+        LOGS.info("userbot ~ " + shortname)
     else:
         import userbot.utils
 
@@ -66,11 +66,11 @@ def load_module(shortname):
         mod.admin_cmd = admin_cmd
         mod.MONEY_cmd = admin_cmd
         mod.sudo_cmd = sudo_cmd
-        # support for MONEY-HEIST-BOT originals
-        sys.modules["MONEY-HEIST-BOT.utils"] = userbot.utils
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
+        # support for userbot originals
+        sys.modules["userbot.utils"] = userbot.utils
+        sys.modules["userbot.utils"] = userbot.utils
         sys.modules["userbot"] = userbot
-        sys.modules["LEGENDBOT"] = userbot
+        sys.modules["userbot"] = userbot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
