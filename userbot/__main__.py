@@ -10,7 +10,7 @@ from telethon.tl.types import InputMessagesFilterDocument
 
 from userbot import LOGS, money_version, bot
 from userbot.Config import Config
-from userbot.utils import (
+from moneybot.utils import (
     load_addons,
     load_module,
     start_assistant,
