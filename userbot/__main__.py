@@ -8,7 +8,7 @@ from telethon.tl.functions.channels import JoinChannelRequest
 
 from userbot import LOGS, money_version, bot
 from userbot.Config import Config
-from moneybot.utils import (
+from userbot.utils import (
     load_abuse,
     load_addons,
     load_module,
