@@ -246,4 +246,4 @@ CmdHelp("gban").add_command(
     "<reply>/ <userid>/ <username>",
     "Ungmutes the user. Now targeted user is free",
 ).add()
-"J
+"
