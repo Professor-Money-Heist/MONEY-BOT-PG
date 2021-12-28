@@ -1,19 +1,19 @@
 import os
-import re
 import sys
 from pathlib import Path
 
 import telethon.utils
 from telethon import Button, TelegramClient, custom, events
 from telethon.tl.functions.channels import JoinChannelRequest
-from telethon.tl.types import InputMessagesFilterDocument
 
 from userbot import LOGS, money_version, bot
 from userbot.Config import Config
 from moneybot.utils import (
+    load_abuse,
     load_addons,
     load_module,
     start_assistant,
+    start_spam,
 )
 from var import Var
 
