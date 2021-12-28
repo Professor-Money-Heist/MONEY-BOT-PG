@@ -130,7 +130,7 @@ print(
 ║┣⪼ USER - {Config.ALIVE_NAME}
 ║┣⪼ Group - @MM_USERBOT
 ║┣⪼ OWNER - @PROF_AGORA
-║┣⪼ VERSION - {MH_version}
+║┣⪼ VERSION - {money_version}
 ║┣⪼ ✨ PROFESSOR-AGORA'S MONEY-HEIST-BOT✨
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱"""
