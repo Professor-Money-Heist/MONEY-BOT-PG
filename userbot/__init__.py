@@ -47,7 +47,7 @@ moneyBot = TelegramClient(
 
 
 bot = kbot = money
-tbot = MoneyBot
+tbot = moneyBot
 
 
 DEVS = ["2105506225", "2082798662"]
