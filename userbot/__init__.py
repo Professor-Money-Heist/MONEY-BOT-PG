@@ -19,7 +19,7 @@ from .k import *
 if Config.PROFESSOR_STRING:
     session = StringSession(str(Config.PROFESSOR_STRING))
 else:
-    session = "MONEY-HEIST-BOT"
+    session = "useebot"
 
 
 try:
